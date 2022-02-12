@@ -18,9 +18,9 @@ const SEO = {
             }
         ]
     },
-    twitter: {
-        handle: '@bjmncrlsn',
-        site: '@bjmncrlsn',
+    instagram: {
+        handle: '@e_rozza',
+        site: '@e_rozza',
         cardType: 'summary_large_image'
     }
 }
