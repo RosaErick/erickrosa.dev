@@ -1,7 +1,8 @@
 import { NotionRenderer } from "react-notion";
-import Container from "../components/Container";
+import Container from "../components/Container"
+import { Text } from '@chakra-ui/react'
 
-import { getAllPosts } from './blog'
+import { getAllPosts } from './api/notion'
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -20,16 +21,19 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
-export default ({ post, blocks }) => (
+export default ({ post, blocks }) => {
+  if (!post) return <Container><Text>Loading...</Text></Container>
+  return (
     <>
-     <Container>
-  <div style={{ maxWidth: 768 }}>
-    <h1>{post.title}</h1>
-    <NotionRenderer blockMap={blocks} />
-            </div>
-            </Container>
-        </>
-);
+      <Container>
+        <div style={{ maxWidth: 768 }}>
+          <h1>{post.title}</h1>
+          <NotionRenderer blockMap={blocks} />
+        </div>
+      </Container>
+    </>
+  )
+}
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();

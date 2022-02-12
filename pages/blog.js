@@ -1,18 +1,13 @@
 import NextLink from "next/link";
 import Container from "../components/Container";
 import {
-    Heading, Link,
+    Heading, Link, Text,
     UnorderedList, Flex,
     ListItem
 } from '@chakra-ui/react'
+import { getAllPosts } from "./api/notion";
 
-const NOTION_BLOG_ID = 'e9c9b6fdc4184d03840f783363a89650'
 
-export const getAllPosts = async () => {
-	return await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
-  ).then((res) => res.json());
-}
 
 export async function getStaticProps() {
     const posts = await getAllPosts();
@@ -25,6 +20,7 @@ export async function getStaticProps() {
 }
 
 function Blog({ posts }) {
+  if (!posts) return <Container><Text>Loading...</Text></Container>
   return (
       <>
       <Container>
