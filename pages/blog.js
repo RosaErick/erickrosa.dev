@@ -16,6 +16,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { getAllPosts } from "./api/notion";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { NextSeo } from "next-seo";
 
 
 export async function getStaticProps() {
@@ -49,7 +50,14 @@ function Blog({ posts }) {
     );
   return (
     <>
- 
+     <NextSeo
+        title="Blog - Erick Rosa"
+        description="Erick Rosa's Blog page"
+        canonical="https://erickrosa.dev"
+        openGraph={{
+
+        }}
+      />
       <Container>
         <Stack
           as="main"
