@@ -62,14 +62,14 @@ export default ({ post, blocks }) => {
       }}
     />
       <Container>
-         <BlogPost>
+      
         <div style={{ maxWidth: 768 }}>
           <h1>{post.title}</h1>
          
             <NotionRenderer blockMap={blocks} />
             
           </div>
-          </BlogPost>
+      
       </Container>
     </>
   )
