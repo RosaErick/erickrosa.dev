@@ -16,7 +16,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { getAllPosts } from "./api/notion";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import BlogSeo  from "../components/BlogSEO";
+
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -49,7 +49,7 @@ function Blog({ posts }) {
     );
   return (
     <>
-      <BlogSeo />
+ 
       <Container>
         <Stack
           as="main"
