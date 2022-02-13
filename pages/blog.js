@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import Container from "../components/Container";
 import {
-  Heading,
+  Heading, Box,
   Stack,
   Link,
   Text,
@@ -17,6 +17,7 @@ import { getAllPosts } from "./api/notion";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
+import  BlogPost  from "../components/BlogPosts"
 
 
 export async function getStaticProps() {
@@ -81,9 +82,9 @@ function Blog({ posts }) {
               transition={{ duration: 0.7, delay: 0.4 }}
             >
               <Heading letterSpacing="tight" as="h1" size="2xl" my={4}>
-                Blog ({posts.length} posts)
+                Blog
               </Heading>
-              <Text mb={2}>Blog posts</Text>
+              <Text mb={5 }>Blog posts</Text>
               <InputGroup mb={4} mr={4} w="100%">
                 <Input
                   aria-label="Search by post title or summary"
@@ -96,17 +97,32 @@ function Blog({ posts }) {
               </InputGroup>
               {!filteredBlogPosts.length && "No posts found."}
               {filteredBlogPosts.map((frontMatter, index) => (
-                <UnorderedList>
-                  <ListItem>
+          
+                    <BlogPost>
+          
+           <Box> <Flex  flexDir={"column"}>
                 <Link
                   key={frontMatter.title}
                   href={frontMatter.slug}
                   {...frontMatter}
                 >
                   {frontMatter.title}
+                      </Link>
+           
+                
+
+                <Link
+                  key={frontMatter.description}
+                  href={frontMatter.slug}
+                  {...frontMatter}
+                >
+                  {frontMatter.description}
                     </Link>
-                    </ListItem>
-                  </UnorderedList>
+                    </Flex>
+              </Box>
+                  </BlogPost>
+                 
+
               ))}
             </motion.div>
           </Flex>

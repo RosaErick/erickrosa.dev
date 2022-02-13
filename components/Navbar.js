@@ -9,6 +9,8 @@ import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import DarkModeSwitch from './DarkModeSwitch'
 import { GiSloth } from 'react-icons/gi'
+import MenuHamburguer from './Menu'
+
 const Navbar = () => {
     const { colorMode } = useColorMode()
     const router = useRouter()
@@ -18,8 +20,10 @@ const Navbar = () => {
         dark: 'pink.500',
     }
 
-    return (
+    return (<>
+        <MenuHamburguer />
         <Flex
+            display={['none', 'none', 'flex', 'flex']}
             flexDirection="row"
             justifyContent="space-between"
             alignItems="center"
@@ -27,10 +31,11 @@ const Navbar = () => {
             minWidth="356px"
             width="100%"
             as="nav"
-            px={5}
+            px={1}
             my={8}
             mx="auto"
         >
+            
         <GiSloth  fontSize="30px" /> 
             
             <Box>
@@ -39,10 +44,11 @@ const Navbar = () => {
                         as="a"
                         variant="ghost"
                         p={[1, 2, 4]}
-                        
+                        fontSize="sm"
                         _hover={{ border: '2px solid',
-                            borderColor: navHoverBg[colorMode] }} 
+                           }} 
                         aria-label="Home"
+                        colorScheme='dark'
                     >
                         Home
                     </Button>
@@ -53,10 +59,12 @@ const Navbar = () => {
                         variant="ghost"
                         p={[1, 2, 4]}
                         _hover={{
-                            border: '2px solid',
-                            borderColor: navHoverBg[colorMode]
+                            border: '1px solid',
+                          
                         }}
                         aria-label="Blog"
+                        fontSize="sm"
+                        colorScheme='dark'
                     >
                         Blog
                     </Button>
@@ -66,9 +74,11 @@ const Navbar = () => {
                         as="a"
                         variant="ghost"
                         p={[1, 2, 4]}
-                        _hover={{border: '2px solid',
-                            borderColor: navHoverBg[colorMode] }} 
+                        _hover={{border: '1px solid',
+                             }} 
                         aria-label="Projects"
+                        fontSize="sm"
+                         colorScheme='dark'
                     >
                         Projects
                     </Button>
@@ -79,11 +89,28 @@ const Navbar = () => {
                         as="a"
                         variant="ghost"
                         p={[1, 2, 4]}
-                        _hover={{ border: '2px solid',
-                            borderColor: navHoverBg[colorMode] }} 
+                        _hover={{ border: '1px solid',
+                        }} 
                         aria-label="Snippets"
+                        fontSize="sm"
+                         colorScheme='dark'
                     >
                         Snippets
+                    </Button>
+                    
+                </NextLink>
+                    <NextLink href="/About" passHref>
+                    <Button
+                        as="a"
+                        variant="ghost"
+                        p={[1, 2, 4]}
+                        _hover={{ border: '1px solid',
+                          }} 
+                        aria-label="About"
+                        fontSize="sm"
+                         colorScheme='dark'
+                    >
+                        About
                     </Button>
                     
                 </NextLink>
@@ -91,6 +118,7 @@ const Navbar = () => {
             </Box>
             
         </Flex>
+        </>
     )
 }
 

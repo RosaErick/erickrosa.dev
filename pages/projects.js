@@ -10,8 +10,7 @@ import Container from '../components/Container'
 import { motion } from "framer-motion"
 import ProjectList from '../components/ProjectList' 
 import React from 'react'
-
-
+import { NextSeo } from 'next-seo'
 
 
 export default function Projects() {
@@ -20,6 +19,11 @@ export default function Projects() {
     if (!data) return <Container><Text>Loading...</Text></Container>
     return (
         <Container>
+                <NextSeo
+        title="Projects - Erick Rosa"
+        description="All my projects stored in GitHub, created using GitHub API"
+      />
+
              <motion.div
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}

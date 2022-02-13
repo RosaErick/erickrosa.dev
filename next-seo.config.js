@@ -4,11 +4,11 @@ const description = 'Erick Rosa, Web Developer, javascript enthusiast and Intern
 const SEO = {
     title,
     description,
-    canonical: 'https://example.io',
+    canonical: 'https://erickrosa.dev',
     openGraph: {
         type: 'website',
         locale: 'en_IE',
-        url: 'https://example.io',
+        url: 'https://erickrosa.dev',
         title,
         description,
         images: [

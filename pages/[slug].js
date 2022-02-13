@@ -2,6 +2,7 @@ import { NotionRenderer } from "react-notion";
 import Container from "../components/Container"
 import { Text } from '@chakra-ui/react'
 import { NextSeo } from "next-seo";
+import BlogPost from "../components/BlogPosts";
 
 import { getAllPosts } from './api/notion'
 
@@ -61,10 +62,14 @@ export default ({ post, blocks }) => {
       }}
     />
       <Container>
+         <BlogPost>
         <div style={{ maxWidth: 768 }}>
           <h1>{post.title}</h1>
-          <NotionRenderer blockMap={blocks} />
-        </div>
+         
+            <NotionRenderer blockMap={blocks} />
+            
+          </div>
+          </BlogPost>
       </Container>
     </>
   )

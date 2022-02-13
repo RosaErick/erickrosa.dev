@@ -40,20 +40,20 @@ export default function Home() {
               <Heading p="0 0 30px 0">
                 Hi there, I&#39;m Erick.
               </Heading>
-              <Paragraph>
+              <Paragraph fontSize="xl" lineHeight={1.6}>
                 {" "}
                 I&#39;m web developer, focused on front-end
-                development, from Rio de Janeiro, Brazil. I&#39;m curruntely working at <Link>@Mundiware</Link> as an Intern and
+                development, from Rio de Janeiro, Brazil. I&#39;m curruntely working at <Link href="https://www.mundiware.com/br">@Mundiware</Link> as an Intern and
                 learning React and Next.js in my free time.
               </Paragraph>
             </Flex>
-            <Image
+            {/*<Image
               width="180px"
               height="120px"
               borderRadius="50%"
               
               src={`https://github.com/rosaerick.png`}
-            />
+            />*/}
           </Flex>
           <Box as="div" m="30px 0">
           </Box>

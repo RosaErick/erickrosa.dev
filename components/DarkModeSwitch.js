@@ -5,11 +5,11 @@ const DarkModeSwitch = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const iconColor = {
         light: 'black',
-        dark: 'black'
+        dark: 'white'
     }
     const backgroundColor = {
         light: 'white',
-        dark: 'light'
+        dark: 'black'
     }
 
     return (
@@ -18,7 +18,7 @@ const DarkModeSwitch = () => {
             icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
             onClick={toggleColorMode}
             color={iconColor[colorMode]}
-            backgroundColor={backgroundColor[colorMode]}
+            variant="ghost"
         />
     )
 }
