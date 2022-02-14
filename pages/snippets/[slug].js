@@ -1,9 +1,9 @@
 import { NotionRenderer } from "react-notion"
-import Container from "../components/Container"
+import Container from "../../components/Container"
 import { Text, Button, Link } from '@chakra-ui/react'
 import { NextSeo } from "next-seo"
 import { ArrowLeftIcon } from "@chakra-ui/icons"
-import { getAllSnippets } from './api/notionSnippets'
+import { getAllSnippets } from '../api/notionSnippets'
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all snippets again
@@ -80,7 +80,8 @@ export default ({ snippet, blocks }) => {
 export async function getStaticPaths() {
   const snippets = await getAllSnippets();
   return {
-    paths: snippets.map((row) => `/${row.slug}`),
+    paths: snippets.map((row) => `/snippets/${row.slug}`),
     fallback: true,
   };
 }
+

@@ -101,7 +101,7 @@ function Blog({ posts }) {
                     <Link
                       _hover={{ textDecoration: "none" }}
                       key={post.title}
-                      href={post.slug}
+                      href={ `/blog/${post.slug}`}
                       {...post}
                     >
                       {post.title}
@@ -112,7 +112,7 @@ function Blog({ posts }) {
                     <Link
                       _hover={{ textDecoration: "none" }}
                       key={post.description}
-                      href={post.slug}
+                      href={ `/blog/${post.slug}`}
                       {...post}
                     >
                       {post.description}
@@ -122,7 +122,7 @@ function Blog({ posts }) {
                     _hover={{ textDecoration: "none" }}
                     alignSelf={"flex-end"}
                     fontSize={"12px"}
-                    href={post.slug}
+                    href={ `/blog/${post.slug}`}
                     key={post.date}
                     {...post}
                   >

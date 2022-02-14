@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Paragraph from "../components/Paragraph";
 import Container from "../components/Container";
-
+import { motion } from "framer-motion";
 const About = () => {
   const [show, setShow] = useState(false);
 
@@ -21,6 +21,11 @@ const About = () => {
   return (
     <>
       <Container>
+         <motion.div
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: .7, delay: .4 }}
+                    >
         <Box>
           <Flex justifyContent="space-between" alignItems="flex-end">
         
@@ -62,7 +67,8 @@ const About = () => {
             </Button>
           </LightMode>
         </Box>
-        <Divider my={10} />
+          <Divider my={10} />
+          </motion.div>
       </Container>
     </>
   );

@@ -1,9 +1,9 @@
 import { NotionRenderer } from "react-notion"
-import Container from "../components/Container"
+import Container from "../../components/Container"
 import { Text, Button, Link } from '@chakra-ui/react'
 import { NextSeo } from "next-seo"
 import { ArrowLeftIcon } from "@chakra-ui/icons"
-import { getAllPosts } from './api/notion'
+import { getAllPosts } from '../api/notion'
 
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
@@ -80,7 +80,7 @@ export default ({ post, blocks }) => {
 export async function getStaticPaths() {
   const posts = await getAllPosts();
   return {
-    paths: posts.map((row) => `/${row.slug}`),
+    paths: posts.map((row) => `/blog/${row.slug}`),
     fallback: true,
   };
 }
