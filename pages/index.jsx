@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
 import Stack from "../components/MyStack"
 import Paragraph from "../components/Paragraph";
+import Script from "next/script"
 
 
 const url = "https://erickrosa.dev/";
@@ -14,6 +15,8 @@ const description =
 export default function Home() {
   return (
     <>
+      <Script async src="https://cdn.splitbee.io/sb.js" />
+
       <NextSeo
         title={title}
         description={description}

@@ -3,32 +3,32 @@ import Container from "../components/Container"
 import { Text, Button, Link } from '@chakra-ui/react'
 import { NextSeo } from "next-seo"
 import { ArrowLeftIcon } from "@chakra-ui/icons"
-import { getAllPosts } from './api/notion'
+import { getAllSnippets } from './api/notionSnippets'
 
 export async function getStaticProps({ params: { slug } }) {
-  // Get all posts again
-  const posts = await getAllPosts();
+  // Get all snippets again
+  const snippets = await getAllSnippets();
 
-  // Find the current blogpost by slug
-  const post = posts.find((t) => t.slug === slug);
+  // Find the current blogsnippet by slug
+  const snippet = snippets.find((t) => t.slug === slug);
 
-  const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
+  const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${snippet.id}`).then((res) => res.json());
   
   return {
     props: {
      blocks,
-     post,
+     snippet,
     },
   };
 }
 
-export default ({ post, blocks }) => {
-  if (!post) return <Container><Text>Loading...</Text></Container>
+export default ({ snippet, blocks }) => {
+  if (!snippet) return <Container><Text>Loading...</Text></Container>
   return (
     <>
         <NextSeo
-      title={post.title}
-      description={post.description}
+      title={snippet.title}
+      description={snippet.description}
       canonical="https://www.canonical.ie/"
       openGraph={{
         url: 'https://www.url.ie/a',
@@ -63,7 +63,7 @@ export default ({ post, blocks }) => {
       <Container>
       
         <div style={{ maxWidth: 768 }}>
-          <h1>{post.title}</h1>
+          <h1>{snippet.title}</h1>
          
           <NotionRenderer blockMap={blocks} />
           
@@ -78,9 +78,9 @@ export default ({ post, blocks }) => {
 }
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts();
+  const snippets = await getAllSnippets();
   return {
-    paths: posts.map((row) => `/${row.slug}`),
+    paths: snippets.map((row) => `/${row.slug}`),
     fallback: true,
   };
 }

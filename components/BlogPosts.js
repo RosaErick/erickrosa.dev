@@ -23,16 +23,17 @@ const BlogPost = ({ children, ...props }) => {
  
         <Flex 
             flexDir="column"
+            justifyContent={"flex-start"}
             _hover={{ transform: 'scale(1.05)',}}
             transition="transform .5s ease-in-out, border .5s ease-in-out"
             boxShadow={boxShadowColor[colorMode]}
                 borderRadius={5}
-                p="10px 0"
+                p="20px"
                 m="20px 0"
             border="2px solid transparent"
             onMouseOver={() => { setOpacity(1), setLineColor(2) }}
             onMouseLeave={() => { setOpacity(0), setLineColor("blue.500") }}>
-             {children}
+            <Paragraph> {children}</Paragraph>
            
     </Flex>
         
