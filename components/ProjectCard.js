@@ -46,7 +46,6 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                 </Box>
                 <Flex justify="space-between" mt={2}>
                     <Flex align="center">
-
                         {stargazersUrl && (
                             <Link href={stargazersUrl.replace("api.", "").replace("repos/", "")} _hover={{ textDecor: 'none' }} isExternal>
                                 <Flex opacity={opacity} transition="opacity .5s ease-in-out">
@@ -54,13 +53,11 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                                 </Flex>
                             </Link>
                         )}
-
                         {homepage && (
                             <Link href={homepage} isExternal>
                                 <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
-
                         {repoHref && (
                             <Link href={repoHref} isExternal>
                                 <IconButton icon={<ExternalLinkIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
@@ -71,7 +68,6 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                                 <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
-                   
                     </Flex>
                     <Flex align="center">
                         <Box w={3} h={3} mr={1} borderRadius="50%" bgColor={languageColor} />
