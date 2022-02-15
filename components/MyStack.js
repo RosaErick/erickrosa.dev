@@ -1,33 +1,30 @@
 import ToolCard from "./toolCard";
-import { Heading, SlideFade, Grid } from "@chakra-ui/react";
+import { Heading, Grid } from "@chakra-ui/react";
 import {
   FaNodeJs,
   FaReact,
   FaJs,
-  FaDatabase,
   FaGitAlt,
-  FaFigma,
 } from "react-icons/fa";
-
 import { SiStyledcomponents,SiNextdotjs, SiGnubash, SiChakraui } from "react-icons/si";
 import Paragraph from "./Paragraph";
 
 const tools = [
   {
     name: "Javascript",
-    description: "These days you can't build an amazing product without JS.",
+    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
     icon: <FaJs fontSize="20px" />,
     url: "https://www.javascript.info",
   },
   {
     name: "Node.js",
-    description: "Chrome's V8 JavaScript engine for server-side javascript.",
+    description: "JavaScript engine for server-side javascript.",
     icon: <FaNodeJs fontSize="20px" />,
     url: "https://www.nodejs.org",
   },
   {
     name: "React.js",
-    description: "A JavaScript library for building user interfaces.",
+    description: "An open-source JavaScript library for building user interfaces.",
     icon: <FaReact fontSize="20px" />,
     url: "https://www.reactjs.org",
   },
@@ -47,7 +44,7 @@ const tools = [
   {
     name: "Styled-components",
     description:
-      "Styled-components is a library built for React",
+      "Styled-components is a CSS in JS library built for React. It helps keep the concerns of styling and element architecture",
     icon: <SiStyledcomponents fontSize="20px" />,
     url: "https://styled-components.com/",
     },  {
@@ -68,7 +65,7 @@ const tools = [
 
 const Stack = () => {
   return (
-    <SlideFade in={true} offsetY={80} delay={0.2}>
+ <>
       <Heading
         as="h1"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
@@ -83,13 +80,14 @@ const Stack = () => {
       <Grid
         mt={10}
         templateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
-        gap={5}
+        gap={4}
       >
         {tools.map((tool) => (
           <ToolCard tool={tool} key={tool?.name} />
         ))}
       </Grid>
-    </SlideFade>
+      </>
+
   );
 };
 

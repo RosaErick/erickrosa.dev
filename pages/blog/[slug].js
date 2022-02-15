@@ -1,6 +1,6 @@
 import { NotionRenderer } from "react-notion"
 import Container from "../../components/Container"
-import { Text, Button, Link } from '@chakra-ui/react'
+import { Text, Button, Box, Link } from '@chakra-ui/react'
 import { NextSeo } from "next-seo"
 import { ArrowLeftIcon } from "@chakra-ui/icons"
 import { getAllPosts } from '../api/notion'
@@ -62,15 +62,14 @@ export default ({ post, blocks }) => {
     />
       <Container>
       
-        <div style={{ maxWidth: 768 }}>
-          <h1>{post.title}</h1>
-         
+        <Box maxWidth='768'>
+     
+          <Text>
           <NotionRenderer blockMap={blocks} />
-          
+          </Text>
 
-
-            <Button><Link href="/blog"><ArrowLeftIcon /></Link></Button>
-          </div>
+            <Button background={"none"} _hover={{ background: "none" }}><Link href="/blog"><ArrowLeftIcon /></Link></Button>
+          </Box>
       
       </Container>
     </>

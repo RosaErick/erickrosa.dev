@@ -25,6 +25,7 @@ const ToolCard = ({ tool }) => {
       <LinkBox as="article">
       <Box
         w="100%"
+       
         p={4}
         borderColor={useColorModeValue("gray.300", "gray.700")}
         borderRadius={5}
@@ -34,7 +35,7 @@ const ToolCard = ({ tool }) => {
         d="flex"
         role="group"
         _hover={{
-          color:'pink.400',
+          color:'grey',
         }}
       >
               <IconButton
@@ -46,17 +47,18 @@ const ToolCard = ({ tool }) => {
           aria-label={tool?.name}
                   mr={3}
                   color={iconColor[colorMode]}
-            backgroundColor={backgroundColor[colorMode]}
-          _groupHover={{ color: "pink.500" }}
+        
+          background="none"
+          _groupHover={{ color: "yellow.500" }}
           icon={tool?.icon}
         />
-        <Box>
+        <Box p='10px 0'>
           <LinkOverlay href={tool?.url} rel="noopener" isExternal>
             <Heading as="h2" size="sm">
               {tool?.name}
             </Heading>
             <Paragraph mt={1} fontSize="sm">
-              {tool?.description}
+             
             </Paragraph>
           </LinkOverlay>
         </Box>

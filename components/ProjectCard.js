@@ -10,7 +10,7 @@ import {
     Button,
 } from '@chakra-ui/react'
 
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { ExternalLinkIcon, ViewIcon } from '@chakra-ui/icons'
 
 
 export default function ProjectCard({ title, description, repoHref, demoHref, languageColor, language, starCount, stargazersUrl, homepage }) {
@@ -57,7 +57,7 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
 
                         {homepage && (
                             <Link href={homepage} isExternal>
-                                <IconButton icon={<ExternalLinkIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
 
@@ -68,7 +68,7 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                         )}
                         {demoHref && (
                             <Link href={demoHref} isExternal>
-                                <IconButton icon={<ExternalLinkIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                    

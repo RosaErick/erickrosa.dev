@@ -10,7 +10,8 @@ export default async (req, res) => {
             "stars": p.stargazers_count,
             "url": p.html_url,
             "description": p.description,
-            "language": p.language
+            "language": p.language,
+            "homepage":p.homepage
         })
     })
 

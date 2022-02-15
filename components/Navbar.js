@@ -31,7 +31,7 @@ const Navbar = () => {
             minWidth="356px"
             width="100%"
             as="nav"
-            px={1}
+            px={6}
             my={8}
             mx="auto"
         >

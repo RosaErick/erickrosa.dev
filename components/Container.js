@@ -3,6 +3,7 @@ import {
     Stack
 } from '@chakra-ui/react'
 import Navbar from './Navbar'
+import Footer from './footer'
 
 export default function Container({ children }) {
     return (
@@ -27,6 +28,8 @@ export default function Container({ children }) {
                 >
                     {children}
                 </Flex>
+
+            <Footer />
             </Stack>
         </>
     )

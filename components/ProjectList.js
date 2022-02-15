@@ -18,14 +18,10 @@ function getLanguageColor(language) {
             return '#f1e05a'
         case 'Python':
             return '#3572A5'
-        case 'Java':
-            return '#b07219'
-        case 'C#':
-            return '#178600'
-        case 'Dart':
-            return '#00B4AB'
         case 'HTML':
             return '#e34c26'
+        case 'CSS':
+            return '#480ca8'
         default:
             return '#000000'
     }
