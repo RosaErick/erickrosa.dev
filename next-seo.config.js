@@ -13,7 +13,7 @@ const SEO = {
         description,
         images: [
             {
-                url: './public/favicon.ico',
+                url: './static/favicon.ico',
                 alt: title
             }
         ]
