@@ -49,23 +49,23 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                         {stargazersUrl && (
                             <Link href={stargazersUrl.replace("api.", "").replace("repos/", "")} _hover={{ textDecor: 'none' }} isExternal>
                                 <Flex opacity={opacity} transition="opacity .5s ease-in-out">
-                                    <Button colorScheme="yellow" variant="ghost">{starCount}</Button>
+                                    <Button colorScheme="yellow" variant="default">{starCount}</Button>
                                 </Flex>
                             </Link>
                         )}
                         {homepage && (
                             <Link href={homepage} isExternal>
-                                <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton icon={<ViewIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                         {repoHref && (
                             <Link href={repoHref} isExternal>
-                                <IconButton icon={<ExternalLinkIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton icon={<ExternalLinkIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                         {demoHref && (
                             <Link href={demoHref} isExternal>
-                                <IconButton icon={<ViewIcon />} variant="ghost" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton icon={<ViewIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                     </Flex>
