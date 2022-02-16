@@ -9,7 +9,7 @@ import Script from "next/script"
 
 
 const url = "https://erickrosa.dev/";
-const title = "Erick Rosa - Portfolio";
+const title = "Erick Rosa";
 const description =
   "Erick Rosa - Junior Web Developer from Rio de Janeiro. Javascript enthusiast";
 
