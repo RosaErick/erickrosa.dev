@@ -27,8 +27,8 @@ const Navbar = () => {
             flexDirection="row"
             justifyContent="space-between"
             alignItems="center"
-            maxWidth="820px"
-            minWidth="356px"
+            maxWidth="51.25rem"
+            minWidth="22.25rem"
             width="100%"
             as="nav"
             px={6}
@@ -36,16 +36,16 @@ const Navbar = () => {
             mx="auto"
         >
             
-        <GiSloth  fontSize="30px" /> 
+        <GiSloth  fontSize="1.875rem" /> 
             
             <Box>
                     <NextLink href="/" passHref>
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
+                        p={[1, 2, 3]}
                         fontSize="sm"
-                        _hover={{ border: '2px solid',
+                        _hover={{ border: '.125rem solid',
                            }} 
                         aria-label="Home"
                         colorScheme='dark'
@@ -57,9 +57,9 @@ const Navbar = () => {
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
+                        p={[1, 2, 3]}
                         _hover={{
-                            border: '1px solid',
+                            border: '.0625rem solid',
                           
                         }}
                         aria-label="Blog"
@@ -73,8 +73,8 @@ const Navbar = () => {
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
-                        _hover={{border: '1px solid',
+                        p={[1, 2, 3]}
+                        _hover={{border: '.0625rem solid',
                              }} 
                         aria-label="Projects"
                         fontSize="sm"
@@ -88,8 +88,8 @@ const Navbar = () => {
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
-                        _hover={{ border: '1px solid',
+                        p={[1, 2, 3]}
+                        _hover={{ border: '.0625rem solid',
                         }} 
                         aria-label="Snippets"
                         fontSize="sm"
@@ -103,8 +103,8 @@ const Navbar = () => {
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
-                        _hover={{ border: '1px solid',
+                        p={[1, 2, 3]}
+                        _hover={{ border: '.0625rem solid',
                           }} 
                         aria-label="About"
                         fontSize="sm"
@@ -118,8 +118,8 @@ const Navbar = () => {
                     <Button
                         as="a"
                         variant="ghost"
-                        p={[1, 2, 4]}
-                        _hover={{ border: '1px solid',
+                        p={[1, 2, 3]}
+                        _hover={{ border: '.0625rem solid',
                           }} 
                         aria-label="resume"
                         fontSize="sm"
