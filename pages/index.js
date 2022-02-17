@@ -4,9 +4,9 @@ import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
 import Stack from "../components/MyStack"
 import Paragraph from "../components/Paragraph";
-
+import Script from "next/script"
 import ProjectCard from "../components/ProjectCard";
-import Head from "next/head"
+
 
 
 
@@ -19,7 +19,7 @@ export default function Home() {
   return (
 
     <> 
-      <Head>  <link rel="icon" type="image/x-icon" href="/favicon.ico" /></Head>
+ <Script async src="https://cdn.splitbee.io/sb.js" />
   
       <NextSeo
         title={title}
