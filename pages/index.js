@@ -29,6 +29,15 @@ export default function Home() {
           url,
           title,
           description,
+          images: [
+            {
+                url: "/images/vintagepc.png",
+              width: 800,
+              height: 420,
+                alt: title
+            }
+        ]
+          
         }}
       />
       <Container>
