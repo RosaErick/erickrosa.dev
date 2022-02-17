@@ -70,7 +70,7 @@ const Footer = () => (
           <NextLink href="/snippets">
         Snippets
         </NextLink>
-              <NextLink href="/resume">
+              <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref>
         Resume
         </NextLink>
     <NextLink href="/About">
