@@ -8,12 +8,13 @@ const SEO = {
     openGraph: {
         type: 'website',
         locale: 'en_IE',
+        site_name: 'Erick Rosa - Portfolio',
         url: 'https://erickrosa.dev',
         title,
         description,
         images: [
             {
-                url: 'https://erickrosa.dev/imgs/vintagepc.jpg',
+                url: 'https://erickrosa.dev/images/vintagepc.png',
                 alt: title
             }
         ]

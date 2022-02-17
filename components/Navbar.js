@@ -114,7 +114,7 @@ const Navbar = () => {
                     </Button>
                     
                 </NextLink>
-                       <NextLink href="https://erickrosa.dev/imgs/Erick_Rosa_CV_2022.pdf" passHref download>
+                       <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref download>
                     <Button
                         as="a"
                         variant="ghost"
