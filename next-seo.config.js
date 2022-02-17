@@ -14,7 +14,9 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https://erickrosa.dev/images/vintagepc.png',
+                url: "/images/vintagepc.png",
+              width: 800,
+              height: 420,
                 alt: title
             }
         ]
