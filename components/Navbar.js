@@ -114,6 +114,21 @@ const Navbar = () => {
                     </Button>
                     
                 </NextLink>
+                       <NextLink href="https://erickrosa.dev/imgs/Erick_Rosa_CV_2022.pdf" passHref download>
+                    <Button
+                        as="a"
+                        variant="ghost"
+                        p={[1, 2, 4]}
+                        _hover={{ border: '1px solid',
+                          }} 
+                        aria-label="resume"
+                        fontSize="sm"
+                         colorScheme='dark'
+                    >
+                       Resume
+                    </Button>
+                    
+                </NextLink>
                 <DarkModeSwitch  />
             </Box>
             

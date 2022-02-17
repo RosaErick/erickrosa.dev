@@ -13,7 +13,7 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https://erickrosa.dev/imgs/favicon.ico',
+                url: 'https://erickrosa.dev/imgs/spikespiegel.gif',
                 alt: title
             }
         ]
