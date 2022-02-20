@@ -54,13 +54,7 @@ const tools = [
     icon: <SiChakraui fontSize="20px" />,
     url: "https://chakra-ui.com/",
     },
-    {
-    name: "GNU Bash",
-    description:
-      "I'm a user and fan of linux systems. Bash is the shell, or command language interpreter, that Linux operating systems use. ",
-    icon: <SiGnubash  fontSize="20px" />,
-    url: "https://www.gnu.org/software/bash/",
-  }
+  
 ];
 
 const Stack = () => {

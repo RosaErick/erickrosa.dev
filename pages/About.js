@@ -18,8 +18,8 @@ import Container from "../components/Container";
 import { motion } from "framer-motion";
 const About = () => {
   const [show, setShow] = useState(false);
-
-  const handleToggle = () => setShow(!show);
+ const handleToggle = () => setShow(!show);
+  
   return (
     <>
       <Container>
