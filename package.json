@@ -15,7 +15,7 @@
     "@emotion/styled": "^11",
     "framer-motion": "^4",
     "gray-matter": "^4.0.3",
-    "next": "11.0.1",
+    "next": "12.1.0",
     "next-mdx-remote": "^3.0.2",
     "next-seo": "^4.26.0",
     "notion-api-worker": "^0.1.0",
