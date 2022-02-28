@@ -61,7 +61,7 @@ const Stack = () => {
   return (
  <>
       <Heading
-        as="h1"
+        as="h2"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
         mb={3}
       >
