@@ -11,7 +11,7 @@ import ProjectCard from "../components/ProjectCard";
 
 
 const url = "https://erickrosa.dev/";
-const title = " Home - Erick Rosa";
+const title = " Home | Erick Rosa";
 const description =
   "Self-taught web developer, Javascript enthusiast, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience.";
 

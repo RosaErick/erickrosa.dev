@@ -20,7 +20,7 @@ export default function Projects() {
     return (
         <Container>
                 <NextSeo
-        title="Projects - Erick Rosa"
+        title="Projects | Erick Rosa"
         description="All my projects stored in GitHub, created using GitHub API"
       />
 

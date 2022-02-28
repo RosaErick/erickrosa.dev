@@ -51,7 +51,7 @@ function Blog({ posts }) {
   return (
     <>
       <NextSeo
-        title="Blog - Erick Rosa"
+        title="Blog | Erick Rosa"
         description="Erick Rosa's Blog page"
         canonical="https://erickrosa.dev"
         openGraph={{}}

@@ -15,6 +15,10 @@ import { getAllSnippets } from "./api/notionSnippets";
 import { useState } from "react";
 import Paragraph from "../components/Paragraph";
 import { motion } from "framer-motion";
+import { NextSeo } from "next-seo";
+
+
+
 export async function getStaticProps() {
   const snippets = await getAllSnippets();
 
@@ -45,7 +49,12 @@ export default function Snippets({ snippets }) {
       </Container>
     );
 
-  return (
+  return (<><NextSeo
+        title="Snippets | Erick Rosa"
+        description="Erick Rosa's Snippets page."
+        canonical="https://erickrosa.dev"
+        openGraph={{}}
+      />
     <Container>
       <motion.div
         initial={{ y: -20, opacity: 0 }}
@@ -146,5 +155,6 @@ export default function Snippets({ snippets }) {
               </Flex>
       </motion.div>
     </Container>
+    </>
   );
 }

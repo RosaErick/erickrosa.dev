@@ -16,12 +16,23 @@ import {
 import Paragraph from "../components/Paragraph";
 import Container from "../components/Container";
 import { motion } from "framer-motion";
+import { NextSeo } from "next-seo";
+
+
+
+
 const About = () => {
   const [show, setShow] = useState(false);
  const handleToggle = () => setShow(!show);
   
   return (
     <>
+           <NextSeo
+        title="About me | Erick Rosa"
+        description="Self-taught web developer, Javascript enthusiast, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience."
+        canonical="https://erickrosa.dev"
+        openGraph={{}}
+      />
       <Container>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
