@@ -5,11 +5,25 @@ import {
   FaReact,
   FaJs,
   FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
 } from "react-icons/fa";
 import { SiStyledcomponents,SiNextdotjs, SiGnubash, SiChakraui } from "react-icons/si";
 import Paragraph from "./Paragraph";
 
 const tools = [
+    {
+    name: "Html",
+    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
+    icon: <FaHtml5 fontSize="20px" />,
+    url: "https://www.javascript.info",
+  },
+      {
+    name: "CSS",
+    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
+    icon: <FaCss3Alt fontSize="20px" />,
+    url: "https://www.javascript.info",
+  },
   {
     name: "Javascript",
     description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
