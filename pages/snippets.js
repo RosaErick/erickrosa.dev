@@ -66,7 +66,7 @@ export default function Snippets({ snippets }) {
         </Heading>
         <Box
           height="5px"
-          w="135px"
+          w="150px"
           m="15px 0"
           bottom="-1px"
           display="block"
