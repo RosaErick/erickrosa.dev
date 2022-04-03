@@ -48,10 +48,13 @@ export default function Home() {
               </Heading>
               <Paragraph fontSize="xl" lineHeight={1.6}>
                 {" "}
-                I&#39;m web developer, focused on front-end development, from
-                Rio de Janeiro, Brazil. I&#39;m curruntely working at{" "}
-                <Link href="https://www.mundiware.com/br" target="_blank">@Mundiware</Link> as
-                a FrontEnd Developer and learning React and Next.js in my free time.
+                I&#39;m a Web Developer from Rio de Janeiro, Brazil. I&#39;m
+                curruntely working at{" "}
+                <Link href="https://www.mundiware.com/br" target="_blank">
+                  @Mundiware
+                </Link>{" "}
+                as a FrontEnd Developer and learning React and Next.js in my
+                free time.
               </Paragraph>
             </Flex>
             {/*<Image
