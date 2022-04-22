@@ -124,6 +124,7 @@ export default function Snippets({ snippets }) {
 
               <Paragraph fontSize="12px">
                 <Link
+                  
                   _hover={{ textDecoration: "none" }}
                   key={snippet.description}
                   href={`/snippets/${snippet.slug}`}

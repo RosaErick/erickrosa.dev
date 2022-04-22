@@ -1,17 +1,13 @@
-import NextLink from "next/link";
 import Container from "../components/Container";
 import {
   Heading,
   Box,
-  Stack,
   Link,
   Text,
-  UnorderedList,
   Flex,
   InputGroup,
   Input,
   InputRightElement,
-  ListItem,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { getAllPosts } from "./api/notion";

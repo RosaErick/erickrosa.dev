@@ -24,7 +24,7 @@ export default function Container({ children }) {
                     alignItems="flex-start"
                     maxWidth="800px"
                     w="100%"
-                    p=" 50px 0"
+                    p="30px 0"
                 >
                     {children}
                 </Flex>
