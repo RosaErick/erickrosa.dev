@@ -7,10 +7,7 @@ const DarkModeSwitch = () => {
     light: "black",
     dark: "white",
   };
-  const backgroundColor = {
-    light: "gray",
-    dark: "black",
-  };
+
 
   return (
     <>
