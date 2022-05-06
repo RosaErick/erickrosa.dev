@@ -1,8 +1,8 @@
 import {
-    Box,
-    Flex,
+  Box,
+  Flex,
   Heading,
-    IconButton,
+  IconButton,
   useColorMode,
   LinkOverlay,
   LinkBox,
@@ -11,21 +11,19 @@ import {
 import Paragraph from "./Paragraph";
 
 const ToolCard = ({ tool }) => {
-
-        const { colorMode, toggleColorMode } = useColorMode()
-    const iconColor = {
-        light: 'black',
-        dark: 'black'
-    }
-    const backgroundColor = {
-        light: 'white',
-        dark: 'light'
-    }
+  const { colorMode, toggleColorMode } = useColorMode();
+  const iconColor = {
+    light: "black",
+    dark: "black",
+  };
+  const backgroundColor = {
+    light: "white",
+    dark: "light",
+  };
   return (
-      <LinkBox as="article">
+    <LinkBox as="article">
       <Box
         w="100%"
-       
         p={4}
         borderColor={useColorModeValue("gray.300", "gray.700")}
         borderRadius={5}
@@ -35,31 +33,27 @@ const ToolCard = ({ tool }) => {
         d="flex"
         role="group"
         _hover={{
-          color:'grey',
+          color: "grey",
         }}
       >
-              <IconButton
-            color={colorMode}
+        <IconButton
           as="a"
           href={tool?.url}
           rel="noopener"
           target="_blank"
           aria-label={tool?.name}
-                  mr={3}
-                  color={iconColor[colorMode]}
-        
+          mr={3}
+          color={iconColor[colorMode]}
           background="none"
           _groupHover={{ color: "yellow.500" }}
           icon={tool?.icon}
         />
-        <Box p='10px 0'>
+        <Box p="10px 0">
           <LinkOverlay href={tool?.url} rel="noopener" isExternal>
             <Heading as="h2" size="sm">
               {tool?.name}
             </Heading>
-            <Paragraph mt={1} fontSize="sm">
-             
-            </Paragraph>
+            <Paragraph mt={1} fontSize="sm"></Paragraph>
           </LinkOverlay>
         </Box>
       </Box>

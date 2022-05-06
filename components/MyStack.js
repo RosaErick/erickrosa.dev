@@ -1,4 +1,4 @@
-import ToolCard from "./toolCard";
+import ToolCard from "./ToolCard";
 import { Heading, Grid } from "@chakra-ui/react";
 import {
   FaNodeJs,
@@ -8,25 +8,33 @@ import {
   FaHtml5,
   FaCss3Alt,
 } from "react-icons/fa";
-import { SiStyledcomponents,SiNextdotjs, SiGnubash, SiChakraui } from "react-icons/si";
+import {
+  SiStyledcomponents,
+  SiNextdotjs,
+  SiGnubash,
+  SiChakraui,
+} from "react-icons/si";
 import Paragraph from "./Paragraph";
 
 const tools = [
-    {
+  {
     name: "Html",
-    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
+    description:
+      "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
     icon: <FaHtml5 fontSize="20px" />,
     url: "https://www.javascript.info",
   },
-      {
+  {
     name: "CSS",
-    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
+    description:
+      "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
     icon: <FaCss3Alt fontSize="20px" />,
     url: "https://www.javascript.info",
   },
   {
     name: "Javascript",
-    description: "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
+    description:
+      "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
     icon: <FaJs fontSize="20px" />,
     url: "https://www.javascript.info",
   },
@@ -38,13 +46,15 @@ const tools = [
   },
   {
     name: "React.js",
-    description: "An open-source JavaScript library for building user interfaces.",
+    description:
+      "An open-source JavaScript library for building user interfaces.",
     icon: <FaReact fontSize="20px" />,
     url: "https://www.reactjs.org",
   },
   {
     name: "Next.js",
-    description: " A react framework. Next.js gives you the best developer experience with all the features you need for production.",
+    description:
+      " A react framework. Next.js gives you the best developer experience with all the features you need for production.",
     icon: <SiNextdotjs fontSize="20px" />,
     url: "https://nextjs.org/",
   },
@@ -61,19 +71,19 @@ const tools = [
       "Styled-components is a CSS in JS library built for React. It helps keep the concerns of styling and element architecture",
     icon: <SiStyledcomponents fontSize="20px" />,
     url: "https://styled-components.com/",
-    },  {
+  },
+  {
     name: "Chakra-UI",
     description:
       "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
     icon: <SiChakraui fontSize="20px" />,
     url: "https://chakra-ui.com/",
-    },
-  
+  },
 ];
 
 const Stack = () => {
   return (
- <>
+    <>
       <Heading
         as="h2"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
@@ -94,8 +104,7 @@ const Stack = () => {
           <ToolCard tool={tool} key={tool?.name} />
         ))}
       </Grid>
-      </>
-
+    </>
   );
 };
 
