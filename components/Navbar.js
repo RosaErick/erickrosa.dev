@@ -1,6 +1,7 @@
 import {
     useColorMode,
     Image,
+    Link,
     Button,
     Flex,
     Box
