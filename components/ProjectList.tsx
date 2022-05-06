@@ -74,6 +74,7 @@ const ProjectListFull = () => {
                 {filteredProjects
                     .map((p, index) => (
                         <ProjectCard
+                            demoHref={p.homepage}
                             key={index}
                             title={p.name}
                             description={p.description}
@@ -82,7 +83,7 @@ const ProjectListFull = () => {
                             language={p.language}
                             starCount={p.stars}
                             stargazersUrl={p.stargazers_url}
-                            homepage={p.homepage}
+                            
                         />
                     ))}
             </SimpleGrid>

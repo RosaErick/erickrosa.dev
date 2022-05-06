@@ -85,16 +85,14 @@ export default function Home() {
                 repoHref="https://github.com/RosaErick/erickrosa.dev"
                 demoHref="https://erickrosa.dev"
                 languageColor="#f1e05a"
-                language="JavaScript"
-              />
+                language="JavaScript" starCount={0} stargazersUrl={""}              />
               <ProjectCard
                 title="Random Stoic Quote Generator"
                 description="Random Stoic Quote Generator built with React and Styled-components."
                 repoHref="https://github.com/RosaErick/StoicQuoteGenerator"
                 demoHref="https://randomstoicquote.netlify.app/"
                 languageColor="#f1e05a"
-                language="JavaScript"
-              />
+                language="JavaScript" starCount={0} stargazersUrl={""}             />
 
               <ProjectCard
                 title="HashtagFinder"
@@ -102,8 +100,7 @@ export default function Home() {
                 repoHref="https://hashtagfindernewtab.netlify.app/"
                 demoHref="https://github.com/RosaErick/hashtagFinderNewtab"
                 languageColor="#f1e05a"
-                language="JavaScript"
-              />
+                language="JavaScript" starCount={0} stargazersUrl={""}             />
 
               <ProjectCard
                 title="Financial Control App"
@@ -111,8 +108,7 @@ export default function Home() {
                 repoHref="https://github.com/RosaErick/AppControleFinanceiro"
                 demoHref="https://rosaerick.github.io/AppControleFinanceiro/"
                 languageColor="#f1e05a"
-                language="JavaScript"
-              />
+                language="JavaScript" starCount={0} stargazersUrl={""}            />
             </SimpleGrid>
           </Box>
         </motion.div>

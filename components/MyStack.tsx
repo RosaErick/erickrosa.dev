@@ -12,6 +12,7 @@ import {
   SiStyledcomponents,
   SiNextdotjs,
   SiGnubash,
+  SiTypescript,
   SiChakraui,
 } from "react-icons/si";
 import Paragraph from "./Paragraph";
@@ -37,6 +38,13 @@ const tools = [
       "A powerful tool and my favourite programming language. These days you can't build a great product without JS.",
     icon: <FaJs fontSize="20px" />,
     url: "https://www.javascript.info",
+  },
+    {
+    name: "TypeScript",
+    description:
+      "TypeScript is a superset of JavaScript that has optional typing and compiles to plain JavaScript. TypeScript is a really powerful tool and opens new world of possibilities in JavaScript projects.",
+    icon: <SiTypescript fontSize="20px" />,
+    url: "https://www.typescriptlang.org/",
   },
   {
     name: "Node.js",
@@ -65,13 +73,7 @@ const tools = [
     icon: <FaGitAlt fontSize="20px" />,
     url: "https://medium.com/swlh/things-about-git-and-github-you-need-to-know-as-developer-907baa0bed79",
   },
-  {
-    name: "Styled-components",
-    description:
-      "Styled-components is a CSS in JS library built for React. It helps keep the concerns of styling and element architecture",
-    icon: <SiStyledcomponents fontSize="20px" />,
-    url: "https://styled-components.com/",
-  },
+
   {
     name: "Chakra-UI",
     description:

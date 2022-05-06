@@ -37,7 +37,7 @@ const Navbar = () => {
             mx="auto"
         >
             
-        <GiSloth  fontSize="1.875rem" /> 
+        <GiSloth cursor='pointer' fontSize="1.875rem" /> 
             
             <Box>
                     <NextLink href="/" passHref>
@@ -115,7 +115,7 @@ const Navbar = () => {
                     </Button>
                     
                 </NextLink>
-                       <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref download>
+                       <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref>
                     <Button
                         as="a"
                         variant="ghost"

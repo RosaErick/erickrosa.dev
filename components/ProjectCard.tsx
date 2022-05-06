@@ -12,8 +12,20 @@ import {
 
 import { ExternalLinkIcon, ViewIcon } from '@chakra-ui/icons'
 
+interface ProjectCardProps {
+    title: string,
+    description: string,
+    repoHref: string,
+    demoHref: string,
+    languageColor: string,
+    language: string,
+    starCount: number,
+    stargazersUrl: string,
 
-export default function ProjectCard({ title, description, repoHref, demoHref, languageColor, language, starCount, stargazersUrl, homepage }) {
+
+} 
+
+export default function ProjectCard({ title, description, repoHref, demoHref, languageColor, language, starCount, stargazersUrl } : ProjectCardProps) {
     const [opacity, setOpacity] = useState(0)
     const [lineColor, setLineColor] = useState("blue.500")
     const { colorMode } = useColorMode()
@@ -53,19 +65,15 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
                                 </Flex>
                             </Link>
                         )}
-                        {homepage && (
-                            <Link href={homepage} isExternal>
-                                <IconButton icon={<ViewIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
-                            </Link>
-                        )}
+           
                         {repoHref && (
                             <Link href={repoHref} isExternal>
-                                <IconButton icon={<ExternalLinkIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton aria-label="Go to repo href" icon={<ExternalLinkIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                         {demoHref && (
                             <Link href={demoHref} isExternal>
-                                <IconButton icon={<ViewIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
+                                <IconButton aria-label="Go to demo href" icon={<ViewIcon />} variant="default" opacity={opacity} transition="opacity .5s ease-in-out" />
                             </Link>
                         )}
                     </Flex>
