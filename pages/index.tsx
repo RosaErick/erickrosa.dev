@@ -84,8 +84,8 @@ export default function Home() {
                 description="this site, my currently portfolio, built with Next.js, React and ChakraUI. The blog was built using Notion as a headless CMS with Notion API. The projects were fetched using GitHub API."
                 repoHref="https://github.com/RosaErick/erickrosa.dev"
                 demoHref="https://erickrosa.dev"
-                languageColor="#f1e05a"
-                language="JavaScript" starCount={0} stargazersUrl={""}              />
+                languageColor="#2b7489"
+                language="TypeScript" starCount={0} stargazersUrl={""}              />
               <ProjectCard
                 title="Random Stoic Quote Generator"
                 description="Random Stoic Quote Generator built with React and Styled-components."

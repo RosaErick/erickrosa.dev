@@ -22,6 +22,8 @@ function getLanguageColor(language) {
             return '#e34c26'
         case 'CSS':
             return '#480ca8'
+        case 'TypeScript':
+            return '#2b7489'
         default:
             return '#000000'
     }
