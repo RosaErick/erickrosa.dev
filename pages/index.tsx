@@ -47,10 +47,10 @@ export default function Home() {
                 Hi there, I&#39;m Erick.
               </Heading>
               <Paragraph fontSize="xl" lineHeight={1.6}>
-                I&#39;m a Web Developer from Rio de Janeiro, Brazil. I&#39;m
+                I&#39;m a Software Developer from Rio de Janeiro, Brazil. I&#39;m
                 curruntely working at{" "}
-                <Link href="https://www.mundiware.com/br" target="_blank">
-                  @Mundiware
+                <Link href="https://proffer.com.br/" target="_blank">
+                  @Proffer
                 </Link>{" "}
                 as a FrontEnd Developer and learning React and Next.js in my
                 free time.
