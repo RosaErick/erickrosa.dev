@@ -1,5 +1,6 @@
 import {
   Button,
+  Image,
   PopoverBody,
   PopoverCloseButton,
   PopoverContent,
@@ -30,7 +31,7 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
                 size="sm"
                 mr={2}
               >
-                <img src={value.image.source} alt={value.image.alt} />
+                <Image boxSize='20px' src={value.image.source} alt={value.image.alt} />
 
                 {value.title}
               </Button>
