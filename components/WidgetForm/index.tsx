@@ -1,8 +1,11 @@
-import React from 'react'
-import  bugImg  from '../../public/images/bug.svg'
-import  lampImg  from '../../public/images/lamp.svg'
-import  cloudImg  from '../../public/images/cloud.svg'
+import React, { useState } from "react";
+import bugImg from "../../public/images/bug.svg";
+import lampImg from "../../public/images/lamp.svg";
+import cloudImg from "../../public/images/cloud.svg";
 
+import { FeedbackSuccess } from "./Steps/FeedbackSuccess";
+import { FeedBackContentStep } from "./Steps/FeedbackContentStep";
+import { FeedbackTypeStep } from "./Steps/FeedBackTypeStep";
 
 export const feedbackTypes = {
   BUG: {
@@ -31,7 +34,33 @@ export const feedbackTypes = {
 export type FeedbackType = keyof typeof feedbackTypes;
 
 export default function WidgetForm() {
+  const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
+  const [feedbackSent, setFeedBackSent] = useState(false);
+
+  function handleRestartFeedBack() {
+    setFeedbackType(null);
+    setFeedBackSent(false);
+  }
+
   return (
-    <div>index</div>
-  )
+    <>
+      {feedbackSent ? (
+        <FeedbackSuccess onFeedbackRestart={handleRestartFeedBack} />
+      ) : (
+        <>
+          {!feedbackType ? (
+            <FeedbackTypeStep onFeedbackTypeChange={setFeedbackType} />
+          ) : (
+            <>
+              <FeedBackContentStep
+                onFeedbackRestart={handleRestartFeedBack}
+                onFeedbackSent={() => setFeedBackSent(true)}
+                feedbackType={feedbackType}
+              />
+            </>
+          )}
+        </>
+      )}
+    </>
+  );
 }
