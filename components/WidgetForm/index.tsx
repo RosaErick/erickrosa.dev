@@ -9,24 +9,24 @@ import { FeedbackTypeStep } from "./Steps/FeedBackTypeStep";
 
 export const feedbackTypes = {
   BUG: {
-    title: "Problema",
+    title: "Problem",
     image: {
       source: bugImg,
-      alt: "Imagem de um Inseto",
+      alt: "Insect Image",
     },
   },
   IDEA: {
-    title: "Mensagem",
+    title: "Menssage",
     image: {
       source: lampImg,
-      alt: "Imagem de um Lampada",
+      alt: "Lamp Image",
     },
   },
   OTHER: {
-    title: "Outro",
+    title: "Other",
     image: {
       source: cloudImg,
-      alt: "Imagem de uma nuvem",
+      alt: "Cloud image",
     },
   },
 };

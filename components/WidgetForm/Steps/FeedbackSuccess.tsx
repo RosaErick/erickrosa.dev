@@ -21,9 +21,9 @@ export function FeedbackSuccess({ onFeedbackRestart }: FeedbackSuccessProps) {
           <PopoverCloseButton />
         </PopoverHeader>
         <PopoverBody>
-          <p>Obrigado por nos ajudar a melhorar!</p>
+          <p>Thanks for your feedback!</p>
           <Button onClick={onFeedbackRestart} variant="outline" size="sm">
-            Enviar outro feedback
+           Send another Feedback
           </Button>
         </PopoverBody>
       </PopoverContent>

@@ -18,7 +18,7 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
     <>
       <PopoverContent>
         <PopoverHeader>
-          <h3>Deixei seu Feedback</h3>
+          <h3>Leave your feedback</h3>
         </PopoverHeader>
         <PopoverCloseButton />
         <PopoverBody>

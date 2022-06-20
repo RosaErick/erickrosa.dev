@@ -54,7 +54,7 @@ export function FeedBackContentStep({
                       
                       />
                       <Button type="submit" variant='outline' size="sm">
-                          Enviar
+                          Send
                         </Button>
                   </form>
                 </PopoverBody>
