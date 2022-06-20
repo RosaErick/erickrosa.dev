@@ -1,6 +1,15 @@
 import { FeedbackType, feedbackTypes } from "..";
 import { FormEvent, useState } from "react";
-import { Button, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader } from "@chakra-ui/react";
+import {
+  Button,
+  Image,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  Textarea,
+  useColorMode,
+} from "@chakra-ui/react";
 
 interface FeedBackContentStepProps {
   feedbackType: FeedbackType;
@@ -14,8 +23,18 @@ export function FeedBackContentStep({
   onFeedbackSent,
 }: FeedBackContentStepProps) {
   const feedbackTypeInfo = feedbackTypes[feedbackType];
-
   const [comment, setComment] = useState<string | null>(null);
+  const { colorMode } = useColorMode();
+
+  const iconColor = {
+    light: "black",
+    dark: "white",
+  };
+
+  const backgroundColor = {
+    light: "gray.100",
+    dark: "gray.800",
+  };
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
@@ -27,41 +46,41 @@ export function FeedBackContentStep({
 
   return (
     <>
-      <PopoverContent>
-              <PopoverHeader>
-                  <Button
-                      onClick={onFeedbackRestart}
-                      variant="outline"
-                      size="sm"
-                      mr={2}
-                    
-                  ></Button>
-
-                  <img
-                      src={feedbackTypeInfo.image.source}
-                        alt={feedbackTypeInfo.image.alt}
-                  />
-
-                <PopoverCloseButton />
-
-              </PopoverHeader>
-              
-              <PopoverBody
-
+      <PopoverHeader>
+        <Button
+          onClick={onFeedbackRestart}
+          variant="outline"
+          size="sm"
+            mr={2}
                   
+          backgroundColor={backgroundColor[colorMode]}
+          _hover={{ background: "none" }}
+          color={iconColor[colorMode]}
               >
-                  <form onSubmit={handleSubmitFeedback}>
-                      <textarea
-                          onChange={(event) => setComment(event.target.value)}
-                          placeholder="Leave your feedback"
-                      
-                      />
-                      <Button type="submit" variant='outline' size="sm">
-                          Send
-                        </Button>
-                  </form>
-                </PopoverBody>
-      </PopoverContent>
+                  
+                 	&#8592;
+            </Button>
+
+        <Image
+          boxSize="20px"
+          src={feedbackTypeInfo.image.source}
+          alt={feedbackTypeInfo.image.alt}
+        />
+
+        <PopoverCloseButton />
+      </PopoverHeader>
+
+      <PopoverBody>
+        <form onSubmit={handleSubmitFeedback}>
+          <Textarea
+            onChange={(event) => setComment(event.target.value)}
+            placeholder="Leave your feedback"
+          />
+          <Button type="submit" variant="outline" size="sm">
+            Send
+          </Button>
+        </form>
+      </PopoverBody>
     </>
   );
 }

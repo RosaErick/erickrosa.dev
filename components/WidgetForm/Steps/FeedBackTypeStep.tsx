@@ -18,20 +18,13 @@ interface FeedbackTypeStepProps {
 
 export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
 
-    const { colorMode } = useColorMode();
-      const textColor = useColorModeValue("#ffff", "gray.700");
 
-    const colors = {
-        light: 'light',
-        dark: 'dark',
-    }
+
 
 
   return (
     <>
-          <PopoverContent
-              backgroundColor={textColor}
-          >
+    
         <PopoverHeader>
           <Paragraph>Leave your feedback</Paragraph>
         </PopoverHeader>
@@ -58,7 +51,7 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
             );
           })}
         </PopoverBody>
-      </PopoverContent>
+
     </>
   );
 }

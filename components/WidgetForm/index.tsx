@@ -6,6 +6,7 @@ import cloudImg from "../../public/images/cloud.svg";
 import { FeedbackSuccess } from "./Steps/FeedbackSuccess";
 import { FeedBackContentStep } from "./Steps/FeedbackContentStep";
 import { FeedbackTypeStep } from "./Steps/FeedBackTypeStep";
+import { PopoverContent, useColorModeValue } from "@chakra-ui/react";
 
 export const feedbackTypes = {
   BUG: {
@@ -36,6 +37,8 @@ export type FeedbackType = keyof typeof feedbackTypes;
 export default function WidgetForm() {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [feedbackSent, setFeedBackSent] = useState(false);
+  const textColor = useColorModeValue("#ffff", "gray.700");
+
 
   function handleRestartFeedBack() {
     setFeedbackType(null);
@@ -43,7 +46,10 @@ export default function WidgetForm() {
   }
 
   return (
-    <>
+    <PopoverContent
+    backgroundColor={textColor}
+      
+    >
       {feedbackSent ? (
         <FeedbackSuccess onFeedbackRestart={handleRestartFeedBack} />
       ) : (
@@ -61,6 +67,6 @@ export default function WidgetForm() {
           )}
         </>
       )}
-    </>
+    </PopoverContent>
   );
 }
