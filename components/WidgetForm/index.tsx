@@ -48,7 +48,7 @@ export default function WidgetForm() {
   return (
     <PopoverContent
     backgroundColor={textColor}
-      
+
     >
       {feedbackSent ? (
         <FeedbackSuccess onFeedbackRestart={handleRestartFeedBack} />

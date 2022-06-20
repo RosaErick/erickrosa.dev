@@ -2,6 +2,7 @@ import { FeedbackType, feedbackTypes } from "..";
 import { FormEvent, useState } from "react";
 import {
   Button,
+  Flex,
   Image,
   PopoverBody,
   PopoverCloseButton,
@@ -10,6 +11,7 @@ import {
   Textarea,
   useColorMode,
 } from "@chakra-ui/react";
+import { ArrowLeftIcon, ChatIcon } from "@chakra-ui/icons";
 
 interface FeedBackContentStepProps {
   feedbackType: FeedbackType;
@@ -47,27 +49,28 @@ export function FeedBackContentStep({
   return (
     <>
       <PopoverHeader>
-        <Button
-          onClick={onFeedbackRestart}
-          variant="outline"
-          size="sm"
-            mr={2}
-                  
-          backgroundColor={backgroundColor[colorMode]}
-          _hover={{ background: "none" }}
-          color={iconColor[colorMode]}
-              >
-                  
-                 	&#8592;
-            </Button>
+        <Flex alignItems="center">
+          <Button
+            onClick={onFeedbackRestart}
+            variant="outline"
+            size="sm"
+            backgroundColor={backgroundColor[colorMode]}
+            _hover={{ background: "none" }}
+            color={iconColor[colorMode]}
+            aria-label="Open Widget"
+          >
+            <ArrowLeftIcon w={1} h={1} />
+          </Button>
 
-        <Image
-          boxSize="20px"
-          src={feedbackTypeInfo.image.source}
-          alt={feedbackTypeInfo.image.alt}
-        />
-
-        <PopoverCloseButton />
+          <Image
+            boxSize="20px"
+            src={feedbackTypeInfo.image.source}
+            alt={feedbackTypeInfo.image.alt}
+            flex="1"
+            justifySelf="center"
+          />
+          <PopoverCloseButton position="absolute" top="2" />
+        </Flex>
       </PopoverHeader>
 
       <PopoverBody>
@@ -75,6 +78,8 @@ export function FeedBackContentStep({
           <Textarea
             onChange={(event) => setComment(event.target.value)}
             placeholder="Leave your feedback"
+            mb={4}
+            mt={2}
           />
           <Button type="submit" variant="outline" size="sm">
             Send
