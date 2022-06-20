@@ -5,25 +5,43 @@ import {
   PopoverCloseButton,
   PopoverContent,
   PopoverHeader,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { FeedbackType, feedbackTypes } from "..";
+import Paragraph from "../../Paragraph";
 
 interface FeedbackTypeStepProps {
   onFeedbackTypeChange: (type: FeedbackType) => void;
 }
 
 export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
+
+    const { colorMode } = useColorMode();
+      const textColor = useColorModeValue("#ffff", "gray.700");
+
+    const colors = {
+        light: 'light',
+        dark: 'dark',
+    }
+
+
   return (
     <>
-      <PopoverContent>
+          <PopoverContent
+              backgroundColor={textColor}
+          >
         <PopoverHeader>
-          <h3>Leave your feedback</h3>
+          <Paragraph>Leave your feedback</Paragraph>
         </PopoverHeader>
         <PopoverCloseButton />
-        <PopoverBody>
+              <PopoverBody
+              
+              >
           {Object.entries(feedbackTypes).map(([key, value]) => {
-            return (
+              return (
+                
               <Button
                 onClick={() => props.onFeedbackTypeChange(key as FeedbackType)}
                 key={key}
@@ -32,9 +50,11 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
                 mr={2}
               >
                 <Image boxSize='20px' src={value.image.source} alt={value.image.alt} />
-
-                {value.title}
-              </Button>
+ <Paragraph>
+                   {value.title}
+                      </Paragraph>
+                      </Button>
+                    
             );
           })}
         </PopoverBody>

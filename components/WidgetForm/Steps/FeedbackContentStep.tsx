@@ -46,11 +46,14 @@ export function FeedBackContentStep({
 
               </PopoverHeader>
               
-              <PopoverBody>
+              <PopoverBody
+
+                  
+              >
                   <form onSubmit={handleSubmitFeedback}>
                       <textarea
                           onChange={(event) => setComment(event.target.value)}
-                          placeholder="Deixe seu feedback"
+                          placeholder="Leave your feedback"
                       
                       />
                       <Button type="submit" variant='outline' size="sm">
