@@ -4,6 +4,7 @@ import {
   Button,
   Flex,
   Image,
+  Input,
   PopoverBody,
   PopoverCloseButton,
   PopoverContent,
@@ -39,8 +40,6 @@ export function FeedBackContentStep({
   };
 
   function handleSubmitFeedback(event: FormEvent) {
-    event.preventDefault();
-
     console.log("submit feedback");
     console.log(comment);
     onFeedbackSent();
@@ -74,12 +73,24 @@ export function FeedBackContentStep({
       </PopoverHeader>
 
       <PopoverBody>
-        <form onSubmit={handleSubmitFeedback}>
+        <form
+          onSubmit={handleSubmitFeedback}
+          action="https://formsubmit.co/erickpmotta@gmail.com"
+          method="post"
+        >
+          <Input
+            placeholder="your contact email"
+            name="email"
+            type="email"
+            required
+          />
           <Textarea
             onChange={(event) => setComment(event.target.value)}
             placeholder="Leave your feedback"
+            name="text"
             mb={4}
             mt={2}
+            required
           />
           <Button type="submit" variant="outline" size="sm">
             Send
