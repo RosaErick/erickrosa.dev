@@ -1,141 +1,141 @@
 import {
-    useColorMode,
-    Image,
-    Link,
-    Button,
-    Flex,
-    Box
-} from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { useRouter } from 'next/router'
-import DarkModeSwitch from './DarkModeSwitch'
-import { GiSloth } from 'react-icons/gi'
-import MenuHamburguer from './Menu'
+  useColorMode,
+  Image,
+  Link,
+  Button,
+  Flex,
+  Box,
+  Stack,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
+import DarkModeSwitch from "./DarkModeSwitch";
+import { GiSloth } from "react-icons/gi";
+import MenuHamburguer from "./Menu";
 
 const Navbar = () => {
-    const { colorMode } = useColorMode()
-    const router = useRouter()
+  const { colorMode } = useColorMode();
+  const router = useRouter();
 
-    const navHoverBg = {
-        light: 'pink.400',
-        dark: 'pink.500',
-    }
+  const navHoverBg = {
+    light: "pink.400",
+    dark: "pink.500",
+  };
 
-    return (<>
-        <MenuHamburguer />
-        <Flex
-            display={['none', 'none', 'flex', 'flex']}
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            maxWidth="51.25rem"
-            minWidth="22.25rem"
-            width="100%"
-            as="nav"
-            px={6}
-            my={8}
-            mx="auto"
-        >
-            
-        <GiSloth cursor='pointer' fontSize="1.875rem" /> 
-            
-            <Box>
-                    <NextLink href="/" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        fontSize="sm"
-                        _hover={{ border: '.125rem solid',
-                           }} 
-                        aria-label="Home"
-                        colorScheme='dark'
-                    >
-                        Home
-                    </Button>
-                </NextLink>
-                <NextLink href="/blog" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        _hover={{
-                            border: '.0625rem solid',
-                          
-                        }}
-                        aria-label="Blog"
-                        fontSize="sm"
-                        colorScheme='dark'
-                    >
-                        Blog
-                    </Button>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        _hover={{border: '.0625rem solid',
-                             }} 
-                        aria-label="Projects"
-                        fontSize="sm"
-                         colorScheme='dark'
-                    >
-                        Projects
-                    </Button>
-                </NextLink>
-            
-                    <NextLink href="/snippets" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        _hover={{ border: '.0625rem solid',
-                        }} 
-                        aria-label="Snippets"
-                        fontSize="sm"
-                         colorScheme='dark'
-                    >
-                        Snippets
-                    </Button>
-                    
-                </NextLink>
-                    <NextLink href="/About" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        _hover={{ border: '.0625rem solid',
-                          }} 
-                        aria-label="About"
-                        fontSize="sm"
-                         colorScheme='dark'
-                    >
-                        About
-                    </Button>
-                    
-                </NextLink>
-                       <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref>
-                    <Button
-                        as="button"
-                        variant="ghost"
-                        p={[1, 2, 3]}
-                        _hover={{ border: '.0625rem solid',
-                          }} 
-                        aria-label="resume"
-                        fontSize="sm"
-                         colorScheme='dark'
-                    >
-                       Resume
-                    </Button>
-                    
-                </NextLink>
-                <DarkModeSwitch  />
-            </Box>
-            
-        </Flex>
-        </>
-    )
-}
+  return (
+    <Stack
+      as="nav"
+      spacing={8}
+      justifyContent="center"
+      alignItems="flex-start"
+      m="0 auto 4rem auto"
+      maxWidth="45.625rem"
+      px={[0, 0, 4, 4]}
+      position="relative"
+    >
+      <MenuHamburguer />
+      <Flex
+        display={["none", "none", "flex", "flex"]}
+        flexDirection="row"
+        m="0 auto 4rem auto"
+        justifyContent="space-between"
+        alignItems="center"
+        w="90%"
+        maxWidth="720px"
+        my={8}
+        position="relative"
+      >
+        <Box>
+          <NextLink href="/" passHref>
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              fontSize="sm"
+              _hover={{ border: ".125rem solid" }}
+              aria-label="Home"
+              colorScheme="dark"
+            >
+              Home
+            </Button>
+          </NextLink>
+          <NextLink href="/blog" passHref>
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              _hover={{
+                border: ".0625rem solid",
+              }}
+              aria-label="Blog"
+              fontSize="sm"
+              colorScheme="dark"
+            >
+              Blog
+            </Button>
+          </NextLink>
+          <NextLink href="/projects" passHref>
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              _hover={{ border: ".0625rem solid" }}
+              aria-label="Projects"
+              fontSize="sm"
+              colorScheme="dark"
+            >
+              Projects
+            </Button>
+          </NextLink>
 
-export default Navbar
+          <NextLink href="/snippets" passHref>
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              _hover={{ border: ".0625rem solid" }}
+              aria-label="Snippets"
+              fontSize="sm"
+              colorScheme="dark"
+            >
+              Snippets
+            </Button>
+          </NextLink>
+          <NextLink href="/About" passHref>
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              _hover={{ border: ".0625rem solid" }}
+              aria-label="About"
+              fontSize="sm"
+              colorScheme="dark"
+            >
+              About
+            </Button>
+          </NextLink>
+          <NextLink
+            href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf"
+            passHref
+          >
+            <Button
+              as="button"
+              variant="ghost"
+              p={[1, 2, 3]}
+              _hover={{ border: ".0625rem solid" }}
+              aria-label="resume"
+              fontSize="sm"
+              colorScheme="dark"
+            >
+              Resume
+            </Button>
+          </NextLink>
+        </Box>
+
+        <DarkModeSwitch />
+      </Flex>
+    </Stack>
+  );
+};
+
+export default Navbar;
