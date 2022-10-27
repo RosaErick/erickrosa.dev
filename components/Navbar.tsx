@@ -42,7 +42,7 @@ const Navbar = () => {
             <Box>
                     <NextLink href="/" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         fontSize="sm"
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </NextLink>
                 <NextLink href="/blog" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         _hover={{
@@ -72,7 +72,7 @@ const Navbar = () => {
                 </NextLink>
                 <NextLink href="/projects" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         _hover={{border: '.0625rem solid',
@@ -87,7 +87,7 @@ const Navbar = () => {
             
                     <NextLink href="/snippets" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         _hover={{ border: '.0625rem solid',
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </NextLink>
                     <NextLink href="/About" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         _hover={{ border: '.0625rem solid',
@@ -117,7 +117,7 @@ const Navbar = () => {
                 </NextLink>
                        <NextLink href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf" passHref>
                     <Button
-                        as="a"
+                        as="button"
                         variant="ghost"
                         p={[1, 2, 3]}
                         _hover={{ border: '.0625rem solid',
