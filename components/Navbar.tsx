@@ -1,26 +1,16 @@
 import {
-  useColorMode,
-  Image,
-  Link,
   Button,
   Flex,
   Box,
   Stack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { useRouter } from "next/router";
 import DarkModeSwitch from "./DarkModeSwitch";
-import { GiSloth } from "react-icons/gi";
 import MenuHamburguer from "./Menu";
 
 const Navbar = () => {
-  const { colorMode } = useColorMode();
-  const router = useRouter();
-
-  const navHoverBg = {
-    light: "pink.400",
-    dark: "pink.500",
-  };
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   return (
     <Stack
@@ -51,10 +41,10 @@ const Navbar = () => {
               as="button"
               variant="ghost"
               p={[1, 2, 3]}
-              fontSize="sm"
+              fontSize="m"
               _hover={{ border: ".125rem solid" }}
               aria-label="Home"
-              colorScheme="dark"
+              color={textColor}
             >
               Home
             </Button>
@@ -68,8 +58,9 @@ const Navbar = () => {
                 border: ".0625rem solid",
               }}
               aria-label="Blog"
-              fontSize="sm"
+              fontSize="m"
               colorScheme="dark"
+              color={textColor}
             >
               Blog
             </Button>
@@ -81,8 +72,8 @@ const Navbar = () => {
               p={[1, 2, 3]}
               _hover={{ border: ".0625rem solid" }}
               aria-label="Projects"
-              fontSize="sm"
-              colorScheme="dark"
+              fontSize="m"
+              color={textColor}
             >
               Projects
             </Button>
@@ -95,8 +86,8 @@ const Navbar = () => {
               p={[1, 2, 3]}
               _hover={{ border: ".0625rem solid" }}
               aria-label="Snippets"
-              fontSize="sm"
-              colorScheme="dark"
+              fontSize="m"
+              color={textColor}
             >
               Snippets
             </Button>
@@ -108,8 +99,8 @@ const Navbar = () => {
               p={[1, 2, 3]}
               _hover={{ border: ".0625rem solid" }}
               aria-label="About"
-              fontSize="sm"
-              colorScheme="dark"
+              fontSize="m"
+              color={textColor}
             >
               About
             </Button>
@@ -117,19 +108,7 @@ const Navbar = () => {
           <NextLink
             href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf"
             passHref
-          >
-            <Button
-              as="button"
-              variant="ghost"
-              p={[1, 2, 3]}
-              _hover={{ border: ".0625rem solid" }}
-              aria-label="resume"
-              fontSize="sm"
-              colorScheme="dark"
-            >
-              Resume
-            </Button>
-          </NextLink>
+          ></NextLink>
         </Box>
 
         <DarkModeSwitch />
