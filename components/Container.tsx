@@ -6,9 +6,8 @@ import { Widget } from "./Widget";
 export default function Container({ children }) {
   return (
     <>
+      <Navbar />
 
-    <Navbar />
-     
       <Stack
         as="main"
         spacing={8}
@@ -19,15 +18,13 @@ export default function Container({ children }) {
         px={4}
         position="relative"
       >
-         
-      
         <Flex
           flexDirection="column"
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
           w="100%"
-          p="30px 0"
+
         >
           {children}
         </Flex>
