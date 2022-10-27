@@ -49,7 +49,7 @@ const Navbar = () => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="/blog" passHref>
+          {/* <NextLink href="/blog" passHref>
             <Button
               as="button"
               variant="ghost"
@@ -64,7 +64,7 @@ const Navbar = () => {
             >
               Blog
             </Button>
-          </NextLink>
+          </NextLink> */}
           <NextLink href="/projects" passHref>
             <Button
               as="button"
@@ -79,7 +79,7 @@ const Navbar = () => {
             </Button>
           </NextLink>
 
-          <NextLink href="/snippets" passHref>
+          {/* <NextLink href="/snippets" passHref>
             <Button
               as="button"
               variant="ghost"
@@ -91,7 +91,7 @@ const Navbar = () => {
             >
               Snippets
             </Button>
-          </NextLink>
+          </NextLink> */}
           <NextLink href="/About" passHref>
             <Button
               as="button"
