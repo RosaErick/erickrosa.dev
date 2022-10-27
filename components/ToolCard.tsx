@@ -30,8 +30,8 @@ const ToolCard = ({ tool }) => {
         borderWidth="1px"
         transition=".5s"
         cursor="pointer"
-        d="flex"
         role="group"
+        display="flex"
         _hover={{
           color: "grey",
         }}
