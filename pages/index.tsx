@@ -44,7 +44,7 @@ export default function Home() {
           <Flex justifyContent="space-around">
             <Flex flexDir="column" p=" 0 20px 0 0">
               <Heading as="h1" p="0 0 30px 0">
-                Hi there, I&#39;m Erick.
+                Hi there, I&#39;m Erick  🍃 
               </Heading>
 
               <Paragraph fontSize="xl" lineHeight={1.8}>
