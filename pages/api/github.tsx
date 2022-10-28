@@ -2,6 +2,7 @@ export default async (req, res) => {
     const url = "https://api.github.com/users/RosaErick/repos"
     const response = await fetch(url)
     const json = await response.json()
+
     const projectsList = []
 
     json.forEach(p => {
@@ -11,7 +12,10 @@ export default async (req, res) => {
             "url": p.html_url,
             "description": p.description,
             "language": p.language,
-            "homepage":p.homepage
+            "homepage": p.homepage,
+            "topics": p.topics,
+            "created_at": p.created_at,
+            "updated_at": p.updated_at,
         })
     })
 

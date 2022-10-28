@@ -55,7 +55,7 @@ export default function Home() {
                 <Link href="https://proffer.com.br/" target="_blank">
                   @Proffer
                 </Link>{" "}
-                as a frontend developer. Outside of programming and taking care of my kid, I enjoy talking about music, history, philosophy and watching football and boxing.
+                as a frontend developer. Outside of programming and taking care of my kid, I enjoy biking, talking about music, history, philosophy and watching football and boxing.
               </Paragraph>
             </Flex>
             {/*<Image
