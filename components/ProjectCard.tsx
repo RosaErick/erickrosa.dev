@@ -56,7 +56,7 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
         >
             <Flex p={[5, 15, 25]} flexDir="column" justify="space-between" h="100%">
                 <Box>
-                    <Heading as="h3" size="lg" fontWeight="semibold" mb={2}>{title}</Heading>
+                    <Heading as="h3" size="md" fontWeight="semibold" mb={2}>{title}</Heading>
                     <Box h={1} w="35%" bgColor={lineColor} transition="background-color .5s ease-in-out" mb={4} />
                     <Text color={colorSecondary[colorMode]}>{description}</Text>
                 </Box>
