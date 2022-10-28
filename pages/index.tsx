@@ -95,7 +95,7 @@ export default function Home() {
                   show={showNotation}
                   animationDuration={5000}
                   color="pink"
-                  strokeWidth={2}
+                  
                 >
                   JavaScript, TypeScript, React, Vue, Node.js, Ruby and Python.
                 </RoughNotation>{" "}
