@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/BlogPosts.js"  ],
+, "components/BlogPosts.js", "scripts/fetcher.js"  ],
   "exclude": [
     "node_modules"
   ]

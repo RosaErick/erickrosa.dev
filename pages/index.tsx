@@ -17,6 +17,15 @@ const description =
 export default function Home() {
   const [showNotation, setShowNotation] = useState(true);
 
+  useEffect(() => {
+    const handleNotationDisplay = () => {
+      if (window.innerWidth > 768) setShowNotation(true);
+      else setShowNotation(false);
+    };
+
+    handleNotationDisplay();
+  }, []);
+
   return (
     <>
       <Script async src="https://cdn.splitbee.io/sb.js" />
@@ -83,20 +92,19 @@ export default function Home() {
                   animate={true}
                   animationDelay={5500}
                   type="underline"
-                  show={true}
+                  show={showNotation}
                   animationDuration={5000}
                   color="pink"
-                  padding={0}
+                  strokeWidth={2}
                 >
-                  JavaScript, TypeScript, React, Node.js, Ruby, Python and
-                  MongoDB.
+                  JavaScript, TypeScript, React, Vue, Node.js, Ruby and Python.
                 </RoughNotation>{" "}
                 I&#39;m curruntely working at{" "}
                 <RoughNotation
                   animate={true}
-                  animationDelay={9900}
+                  animationDelay={11000}
                   type="circle"
-                  show={showNotation}
+                  show={true}
                   color="pink"
                   animationDuration={3000}
                   padding={1}
@@ -108,9 +116,9 @@ export default function Home() {
                 as a{" "}
                 <RoughNotation
                   animate={true}
-                  animationDelay={10400}
+                  animationDelay={13900}
                   type="highlight"
-                  show={showNotation}
+                  show={true}
                   color="yellow"
                   animationDuration={3300}
                   padding={0}

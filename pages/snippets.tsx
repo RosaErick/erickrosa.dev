@@ -104,7 +104,7 @@ export default function Snippets({ snippets }) {
               p="20px"
               
           _hover={{ borderColor: "blue.300", marginTop:"1px" }}
-          _transition="color 0.15 ease, border-color 0.15s ease, margin-top  0.1s ease"
+          //_transition="color 0.15 ease, border-color 0.15s ease, margin-top  0.1s ease"
           borderRadius={"10px"}
           textAlign="left"
               textDecoration={"none"}

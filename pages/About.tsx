@@ -65,7 +65,7 @@ const About = () => {
                 onClick={handleToggle}
                 mt="1rem"
                 variant="ghost"
-                _hover="color = grey.400"
+                
               >
                 Show {show ? "Less" : "More"}
               </Button>
