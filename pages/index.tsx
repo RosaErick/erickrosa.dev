@@ -6,6 +6,8 @@ import Stack from "../components/MyStack";
 import Paragraph from "../components/Paragraph";
 import Script from "next/script";
 import ProjectCard from "../components/ProjectCard";
+import { RoughNotation } from "react-rough-notation";
+import { useEffect, useState } from "react";
 
 const url = "https://erickrosa.dev/";
 const title = "Erick Rosa";
@@ -13,6 +15,8 @@ const description =
   "Self-taught web developer, Javascript enthusiast, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience.";
 
 export default function Home() {
+  const [showNotation, setShowNotation] = useState(true);
+
   return (
     <>
       <Script async src="https://cdn.splitbee.io/sb.js" />
@@ -44,18 +48,78 @@ export default function Home() {
           <Flex justifyContent="space-around">
             <Flex flexDir="column" p=" 0 20px 0 0">
               <Heading as="h1" p="0 0 30px 0">
-                Hi there, I&#39;m Erick  🍃 
+                Hi there, I&#39;m Erick 🍃
               </Heading>
 
               <Paragraph fontSize="xl" lineHeight={1.8}>
-                I&#39;m a software developer currently based in Rio de Janeiro,
-                Brazil. Avid learner with a passion for open source and building things with code. I may not take myself very seriously but take my job very seriously and loves solving problems instead of complaining about them. Interested
-                in JavaScript, TypeScript, React, Node.js, Ruby, Python and
-                MongoDB. I&#39;m curruntely working at{" "}
-                <Link href="https://proffer.com.br/" target="_blank">
-                  @Proffer
-                </Link>{" "}
-                as a frontend developer. Outside of programming and taking care of my kid, I enjoy biking, talking about music, history, philosophy and watching football and boxing.
+                I&#39;m a{" "}
+                <RoughNotation
+                  animate={true}
+                  animationDelay={1200}
+                  animationDuration={1000}
+                  type="underline"
+                  show={true}
+                  color="pink"
+                  padding={0}
+                >
+                  software developer
+                </RoughNotation>{" "}
+                currently based in Rio de Janeiro, Brazil. Avid learner with a
+                passion for open source and building things with code. I may not
+                take myself very seriously but{" "}
+                <RoughNotation
+                  animate={true}
+                  animationDelay={3300}
+                  type="box"
+                  show={showNotation}
+                  color="pink"
+                  padding={0}
+                >
+                  take my job very seriously{" "}
+                </RoughNotation>
+                and loves solving problems instead of complaining about them.
+                Interested in{" "}
+                <RoughNotation
+                  animate={true}
+                  animationDelay={5500}
+                  type="underline"
+                  show={true}
+                  animationDuration={5000}
+                  color="pink"
+                  padding={0}
+                >
+                  JavaScript, TypeScript, React, Node.js, Ruby, Python and
+                  MongoDB.
+                </RoughNotation>{" "}
+                I&#39;m curruntely working at{" "}
+                <RoughNotation
+                  animate={true}
+                  animationDelay={9900}
+                  type="circle"
+                  show={showNotation}
+                  color="pink"
+                  animationDuration={3000}
+                  padding={1}
+                >
+                  <Link href="https://proffer.com.br/" target="_blank">
+                    @Proffer{" "}
+                  </Link>
+                </RoughNotation>{" "}
+                as a{" "}
+                <RoughNotation
+                  animate={true}
+                  animationDelay={10400}
+                  type="highlight"
+                  show={showNotation}
+                  color="yellow"
+                  animationDuration={3300}
+                  padding={0}
+                >
+                  frontend developer.
+                </RoughNotation>{" "}
+                Outside of programming and taking care of my kid, I enjoy
+                biking, talking about music, history, philosophy and watching
+                football and boxing.
               </Paragraph>
             </Flex>
             {/*<Image
