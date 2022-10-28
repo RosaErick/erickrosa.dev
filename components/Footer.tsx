@@ -59,7 +59,7 @@ const Footer = () => (
         />
       </ButtonGroup>
     </Stack>
-    <Flex
+    {/* <Flex
       justifyContent={"center"}
       fontWeight="bold"
       fontSize={9}
@@ -75,7 +75,7 @@ const Footer = () => (
         Resume
       </NextLink>
       <NextLink href="/About">About</NextLink>
-    </Flex>
+    </Flex> */}
     <Divider pt={2} />
     <Stack direction="row" align="center" justify="space-between" pt={5}>
       <Text fontSize="11px" fontWeight={"medium"}>
