@@ -92,7 +92,7 @@ const Navbar = () => {
               Snippets
             </Button>
           </NextLink> */}
-          <NextLink href="/About" passHref>
+           {/* <NextLink href="/About" passHref>
             <Button
               as="button"
               variant="ghost"
@@ -103,8 +103,8 @@ const Navbar = () => {
               color={textColor}
             >
               About
-            </Button>
-          </NextLink>
+            </Button> 
+          </NextLink> */}
           <NextLink
             href="https://erickrosa.dev/images/Erick_Rosa_CV_2022.pdf"
             passHref

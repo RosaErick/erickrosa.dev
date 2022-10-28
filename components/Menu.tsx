@@ -64,19 +64,19 @@ const MenuHamburguer = () => {
                 Home
               </NextLink>
             </MenuItem>
-            <MenuItem>
+            {/* <MenuItem>
               {" "}
               <NextLink href="/blog" passHref>
                 Blog
               </NextLink>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem>
               {" "}
               <NextLink href="/projects" passHref>
                 Projects
               </NextLink>
             </MenuItem>
-            <MenuItem>
+            {/* <MenuItem>
               <NextLink href="/snippets" passHref>
                 Snippets
               </NextLink>
@@ -86,7 +86,7 @@ const MenuHamburguer = () => {
               <NextLink href="/About" passHref>
                 About
               </NextLink>
-            </MenuItem>
+            </MenuItem> */}
           </MenuList>
         </Menu>
       </Box>

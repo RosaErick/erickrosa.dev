@@ -46,14 +46,16 @@ export default function Home() {
               <Heading as="h1" p="0 0 30px 0">
                 Hi there, I&#39;m Erick.
               </Heading>
-              <Paragraph fontSize="xl" lineHeight={1.6}>
-                I&#39;m a Software Developer from Rio de Janeiro, Brazil. I&#39;m
-                curruntely working at{" "}
+
+              <Paragraph fontSize="xl" lineHeight={1.8}>
+                I&#39;m a software developer currently based in Rio de Janeiro,
+                Brazil. Avid learner with a passion for open source and building things with code. I may not take myself very seriously but take my job very seriously and loves solving problems instead of complaining about them. Interested
+                in JavaScript, TypeScript, React, Node.js, Ruby, Python and
+                MongoDB. I&#39;m curruntely working at{" "}
                 <Link href="https://proffer.com.br/" target="_blank">
                   @Proffer
                 </Link>{" "}
-                as a FrontEnd Developer and learning React and Next.js in my
-                free time.
+                as a FrontEnd Developer. Outside of programming and taking care of my kid, I enjoy talking about music, history, philosophy and watching football and boxing.
               </Paragraph>
             </Flex>
             {/*<Image
@@ -66,7 +68,6 @@ export default function Home() {
           </Flex>
           <Box as="div" m="30px 0"></Box>
 
-          <Stack />
           <Box as="section" mt={10} mb={20}>
             <Heading
               letterSpacing="tight"
@@ -74,7 +75,7 @@ export default function Home() {
               size="lg"
               fontWeight={700}
               as="h2"
-              mb={4}
+              mb={10}
             >
               Featured Projects 👨‍💻
             </Heading>
@@ -85,30 +86,42 @@ export default function Home() {
                 repoHref="https://github.com/RosaErick/erickrosa.dev"
                 demoHref="https://erickrosa.dev"
                 languageColor="#2b7489"
-                language="TypeScript" starCount={0} stargazersUrl={""}              />
+                language="TypeScript"
+                starCount={0}
+                stargazersUrl={""}
+              />
               <ProjectCard
                 title="Random Stoic Quote Generator"
                 description="Random Stoic Quote Generator built with React and Styled-components."
                 repoHref="https://github.com/RosaErick/StoicQuoteGenerator"
                 demoHref="https://randomstoicquote.netlify.app/"
                 languageColor="#f1e05a"
-                language="JavaScript" starCount={0} stargazersUrl={""}             />
+                language="JavaScript"
+                starCount={0}
+                stargazersUrl={""}
+              />
 
               <ProjectCard
-                title="HashtagFinder"
-                description="A colaborative project built for the newtab Academy curriculum. The app connects with the Twitter API to return and render searched tweets and images."
-                repoHref="https://hashtagfindernewtab.netlify.app/"
-                demoHref="https://github.com/RosaErick/hashtagFinderNewtab"
+                title="node-aws-cognito-Admin-API"
+                description="exemple of a Node.js Auth API using Cognito Identity Provider Client - AWS SDK v3 (admin-level Cognito APIs)."
+                repoHref="https://github.com/RosaErick/node-aws-cognito-Admin-API"
+                demoHref="https://github.com/RosaErick/node-aws-cognito-Admin-API"
                 languageColor="#f1e05a"
-                language="JavaScript" starCount={0} stargazersUrl={""}             />
+                language="JavaScript"
+                starCount={0}
+                stargazersUrl={""}
+              />
 
               <ProjectCard
                 title="Financial Control App"
-                description="Solo Project developed for the curriculum of Newtab Academy. Via Varejo FrontEnd Test. The app works as a financial control tool and it's a SPA built only with vanilla Javascript, without any framework."
+                description="Via Varejo FrontEnd Test. The app works as a financial control tool and it's a SPA built only with vanilla Javascript, without any framework."
                 repoHref="https://github.com/RosaErick/AppControleFinanceiro"
                 demoHref="https://rosaerick.github.io/AppControleFinanceiro/"
                 languageColor="#f1e05a"
-                language="JavaScript" starCount={0} stargazersUrl={""}            />
+                language="JavaScript"
+                starCount={0}
+                stargazersUrl={""}
+              />
             </SimpleGrid>
           </Box>
         </motion.div>
