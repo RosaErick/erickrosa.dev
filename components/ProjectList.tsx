@@ -73,11 +73,11 @@ const ProjectListFull = () => {
         project?.language?.toLowerCase().includes(searchValue.toLowerCase())
     )
 
-    //sort repos by updated_at
+    //sort repos by created_at
 
-    .sort((a: { updated_at: string }, b: { updated_at: string }) => {
+    .sort((a: {  created_at: string }, b: { created_at: string }) => {
       return (
-        new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
       );
     });
 
