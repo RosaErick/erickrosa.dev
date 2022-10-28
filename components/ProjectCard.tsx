@@ -30,6 +30,10 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
     const [lineColor, setLineColor] = useState("blue.500")
     const { colorMode } = useColorMode()
 
+
+
+
+
     const colorSecondary = {
         light: 'gray.600',
         dark: 'gray.400'
