@@ -1,9 +1,8 @@
 const title = 'Erick Rosa'
-const description = 'Erick Rosa, Web Developer, javascript enthusiast and Internet Systems student'
+const description = ''
 
 const SEO = {
     title,
-    description,
     canonical: 'https://erickrosa.dev',
     openGraph: {
         type: 'website',
