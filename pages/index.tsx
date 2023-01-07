@@ -87,7 +87,7 @@ export default function Home() {
                   take my job very seriously{" "}
                 </RoughNotation>
                 and loves solving problems instead of complaining about them.
-                Interested in JavaScript, TypeScript, Node.js, Rust, Python, and
+                Interested in JavaScript, TypeScript, Node.js, Rust, Python and
                 all the ecosystems around theses languages. I&#39;m curruntely
                 working at{" "}
                 <RoughNotation
