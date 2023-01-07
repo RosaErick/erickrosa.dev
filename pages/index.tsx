@@ -2,7 +2,6 @@ import Container from "../components/Container";
 import { Heading, Box, Flex, Link, SimpleGrid } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
-import Stack from "../components/MyStack";
 import Paragraph from "../components/Paragraph";
 import Script from "next/script";
 import ProjectCard from "../components/ProjectCard";
