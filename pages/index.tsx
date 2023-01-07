@@ -87,18 +87,9 @@ export default function Home() {
                   take my job very seriously{" "}
                 </RoughNotation>
                 and loves solving problems instead of complaining about them.
-                Interested in{" "}
-                <RoughNotation
-                  animate={true}
-                  animationDelay={5500}
-                  type="underline"
-                  show={showNotation}
-                  animationDuration={5000}
-                  color="pink"
-                >
-                  JavaScript, TypeScript, React, Vue, Node.js, Ruby and Python.
-                </RoughNotation>{" "}
-                I&#39;m curruntely working at{" "}
+                Interested in JavaScript, TypeScript, Node.js, Rust, Python, and
+                all the ecosystems around theses languages. I&#39;m curruntely
+                working at{" "}
                 <RoughNotation
                   animate={true}
                   animationDelay={11000}
@@ -112,21 +103,9 @@ export default function Home() {
                     @Proffer{" "}
                   </Link>
                 </RoughNotation>{" "}
-                as a{" "}
-                <RoughNotation
-                  animate={true}
-                  animationDelay={13900}
-                  type="highlight"
-                  show={true}
-                  color="yellow"
-                  animationDuration={3300}
-                  padding={0}
-                >
-                  frontend developer.
-                </RoughNotation>{" "}
-                Outside of programming and taking care of my kid, I enjoy
-                biking, talking about music, history, philosophy and watching
-                football and boxing.
+                as a frontend developer. Outside of programming and taking care
+                of my kid, I enjoy biking, talking about music, history,
+                philosophy and watching football and boxing.
               </Paragraph>
             </Flex>
             {/*<Image
@@ -184,10 +163,10 @@ export default function Home() {
               />
 
               <ProjectCard
-                title="Financial Control App"
-                description="Via Varejo FrontEnd Test. The app works as a financial control tool and it's a SPA built only with vanilla Javascript, without any framework."
-                repoHref="https://github.com/RosaErick/AppControleFinanceiro"
-                demoHref="https://rosaerick.github.io/AppControleFinanceiro/"
+                title="CalendarBot"
+                description="A simple twitter node bot for test and studies. This app fetches data from a calendar on Airtable and transforms it in a tweet or a thread with an image. It also comes with a cron job to repeat the task everyday."
+                repoHref="https://github.com/RosaErick/node-twitter-bot"
+                demoHref="https://github.com/RosaErick/node-twitter-bot"
                 languageColor="#f1e05a"
                 language="JavaScript"
                 starCount={0}
