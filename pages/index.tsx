@@ -86,9 +86,9 @@ export default function Home() {
                   take my job very seriously{" "}
                 </RoughNotation>
                 and loves solving problems instead of complaining about them.
-                Interested in JavaScript, TypeScript, Node.js, Rust, Python and
-                all the ecosystems around theses languages. I&#39;m curruntely
-                working at{" "}
+                Interested in JavaScript, TypeScript, Rust, Python and all the
+                ecosystems around theses languages. I&#39;m curruntely working
+                at{" "}
                 <RoughNotation
                   animate={true}
                   animationDelay={11000}
@@ -99,12 +99,12 @@ export default function Home() {
                   padding={1}
                 >
                   <Link href="https://proffer.com.br/" target="_blank">
-                    @Proffer{" "}
+                    @Proffer.{" "}
                   </Link>
-                </RoughNotation>{" "}
-                as a frontend developer. Outside of programming and taking care
-                of my kid, I enjoy biking, talking about music, history,
-                philosophy and watching football and boxing.
+                </RoughNotation>
+                Outside of programming and taking care of my kid, I enjoy
+                biking, talking about music, history, philosophy and watching
+                football and boxing.
               </Paragraph>
             </Flex>
             {/*<Image
