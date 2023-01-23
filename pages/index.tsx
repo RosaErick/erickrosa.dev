@@ -103,7 +103,7 @@ export default function Home() {
                   </Link>
                 </RoughNotation>
                 Outside of programming and taking care of my kid, I enjoy
-                biking, talking about music, history, philosophy and watching
+                swimming, talking about music, history, philosophy and watching
                 football and boxing.
               </Paragraph>
             </Flex>
