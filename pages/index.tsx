@@ -87,7 +87,7 @@ export default function Home() {
                 </RoughNotation>
                 and loves solving problems instead of complaining about them.
                 Interested in JavaScript, TypeScript, Rust, Python and all the
-                ecosystems around theses languages. I&#39;m curruntely working
+                ecosystems around these languages. I&#39;m curruntely working
                 at{" "}
                 <RoughNotation
                   animate={true}
