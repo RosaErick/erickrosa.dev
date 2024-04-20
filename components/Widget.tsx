@@ -12,7 +12,7 @@ export function Widget() {
   };
 
   const backgroundColor = {
-    light: "gray.100",
+    light: "#f0e7db",
     dark: "gray.800",
   };
 
@@ -23,7 +23,7 @@ export function Widget() {
           <PopoverTrigger>
             <IconButton
               backgroundColor={backgroundColor[colorMode]}
-              _hover={{ background: "none" }}
+              _hover={{ background: "none", marginTop: "20px" }}
               color={iconColor[colorMode]}
               aria-label="Open Widget"
               icon={<ChatIcon />}

@@ -1,5 +1,5 @@
 import { NotionRenderer } from "react-notion"
-import Container from "../../components/Container"
+import Layout from "../../layouts/Layout"
 import { Text, Button, Link, Box } from '@chakra-ui/react'
 import { NextSeo } from "next-seo"
 import { ArrowLeftIcon } from "@chakra-ui/icons"
@@ -60,7 +60,7 @@ export default ({ snippet, blocks }) => {
         cardType: 'summary_large_image',
       }}
     />
-      <Container>
+      <Layout>
       
          <Box maxWidth='768'>
      
@@ -71,7 +71,7 @@ export default ({ snippet, blocks }) => {
             <Button background={"none"} _hover={{ background: "none" }}><Link href="/snippets"><ArrowLeftIcon /></Link></Button>
           </Box>
       
-      </Container>
+      </Layout>
     </>
   )
 }

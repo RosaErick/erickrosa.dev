@@ -14,7 +14,7 @@ import {
   Tag,
 } from "@chakra-ui/react";
 import Paragraph from "../components/Paragraph";
-import Container from "../components/Container";
+import Container from "../layouts/Layout";
 import { motion } from "framer-motion";
 
 const About = () => {

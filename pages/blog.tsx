@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Container from "../layouts/Layout";
 import {
   Heading,
   Box,

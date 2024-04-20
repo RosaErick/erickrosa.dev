@@ -10,7 +10,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import Container from "../components/Container";
+import Container from "../layouts/Layout";
 import { getAllSnippets } from "./api/notionSnippets";
 import { useState } from "react";
 import Paragraph from "../components/Paragraph";

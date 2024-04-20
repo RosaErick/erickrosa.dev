@@ -1,9 +1,10 @@
 import { Flex, Stack } from "@chakra-ui/react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import { Widget } from "./Widget";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Widget } from "../components/Widget";
+import { motion } from "framer-motion";
 
-export default function Container({ children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Navbar />
@@ -24,9 +25,14 @@ export default function Container({ children }) {
           alignItems="flex-start"
           maxWidth="700px"
           w="100%"
-
         >
-          {children}
+          <motion.div 
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            {children}
+          </motion.div>
         </Flex>
 
         <Widget />
