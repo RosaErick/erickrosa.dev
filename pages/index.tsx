@@ -68,8 +68,9 @@ export default function Home() {
                 software developer
               </RoughNotation>{" "}
               currently based in Rio de Janeiro, Brazil. Avid learner with a
-              passion for open source and building things with code. I may not
-              take myself very seriously but{" "}
+              passion for open source and building things with code. I'm a
+              multipotentialite person that loves solving problems and learn new
+              things.{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={3300}
@@ -78,11 +79,10 @@ export default function Home() {
                 color="pink"
                 padding={0}
               >
-                take my job very seriously{" "}
-              </RoughNotation>
-              and loves solving problems instead of complaining about them.
-              Interested in JavaScript, TypeScript, Rust, Python and all the
-              ecosystems around these languages. I&#39;m curruntely working at{" "}
+                Interested in Javscript, Ruby, Python, TypeScript
+              </RoughNotation>{" "}
+              and all the ecosystems around these languages. I&#39;m curruntely
+              working at{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={11000}
@@ -96,9 +96,8 @@ export default function Home() {
                   @Proffer.{" "}
                 </Link>
               </RoughNotation>
-              Outside of programming and taking care of my kid, I enjoy
-              swimming, talking about music, history, philosophy and watching
-              football and boxing.
+              Outside of programming and taking care of my kid, I enjoy talking
+              about music, history, philosophy and watching football and boxing.
             </Paragraph>
           </Flex>
           {/*<Image
