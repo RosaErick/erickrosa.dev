@@ -23,7 +23,7 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export default ({ snippet, blocks }) => {
-  if (!snippet) return <Container><Text>Loading...</Text></Container>
+  if (!snippet) return <Layout><Text>Loading...</Text></Layout>
   return (
     <>
         <NextSeo
