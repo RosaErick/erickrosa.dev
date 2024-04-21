@@ -42,7 +42,7 @@ const Navbar = () => {
       spacing={8}
       justifyContent="center"
       alignItems="flex-start"
-      m="0 auto 4rem auto"
+      m="0 auto 2rem auto"
       maxWidth="800px"
       px={[0, 0, 4, 4]}
       position="relative"
@@ -61,7 +61,7 @@ const Navbar = () => {
       >
         <Box>
           <LinkItem href="/" path={path} target="_self">
-            Home
+            home
           </LinkItem>
           {/* <NextLink href="/blog" passHref>
             <Button
@@ -80,7 +80,10 @@ const Navbar = () => {
             </Button>
           </NextLink> */}
           <LinkItem href="/projects" path={path} target="_self">
-            Projects
+            projects
+          </LinkItem>
+          <LinkItem href="/work" path={path} target="_self">
+            work
           </LinkItem>
 
           {/* <NextLink href="/snippets" passHref>

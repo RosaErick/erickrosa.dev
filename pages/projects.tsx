@@ -25,13 +25,13 @@ export default function Projects() {
         description="All my projects stored in GitHub, created using GitHub API"
       />
 
-      <Heading as="h1" lineHeight="20px">
-        Projects{" "}
+      <Heading as="h1" fontSize="2xl" fontWeight="medium">
+        projects{" "}
       </Heading>
       <Box
         height="5px"
-        w="135px"
-        m="15px 0"
+        w="100px"
+        m="10px 0"
         bottom="-1px"
         display="block"
         backgroundImage="radial-gradient( circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2% );
