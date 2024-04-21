@@ -19,7 +19,7 @@ export const ModelContainer = forwardRef<HTMLDivElement, DogContainerProps>(
     <Box
     ref={ref}
     m="auto"
-    mt={['-20px', '-60px', '-160px']}
+    mt={['-20px', '-60px', '-100px']}
     mb={['-40px', '-140px', '-80px']}
     w={[180, 640, 640]}
     h={[180, 480, 640]}

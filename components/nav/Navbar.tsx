@@ -41,10 +41,11 @@ const Navbar = () => {
       w="100%"
       px={[0, 0, 4, 4]}
       position="fixed"
-      top="5"
+      top="0"
       left="0"
       right="0"
-      zIndex="10"
+      zIndex={2}
+      css={{ backdropFilter: 'blur(10px)' }}
     >
       <Container
         display="flex"
