@@ -21,10 +21,11 @@ export const ModelContainer = forwardRef<HTMLDivElement, DogContainerProps>(
     m="auto"
     mt={['-20px', '-60px', '-160px']}
     mb={['-40px', '-140px', '-80px']}
-    w={[180, 580, 640]}
-    h={[280, 480, 640]}
+    w={[180, 640, 640]}
+    h={[180, 480, 640]}
     position="relative"
     zIndex="0"  
+    alignSelf={['center', 'center', 'center']}
     >
       {children}
     </Box>

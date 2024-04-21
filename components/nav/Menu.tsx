@@ -33,16 +33,15 @@ const MenuHamburguer = () => {
       display={["flex", "flex", "none", "none"]}
       color={menuTextColor}
       zIndex={2}
-      css={{ backdropFilter: 'blur(10px)' }}
     >
-      <Box css={{ backdropFilter: 'blur(10px)' }}>
+      <Box>
         <Menu>
           <MenuButton
             as={IconButton}
             aria-label="Options"
             icon={<HamburgerIcon />}
             variant="outline"
-            color={iconColor}  // Use dynamic color
+            color={iconColor} // Use dynamic color
             _expanded={{ bg: menuHoverBgColor }}
             _hover={{ bg: menuHoverBgColor }}
             _focus={{ boxShadow: "outline" }}
