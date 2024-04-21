@@ -39,19 +39,18 @@ const ModelViewer: React.FC<Props> = () => {
       });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(scW, scH);
-
       container.appendChild(renderer.domElement);
       refRenderer.current = renderer;
-      const scene = new THREE.Scene();
 
+      const scene = new THREE.Scene();
       const target = new THREE.Vector3(-0.5, 1.2, 0);
       const initialCameraPosition = new THREE.Vector3(
-        -70 * Math.sin(0.2 * Math.PI),
-        10,
-        -10 * Math.cos(0.2 * Math.PI)
+        -20 * Math.sin(Math.PI * 2),
+        40,
+        -70 * Math.cos(Math.PI * 2)
       );
 
-      const scale = scH * 0.005 + 4.8;
+      const scale = scH * 0.005 + 5.5;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -68,6 +67,7 @@ const ModelViewer: React.FC<Props> = () => {
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
+      controls.autoRotateSpeed = -2;
       controls.target = target;
 
       loadGLTFModel(scene, modelUrl, {
@@ -83,18 +83,13 @@ const ModelViewer: React.FC<Props> = () => {
       const animate = () => {
         req = requestAnimationFrame(animate);
 
-        frame = frame <= 100 ? frame + 1 : frame;
-
         if (frame <= 100) {
-          const p = initialCameraPosition;
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
-
-          camera.position.y = 10;
-          camera.position.x =
-            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
-          camera.position.z =
-            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed);
+          const factor = easeOutCirc(frame / 100);
+          const angle = Math.PI * 2 * factor; // Full rotation over 100 frames
+          camera.position.x = 70 * Math.sin(angle);
+          camera.position.z = 70 * Math.cos(angle);
           camera.lookAt(target);
+          frame++;
         } else {
           controls.update();
         }

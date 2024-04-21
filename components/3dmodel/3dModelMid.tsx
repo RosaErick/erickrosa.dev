@@ -45,16 +45,10 @@ const ModelViewerMid: React.FC<Props> = () => {
 
       const scene = new THREE.Scene();
 
-      // Adjust target to center the model more appropriately
-      const target = new THREE.Vector3(0, 1.2, 0); // Centered and slightly elevated target
-      const initialCameraPosition = new THREE.Vector3(
-        0,
-        10,
-        20 // Closer and centered on the target
-      );
+      const target = new THREE.Vector3(0, 1.2, 0);
+      const initialCameraPosition = new THREE.Vector3(0, 10, 20);
 
-      // Adjust the camera scale and properties
-      const scale = 2; // Smaller scale to zoom in closer
+      const scale = 2;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,11 +60,12 @@ const ModelViewerMid: React.FC<Props> = () => {
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1); // Brighter light
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
       scene.add(ambientLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
+      controls.autoRotateSpeed = -2;
       controls.target.copy(target);
 
       loadGLTFModel(scene, modelUrl, {
