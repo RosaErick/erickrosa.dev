@@ -15,7 +15,7 @@ const ModelViewer: React.FC<Props> = () => {
   const refContainer = useRef<HTMLDivElement | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const refRenderer = useRef<THREE.WebGLRenderer | null>(null);
-  const modelUrl = "/models/low_poly_lighthouse_scene.glb";
+  const modelUrl = "/models/pokemon_firered_-_players_room.glb";
 
   const handleWindowResize = useCallback(() => {
     const renderer = refRenderer.current;
@@ -48,7 +48,7 @@ const ModelViewer: React.FC<Props> = () => {
       const initialCameraPosition = new THREE.Vector3(
         -70 * Math.sin(0.2 * Math.PI),
         10,
-        20 * Math.cos(0.2 * Math.PI)
+        -10 * Math.cos(0.2 * Math.PI)
       );
 
       const scale = scH * 0.005 + 4.8;

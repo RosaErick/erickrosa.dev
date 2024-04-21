@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese house 2.0
+* source:	https://sketchfab.com/3d-models/japanese-house-20-5ae0121e33b54b7789c6b9113da444bf
+* author:	annzep (https://sketchfab.com/annzep)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese house 2.0" (https://sketchfab.com/3d-models/japanese-house-20-5ae0121e33b54b7789c6b9113da444bf) by annzep (https://sketchfab.com/annzep) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
