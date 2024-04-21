@@ -37,6 +37,10 @@ export default function Projects() {
         backgroundImage="radial-gradient( circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2% );
 }"
       ></Box>
+      <Text fontSize="medium" mt={4}>
+        here you can find and search all my projects stored in GitHub, created using GitHub
+        API.
+      </Text>
 
       <Flex flexDir="column" m="30px 0">
         {!data && (
