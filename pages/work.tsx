@@ -61,7 +61,7 @@ export default function WorkPage() {
             Docker and some AWS services like Lambda, Ec2, S3, Amplify, and
             others.
           </Text>
-          <UnorderedList spacing={3}>
+          <UnorderedList spacing={3} px={6}>
             <ListItem>
               My daily responsibilities involve collaborative efforts as part of
               geographically distributed teams, working in sync with the entire
@@ -103,7 +103,7 @@ export default function WorkPage() {
             development of customized solutions aimed at optimizing production
             stages.
           </Text>
-          <UnorderedList spacing={3}>
+          <UnorderedList spacing={3} px={6}>
             <ListItem>
               I started as a trainee and was promoted to a full-time position
               after 4 months. I worked on the development of websites and
@@ -115,6 +115,12 @@ export default function WorkPage() {
               responsible for the upgrade and maintenance of these projects.
             </ListItem>
           </UnorderedList>
+          <Text>
+            This was my first job as a developer, and I learned a lot about web
+            development and software engineering in a brief period. I was able
+            to develop my skills in frontend development and learn about the
+            importance of teamwork and collaboration in software development.
+          </Text>
         </VStack>
       </Box>
     </Layout>
