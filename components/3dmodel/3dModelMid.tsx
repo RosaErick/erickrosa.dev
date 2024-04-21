@@ -96,11 +96,7 @@ const ModelViewerMid: React.FC<Props> = () => {
     };
   }, [handleWindowResize]);
 
-  return (
-    <ModelContainer ref={refContainer}>
-      {loading && <ModelSpinner />}
-    </ModelContainer>
-  );
+  return <ModelContainer ref={refContainer}></ModelContainer>;
 };
 
 export default ModelViewerMid;
