@@ -1,5 +1,5 @@
 import { NotionRenderer } from "react-notion";
-import Container from "../../components/Container";
+import Layout from "../../layouts/Layout";
 import { Text, Button, Box, Link } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { ArrowLeftIcon } from "@chakra-ui/icons";
@@ -28,9 +28,9 @@ export async function getStaticProps({ params: { slug } }) {
 export default ({ post, blocks }) => {
   if (!post)
     return (
-      <Container>
+      <Layout>
         <Text>Loading...</Text>
-      </Container>
+      </Layout>
     );
   return (
     <>
@@ -68,7 +68,7 @@ export default ({ post, blocks }) => {
           cardType: "summary_large_image",
         }}
       />
-      <Container>
+      <Layout>
         <Box maxWidth="768">
           <Text>
             <NotionRenderer blockMap={blocks} />
@@ -80,7 +80,7 @@ export default ({ post, blocks }) => {
             </Link>
           </Button>
         </Box>
-      </Container>
+      </Layout>
     </>
   );
 };

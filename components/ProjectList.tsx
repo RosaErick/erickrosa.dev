@@ -23,12 +23,16 @@ function getLanguageColor(language: any) {
     case "CSS":
       return "#480ca8";
     case "TypeScript":
-          return "#2b7489";
-      case "Vue":
-            return "#2c3e";
+      return "#2b7489";
+    case "Vue":
+      return "#2c3e";
+    case "Ruby":
+      return "#701516";
+    case "bash":
+      return "#89e051";
+
     default:
       return "#000000";
-      
   }
 }
 
@@ -60,9 +64,6 @@ const ProjectListFull = () => {
       </div>
     );
 
-
-
-
   const filteredProjects = Object(data.repos)
     .filter(
       (project: { name: string; description: string; language: string }) =>
@@ -75,7 +76,7 @@ const ProjectListFull = () => {
 
     //sort repos by created_at
 
-    .sort((a: {  created_at: string }, b: { created_at: string }) => {
+    .sort((a: { created_at: string }, b: { created_at: string }) => {
       return (
         new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
       );

@@ -116,31 +116,21 @@ export default function Home() {
           </Heading>
           <SimpleGrid minChildWidth="300px" spacing="40px">
             <ProjectCard
-              title="erickrosa.dev"
-              description="this site, my currently portfolio, built with Next.js, React and ChakraUI. The blog was built using Notion as a headless CMS with Notion API. The projects were fetched using GitHub API."
-              repoHref="https://github.com/RosaErick/erickrosa.dev"
-              demoHref="https://erickrosa.dev"
-              languageColor="#2b7489"
-              language="TypeScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
-            <ProjectCard
-              title="Random Stoic Quote Generator"
-              description="Random Stoic Quote Generator built with React and Styled-components."
-              repoHref="https://github.com/RosaErick/StoicQuoteGenerator"
-              demoHref="https://randomstoicquote.netlify.app/"
-              languageColor="#f1e05a"
-              language="JavaScript"
+              title="Ruby-docker-ecomm"
+              description="an e-commerce platform template built with Ruby on Rails, Tailwind CSS, Hotwire and Postgres. Admin pane, shopping experience, filter categories, add items to cart, process secure checkouts with Stripe integration."
+              repoHref="https://github.com/RosaErick/ruby-docker-commerce"
+              demoHref="rubydockercomm.onrender.com"
+              languageColor="#701516"
+              language="Ruby"
               starCount={0}
               stargazersUrl={""}
             />
 
             <ProjectCard
-              title="node-aws-cognito-Admin-API"
-              description="exemple of a Node.js Auth API using Cognito Identity Provider Client - AWS SDK v3 (admin-level Cognito APIs)."
-              repoHref="https://github.com/RosaErick/node-aws-cognito-Admin-API"
-              demoHref="https://github.com/RosaErick/node-aws-cognito-Admin-API"
+              title="setup-kit-node-js"
+              description="A setup kit/starter for node js using deploy first approach and Github Actions."
+              repoHref="https://github.com/RosaErick/setup-kit-node-js"
+              demoHref="https://github.com/RosaErick/setup-kit-node-js"
               languageColor="#f1e05a"
               language="JavaScript"
               starCount={0}
@@ -154,6 +144,36 @@ export default function Home() {
               demoHref="https://github.com/RosaErick/node-twitter-bot"
               languageColor="#f1e05a"
               language="JavaScript"
+              starCount={0}
+              stargazersUrl={""}
+            />
+            <ProjectCard
+              title="spotifysplit"
+              description="Spotifysplit is a simple fullstack app connected to Spotify via OAUTH 2.0 to see all kinds of music stats. Built for practice. Currently in progress, building it in public. Feel free to fork and use as you like. frotend: Vite + TypeScript + React + TailWindCSS, backend: Node.js + Express."
+              repoHref="https://github.com/RosaErick/spotifysplit"
+              demoHref="https://github.com/RosaErick/spotifysplit"
+              languageColor="#2b7489"
+              language="TypeScript"
+              starCount={0}
+              stargazersUrl={""}
+            />
+            <ProjectCard
+              title="AI-vegetarian-recipes"
+              description="AI generated vegetarian recipes! you can share it! Built with Node.js, MongoDB, Vite, React, TailwindCSS and OpenAI API(ChatGPT)"
+              repoHref="https://github.com/RosaErick/AI-vegetarian-recipes"
+              demoHref="aivegetarianrecipes.netlify.app/"
+              languageColor="#f1e05a"
+              language="JavaScript"
+              starCount={0}
+              stargazersUrl={""}
+            />
+            <ProjectCard
+              title="erickrosa.dev"
+              description="this site, my currently portfolio, built with Next.js, React and ChakraUI. The projects were fetched using GitHub API."
+              repoHref="https://github.com/RosaErick/erickrosa.dev"
+              demoHref="https://erickrosa.dev"
+              languageColor="#2b7489"
+              language="TypeScript"
               starCount={0}
               stargazersUrl={""}
             />
