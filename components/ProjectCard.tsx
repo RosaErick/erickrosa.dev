@@ -8,6 +8,7 @@ import {
     Box,
     IconButton,
     Button,
+    useColorModeValue,
 } from '@chakra-ui/react'
 
 import { ExternalLinkIcon, ViewIcon } from '@chakra-ui/icons'
@@ -58,7 +59,7 @@ export default function ProjectCard({ title, description, repoHref, demoHref, la
             <Flex p={[5, 15, 25]} flexDir="column" justify="space-between" h="100%" minHeight="280px">
                 <Box>
                     <Heading as="h3" size="md" fontWeight="semibold" mb={2}>{title}</Heading>
-                    <Box h={1} w="35%" bgColor={lineColor} transition="background-color .5s ease-in-out" mb={4} />
+                    <Box h={1} w="35%" bgColor={useColorModeValue("black", "pink")} transition="background-color .5s ease-in-out" mb={4} />
                     <Text fontSize="medium" color={colorSecondary[colorMode]}>{description}</Text>
                 </Box>
                 <Flex justify="space-between" mt={2}>

@@ -1,5 +1,12 @@
 import Layout from "../layouts/Layout";
-import { Heading, Box, Flex, Link, SimpleGrid } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Flex,
+  Link,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
 import Paragraph from "../components/Paragraph";
@@ -62,42 +69,43 @@ export default function Home() {
                 animationDuration={1000}
                 type="underline"
                 show={true}
-                color="pink"
+                color={useColorModeValue("black", "pink")}
                 padding={0}
               >
                 software developer
               </RoughNotation>{" "}
-              currently based in Rio de Janeiro, Brazil. Avid learner with a
-              passion for open source and building things with code. I'm a
-              multipotentialite person that loves solving problems and learn new
-              things.{" "}
+              currently based in Rio de Janeiro, Brazil and working at{" "}
               <RoughNotation
                 animate={true}
-                animationDelay={3300}
-                type="box"
-                show={showNotation}
-                color="pink"
-                padding={0}
-              >
-                Interested in Javscript, Ruby, Python, TypeScript
-              </RoughNotation>{" "}
-              and all the ecosystems around these languages. I&#39;m curruntely
-              working at{" "}
-              <RoughNotation
-                animate={true}
-                animationDelay={11000}
+                animationDelay={4300}
                 type="circle"
                 show={true}
-                color="pink"
+                color={useColorModeValue("black", "pink")}
                 animationDuration={3000}
                 padding={1}
               >
                 <Link href="https://proffer.com.br/" target="_blank">
-                  @Proffer.{" "}
+                  @Proffer.
                 </Link>
+              </RoughNotation>{" "}
+              As an avid learner passionate about open source, I enjoy building
+              things with code and am particularly interested in languages like{" "}
+              <RoughNotation
+                animate={true}
+                animationDelay={8500}
+                type="box"
+                show={showNotation}
+                color={useColorModeValue("black", "pink")}
+                padding={0}
+              >
+                JavaScript, Ruby, Python, and TypeScript
               </RoughNotation>
-              Outside of programming and taking care of my kid, I enjoy talking
-              about music, history, philosophy and watching football and boxing.
+              , along with their ecosystems. I'm a multipotentialite who loves
+              solving problems and learning new things. Aside from programming
+              and taking care of my child, I like to chill at the beach, wander
+              through nature, and chat about topics like music, history, and
+              philosophy. I also like practicing and watching football and
+              boxing. I passed the Voight-Kampff Test.
             </Paragraph>
           </Flex>
           {/*<Image
@@ -112,12 +120,12 @@ export default function Home() {
 
         <Box as="section" mt={10} mb={20}>
           <Heading letterSpacing="tight" mt={8} fontSize="2xl" as="h2" mb={10}>
-            Featured Projects 👨‍💻
+            Featured Projects  🛠️
           </Heading>
           <SimpleGrid minChildWidth="300px" spacing="40px">
             <ProjectCard
               title="Ruby-docker-ecomm"
-              description="an e-commerce platform template built with Ruby on Rails, Tailwind CSS, Hotwire and Postgres. Admin pane, shopping experience, filter categories, add items to cart, process secure checkouts with Stripe integration."
+              description="an e-commerce platform template built with Ruby on Rails, Tailwind CSS, Hotwire and Postgres. Admin panel, shopping experience, filter categories, add items to cart, process secure checkouts with Stripe integration."
               repoHref="https://github.com/RosaErick/ruby-docker-commerce"
               demoHref="rubydockercomm.onrender.com"
               languageColor="#701516"

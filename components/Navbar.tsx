@@ -1,10 +1,4 @@
-import {
-  Button,
-  Flex,
-  Box,
-  Stack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Button, Flex, Box, Stack, useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 import MenuHamburguer from "./Menu";
@@ -19,7 +13,7 @@ const Navbar = () => {
       justifyContent="center"
       alignItems="flex-start"
       m="0 auto 4rem auto"
-      maxWidth="45.625rem"
+      maxWidth="800px"
       px={[0, 0, 4, 4]}
       position="relative"
     >
@@ -31,7 +25,7 @@ const Navbar = () => {
         justifyContent="space-between"
         alignItems="center"
         w="90%"
-        maxWidth="720px"
+        maxWidth="820px"
         my={8}
         position="relative"
       >
@@ -92,7 +86,7 @@ const Navbar = () => {
               Snippets
             </Button>
           </NextLink> */}
-           {/* <NextLink href="/About" passHref>
+          {/* <NextLink href="/About" passHref>
             <Button
               as="button"
               variant="ghost"
