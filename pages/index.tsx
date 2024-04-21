@@ -9,9 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
-import Paragraph from "../components/Paragraph";
+import Paragraph from "../layouts/Paragraph";
 import Script from "next/script";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/projects/ProjectCard";
 import { RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
 
@@ -54,7 +54,7 @@ export default function Home() {
           ],
         }}
       />
-      <Layout>
+      
         <Flex justifyContent="space-around">
           <Flex flexDir="column" p=" 0 20px 0 0">
             <Heading as="h1" p="0 0 30px 0" fontSize="2xl">
@@ -187,7 +187,7 @@ export default function Home() {
             />
           </SimpleGrid>
         </Box>
-      </Layout>
+      
     </>
   );
 }

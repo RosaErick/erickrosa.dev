@@ -13,7 +13,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import Container from "../layouts/Layout";
 import { getAllSnippets } from "./api/notionSnippets";
 import { useState } from "react";
-import Paragraph from "../components/Paragraph";
+import Paragraph from "../layouts/Paragraph";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 

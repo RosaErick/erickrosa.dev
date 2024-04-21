@@ -6,6 +6,7 @@ import theme from "../theme";
 import "@fontsource/ibm-plex-sans/700.css";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/300.css";
+import Layout from "../layouts/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" type="favicon" href="../static/favicon.ico" />
       </Head>
+      <Layout>
       <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   );
 }

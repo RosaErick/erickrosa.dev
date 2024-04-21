@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { Flex, Heading, Text, Spinner, Box } from "@chakra-ui/react";
 import Layout from "../layouts/Layout";
-import ProjectList from "../components/ProjectList";
+import ProjectList from "../components/projects/ProjectList";
 import React from "react";
 import { NextSeo } from "next-seo";
 
@@ -18,7 +18,7 @@ export default function Projects() {
     );
 
   return (
-    <Layout>
+    <>
       <NextSeo
         title="Projects | Erick Rosa"
         description="All my projects stored in GitHub, created using GitHub API"
@@ -54,6 +54,6 @@ export default function Projects() {
         )}
         <ProjectList />
       </Flex>
-    </Layout>
+    </>
   );
 }

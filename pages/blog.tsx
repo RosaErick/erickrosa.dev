@@ -15,7 +15,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 import BlogPost from "../components/BlogPosts";
-import Paragraph from "../components/Paragraph";
+import Paragraph from "../layouts/Paragraph";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
