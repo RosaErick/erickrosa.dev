@@ -1,10 +1,40 @@
-import { Button, Flex, Box, Stack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Box,
+  Stack,
+  useColorModeValue,
+  Link,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 import MenuHamburguer from "./Menu";
 
+const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href;
+  const inactiveColor = useColorModeValue("gray.600", "gray.400");
+  const activeColor = useColorModeValue("gray.900", "gray.100");
+  const bgColor = useColorModeValue("", "");
+
+  return (
+    <Link
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? bgColor : undefined}
+      color={active ? activeColor : inactiveColor}
+      target={target}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};
+
 const Navbar = () => {
   const textColor = useColorModeValue("gray.600", "gray.400");
+  const path = typeof window !== "undefined" ? window.location.pathname : "";
 
   return (
     <Stack
@@ -30,19 +60,9 @@ const Navbar = () => {
         position="relative"
       >
         <Box>
-          <NextLink href="/" passHref>
-            <Button
-              as="button"
-              variant="ghost"
-              p={[1, 2, 3]}
-              fontSize="m"
-              _hover={{ border: ".125rem solid" }}
-              aria-label="Home"
-              color={textColor}
-            >
-              Home
-            </Button>
-          </NextLink>
+          <LinkItem href="/" path={path} target="_self">
+            Home
+          </LinkItem>
           {/* <NextLink href="/blog" passHref>
             <Button
               as="button"
@@ -59,19 +79,9 @@ const Navbar = () => {
               Blog
             </Button>
           </NextLink> */}
-          <NextLink href="/projects" passHref>
-            <Button
-              as="button"
-              variant="ghost"
-              p={[1, 2, 3]}
-              _hover={{ border: ".0625rem solid" }}
-              aria-label="Projects"
-              fontSize="m"
-              color={textColor}
-            >
-              Projects
-            </Button>
-          </NextLink>
+          <LinkItem href="/projects" path={path} target="_self">
+            Projects
+          </LinkItem>
 
           {/* <NextLink href="/snippets" passHref>
             <Button
