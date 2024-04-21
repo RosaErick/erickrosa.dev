@@ -1,7 +1,6 @@
 import useSWR from "swr";
 import { Flex, Heading, Text, Spinner, Box } from "@chakra-ui/react";
 import Layout from "../layouts/Layout";
-import { motion } from "framer-motion";
 import ProjectList from "../components/ProjectList";
 import React from "react";
 import { NextSeo } from "next-seo";
@@ -38,8 +37,8 @@ export default function Projects() {
 }"
       ></Box>
       <Text fontSize="medium" mt={4}>
-        here you can find and search all my projects stored in GitHub, created using GitHub
-        API.
+        here you can find and search all my projects stored in GitHub, created
+        using GitHub API.
       </Text>
 
       <Flex flexDir="column" m="30px 0">

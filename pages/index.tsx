@@ -103,7 +103,7 @@ export default function Home() {
               , along with their ecosystems. I'm a multipotentialite who loves
               solving problems and learning new things. Aside from programming
               and taking care of my child, I like to chill at the beach, wander
-              through nature, and chat about topics like music, history, and
+              through nature, and chat about topics like arts, music, history, and
               philosophy. I also like practicing and watching football and
               boxing. I passed the Voight-Kampff Test.
             </Paragraph>
