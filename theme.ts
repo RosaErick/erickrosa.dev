@@ -15,6 +15,10 @@ const theme = extendTheme({
     body: `'IBM Plex Sans', sans-serif`,
   },
   styles,
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,  // This disables the system color mode detection
+  },
 });
 
 export default theme;
