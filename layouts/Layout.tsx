@@ -14,7 +14,6 @@ export default function Layout({ children }) {
       alignItems="flex-start"
       m="0 auto 4rem auto"
       maxW="20vw"
-      px={0}
       position="relative"
     >
       <Navbar />
@@ -23,6 +22,7 @@ export default function Layout({ children }) {
         justifyContent="center"
         alignItems="center"
         p={8}
+        m="0 auto"
         w="100%"
       >
         <motion.div
@@ -35,7 +35,6 @@ export default function Layout({ children }) {
         </motion.div>
       </Flex>
 
-      <Widget />
       <Footer />
     </Stack>
   );

@@ -19,7 +19,7 @@ const Footer = () => (
     role="contentinfo"
     m=" 0 auto"
     width={"100%"}
-    maxW="7xl"
+    maxW="100%"
     px={{ base: "4", md: "8" }}
   >
     <Stack
@@ -28,7 +28,6 @@ const Footer = () => (
       align="center"
       alignSelf={"center"}
       justify="center"
-      pb={5}
       textAlign="center"
     >
       <ButtonGroup variant="default">
@@ -76,7 +75,7 @@ const Footer = () => (
       </NextLink>
       <NextLink href="/About">About</NextLink>
     </Flex> */}
-    <Divider pt={2} />
+    <Divider pt={2} w="100%" />
     <Stack direction="row" align="center" justify="space-between" pt={5}>
       <Text fontSize="11px" fontWeight={"medium"}>
         &copy; Erick Rosa {new Date().getFullYear()}
