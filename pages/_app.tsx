@@ -8,10 +8,12 @@ import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/300.css";
 import Layout from "../layouts/Layout";
 import { SessionProvider } from "next-auth/react";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
+      <Analytics />
       <ChakraProvider theme={theme}>
         <Head>
           <link rel="icon" type="favicon" href="../static/favicon.ico" />
