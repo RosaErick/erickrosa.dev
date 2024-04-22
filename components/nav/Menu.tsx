@@ -23,8 +23,7 @@ const MenuHamburguer = () => {
       flexDirection="row"
       justifyContent="space-between"
       alignItems="center"
-      maxWidth="820px"
-      minWidth="356px"
+      
       width="100%"
       as="nav"
       px={1}
@@ -49,12 +48,22 @@ const MenuHamburguer = () => {
           <MenuList bg={menuBgColor}>
             <MenuItem>
               <NextLink href="/" passHref>
-                Home
+                home
               </NextLink>
             </MenuItem>
             <MenuItem>
               <NextLink href="/projects" passHref>
-                Projects
+                projects
+              </NextLink>
+            </MenuItem>
+            <MenuItem>
+              <NextLink href="/work" passHref>
+                work
+              </NextLink>
+            </MenuItem>
+            <MenuItem>
+              <NextLink href="/guestbook" passHref>
+                guestbook
               </NextLink>
             </MenuItem>
           </MenuList>

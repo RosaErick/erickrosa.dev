@@ -39,13 +39,13 @@ const Navbar = () => {
       as="nav"
       spacing={8}
       w="100%"
-      px={[0, 0, 4, 4]}
+      px={[4, 4, 4, 4]}
       position="fixed"
       top="0"
       left="0"
       right="0"
       zIndex={2}
-      css={{ backdropFilter: 'blur(10px)' }}
+      css={{ backdropFilter: "blur(10px)" }}
     >
       <Container
         display="flex"
@@ -70,6 +70,9 @@ const Navbar = () => {
             </LinkItem>
             <LinkItem target="_self" href="/work" path={path}>
               work
+            </LinkItem>
+            <LinkItem target="_self" href="/guestbook" path={path}>
+              guestbook
             </LinkItem>
           </Stack>
         </Flex>

@@ -66,7 +66,7 @@ export default function Home() {
               Hi there, I&#39;m Erick 🍃
             </Heading>
 
-            <Paragraph fontSize="xl" lineHeight={1.8}>
+            <Paragraph fontSize={['sm', 'md']} lineHeight={1.8}>
               I&#39;m a{" "}
               <RoughNotation
                 animate={true}

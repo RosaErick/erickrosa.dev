@@ -13,16 +13,16 @@ export default function Layout({ children }) {
       justifyContent="center"
       alignItems="flex-start"
       m="0 auto 4rem auto"
-      maxWidth="800px"
-      px={8}
+      maxW="20vw"
+      px={0}
       position="relative"
     >
       <Navbar />
       <Flex
         flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
+        justifyContent="center"
+        alignItems="center"
+        p={8}
         w="100%"
       >
         <motion.div
