@@ -2,11 +2,13 @@ import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const styles = {
-  global: (props) => ({
-    body: {
-      bg: mode("#f0e7db", "#202023")(props),
-    },
-  }),
+  global: (props) => {
+    return {
+      body: {
+        bg: mode("#f0e7db", "#202023")(props),
+      },
+    };
+  },
 };
 
 const theme = extendTheme({
@@ -16,8 +18,8 @@ const theme = extendTheme({
   },
   styles,
   config: {
-    initialColorMode: 'dark',
-    useSystemColorMode: false,  // This disables the system color mode detection
+    initialColorMode: "dark",
+    useSystemColorMode: false, // This disables the system color mode detection
   },
 });
 
