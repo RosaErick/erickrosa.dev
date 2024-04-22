@@ -7,17 +7,20 @@ import "@fontsource/ibm-plex-sans/700.css";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/300.css";
 import Layout from "../layouts/Layout";
+import { SessionProvider } from "next-auth/react";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <ChakraProvider theme={theme}>
-      <Head>
-        <link rel="icon" type="favicon" href="../static/favicon.ico" />
-      </Head>
-      <Layout>
-      <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <SessionProvider session={session}>
+      <ChakraProvider theme={theme}>
+        <Head>
+          <link rel="icon" type="favicon" href="../static/favicon.ico" />
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </SessionProvider>
   );
 }
 
