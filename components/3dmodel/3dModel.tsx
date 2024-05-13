@@ -47,7 +47,7 @@ const ModelViewer: React.FC<Props> = () => {
       const initialCameraPosition = new THREE.Vector3(
         -20 * Math.sin(Math.PI * 2),
         40,
-        -70 * Math.cos(Math.PI * 2)
+        100 * Math.cos(Math.PI * 2)
       );
 
       const scale = scH * 0.005 + 5.5;

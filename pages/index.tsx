@@ -55,18 +55,22 @@ export default function Home() {
           ],
         }}
       />
+      
+
+      
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.4 }}
+
       >
         <Flex justifyContent="space-around">
-          <Flex flexDir="column" p=" 0 20px 0 0">
-            <Heading as="h1" p="0 0 30px 0" fontSize="2xl">
+          <Flex flexDir="column">
+            <Heading as="h1" p="10px 0" fontSize={["1xl", "2xl"]}>
               Hi there, I&#39;m Erick 🍃
             </Heading>
 
-            <Paragraph fontSize={['sm', 'md']} lineHeight={1.8}>
+            <Paragraph fontSize={["sm", "md"]} lineHeight={2}>
               I&#39;m a{" "}
               <RoughNotation
                 animate={true}
@@ -103,7 +107,7 @@ export default function Home() {
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
-                JavaScript, Ruby, Python, and TypeScript
+                JavaScript, Ruby and Python
               </RoughNotation>
               , along with their ecosystems. I'm a multipotentialite who loves
               solving problems and learning new things. Aside from programming
@@ -123,7 +127,7 @@ export default function Home() {
         </Flex>
         <Box as="div" m="30px 0"></Box>
 
-        <Box as="section" mt={10} mb={20}>
+        <Box as="section" mb={20}>
           <Box
             as="div"
             m="30px 0"
@@ -137,15 +141,25 @@ export default function Home() {
               mt={8}
               fontSize="2xl"
               as="h2"
-              mb={10}
               w="100%"
             >
               Featured Projects
             </Heading>
-            <ModelViewerMid />
+            {/* <ModelViewerMid /> */}
           </Box>
 
-          <SimpleGrid minChildWidth="300px" spacing="40px">
+          <SimpleGrid minChildWidth="280px" spacing="30px">
+            <ProjectCard
+              title="spotifysplit"
+              description="Spotifysplit is a simple fullstack app connected to Spotify via OAUTH 2.0 to see all kinds of music stats. Built for practice. Currently in progress, building it in public. Feel free to fork and use as you like. frotend: Vite + TypeScript + React + TailWindCSS, backend: Node.js + Express."
+              repoHref="https://github.com/RosaErick/spotifysplit"
+              demoHref="https://github.com/RosaErick/spotifysplit"
+              languageColor="#2b7489"
+              language="TypeScript"
+              starCount={0}
+              stargazersUrl={""}
+            />
+
             <ProjectCard
               title="Ruby-docker-ecomm"
               description="an e-commerce platform template built with Ruby on Rails, Tailwind CSS, Hotwire and Postgres. Admin panel, shopping experience, filter categories, add items to cart, process secure checkouts with Stripe integration."
@@ -178,16 +192,7 @@ export default function Home() {
               starCount={0}
               stargazersUrl={""}
             />
-            <ProjectCard
-              title="spotifysplit"
-              description="Spotifysplit is a simple fullstack app connected to Spotify via OAUTH 2.0 to see all kinds of music stats. Built for practice. Currently in progress, building it in public. Feel free to fork and use as you like. frotend: Vite + TypeScript + React + TailWindCSS, backend: Node.js + Express."
-              repoHref="https://github.com/RosaErick/spotifysplit"
-              demoHref="https://github.com/RosaErick/spotifysplit"
-              languageColor="#2b7489"
-              language="TypeScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
+
             <ProjectCard
               title="AI-vegetarian-recipes"
               description="AI generated vegetarian recipes! you can share it! Built with Node.js, MongoDB, Vite, React, TailwindCSS and OpenAI API(ChatGPT)"
@@ -199,12 +204,12 @@ export default function Home() {
               stargazersUrl={""}
             />
             <ProjectCard
-              title="erickrosa.dev"
-              description="this site, my currently portfolio, built with Next.js, React and ChakraUI. The projects were fetched using GitHub API."
-              repoHref="https://github.com/RosaErick/erickrosa.dev"
-              demoHref="https://erickrosa.dev"
-              languageColor="#2b7489"
-              language="TypeScript"
+              title="piMageKit"
+              description="PiMageKit is a simple web tool built with Flask for quick image adjustments. Easily remove backgrounds, strip metadata, resize, and crop images. Built as a Python proof of concept for image processing."
+              repoHref="https://github.com/RosaErick/piMageKit"
+              demoHref="https://github.com/RosaErick/piMageKit"
+              languageColor="#3572A5"
+              language="Python"
               starCount={0}
               stargazersUrl={""}
             />

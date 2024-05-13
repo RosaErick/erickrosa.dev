@@ -17,15 +17,15 @@ interface DogContainerProps {
 export const ModelContainer = forwardRef<HTMLDivElement, DogContainerProps>(
   ({ children }, ref) => (
     <Box
-    ref={ref}
-    m="auto"
-    mt={['-20px', '-60px', '-100px']}
-    mb={['-40px', '-140px', '-80px']}
-    w={[180, 640, 640]}
-    h={[180, 480, 640]}
-    position="relative"
-    zIndex="0"  
-    alignSelf={['center', 'center', 'center']}
+      ref={ref}
+      m="auto"
+      mt={["-20px", "-60px", "-100px"]}
+      mb={["-20px", "-60px", "-80px"]}
+      w={[180, 440, 600]}
+      h={[180, 480, 570]}
+      position="relative"
+      zIndex="0"
+      alignSelf={["center", "center", "center"]}
     >
       {children}
     </Box>

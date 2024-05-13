@@ -7,35 +7,25 @@ import ModelViewer from "../components/3dmodel/3dModel";
 
 export default function Layout({ children }) {
   return (
-    <Stack
-      as="main"
-      spacing={8}
-      justifyContent="center"
-      alignItems="flex-start"
-      m="0 auto 4rem auto"
-      maxW="20vw"
-      position="relative"
+    <Flex
+      direction="column"
+      flex="1"
+      maxW={{
+        xl: "750px",
+        "2xl": "750px",
+        md: "750px",
+        lg: "750px",
+    
+      }}
+      px={10}
+      m="0 auto"
     >
       <Navbar />
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        p={8}
-        m="0 auto"
-        w="100%"
-      >
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
-          <ModelViewer />
-          {children}
-        </motion.div>
-      </Flex>
+
+      <ModelViewer />
+      {children}
 
       <Footer />
-    </Stack>
+    </Flex>
   );
 }
