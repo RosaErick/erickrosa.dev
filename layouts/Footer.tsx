@@ -17,10 +17,10 @@ const Footer = () => (
   <Box
     as="footer"
     role="contentinfo"
-    m=" 0 auto"
+    m="20px auto"
     width={"100%"}
     maxW="100%"
-    px={{ base: "4", md: "8" }}
+    p={0}
   >
     <Stack
       direction="row"
@@ -75,7 +75,7 @@ const Footer = () => (
       </NextLink>
       <NextLink href="/About">About</NextLink>
     </Flex> */}
-    <Divider pt={2} w="100%" />
+    <Divider pt={0} w="100%" />
     <Stack direction="row" align="center" justify="space-between" pt={5}>
       <Text fontSize="11px" fontWeight={"medium"}>
         &copy; Erick Rosa {new Date().getFullYear()}
