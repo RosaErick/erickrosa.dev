@@ -25,17 +25,19 @@ export default function Guestbook() {
     fetchMessages();
   }, []);
 
-  console.log("messages", messages);
-
   async function fetchMessages() {
-    const res = await fetch("/api/messages");
-    const data = await res.json();
-    if (res.ok) {
+    try {
+      const res = await fetch("/api/messages");
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || `Request failed (${res.status})`);
+      }
+      const data = await res.json();
       setMessages(data);
-    } else {
+    } catch (err: any) {
       toast({
         title: "Error fetching messages.",
-        description: data.error,
+        description: err.message,
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -47,19 +49,16 @@ export default function Guestbook() {
     const res = await fetch("/api/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        content: message,
-        user_email: session.user.email,
-      }),
+      body: JSON.stringify({ content: message }),
     });
     if (res.ok) {
       setMessage("");
       fetchMessages();
     } else {
-      const error = await res.json();
+      const data = await res.json();
       toast({
         title: "Error sending message.",
-        description: error.message,
+        description: data.error,
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -168,8 +167,10 @@ export default function Guestbook() {
           </Heading>
           {messages.map((msg: any, i: number) => (
             <HStack key={i} align="stretch">
-              <Avatar src={msg.profiles.image_url} size="sm" />
-              <Text fontWeight="bold">{msg.profiles.username}:</Text>
+              <Avatar src={msg.profiles?.image_url} size="sm" />
+              <Text fontWeight="bold">
+                {msg.profiles?.username ?? msg.user_email}:
+              </Text>
               <Text>{msg.content}</Text>
             </HStack>
           ))}
