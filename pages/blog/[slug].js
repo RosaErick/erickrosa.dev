@@ -10,18 +10,26 @@ export async function getStaticProps({ params: { slug } }) {
   const posts = await getAllPosts();
 
   // Find the current blogpost by slug
-  const post = posts.find((t) => t.slug === slug);
+  const post = posts.find((t) => t.slug === slug) || null;
 
-  const blocks = await fetch(
-    `https://notion-api.splitbee.io/v1/page/${post.id}`
-  ).then((res) => res.json());
+  if (!post) {
+    return { props: { post: null, blocks: {} }, revalidate: 30 };
+  }
+
+  let blocks = {};
+  try {
+    const res = await fetch(
+      `https://notion-api.splitbee.io/v1/page/${post.id}`
+    );
+    if (res.ok) blocks = await res.json();
+  } catch {}
 
   return {
     props: {
       blocks,
       post,
     },
-    revalidate: 1,
+    revalidate: 30,
   };
 }
 

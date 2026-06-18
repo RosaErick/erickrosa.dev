@@ -10,15 +10,26 @@ export async function getStaticProps({ params: { slug } }) {
   const snippets = await getAllSnippets();
 
   // Find the current blogsnippet by slug
-  const snippet = snippets.find((t) => t.slug === slug);
+  const snippet = snippets.find((t) => t.slug === slug) || null;
 
-  const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${snippet.id}`).then((res) => res.json());
-  
+  if (!snippet) {
+    return { props: { snippet: null, blocks: {} }, revalidate: 30 };
+  }
+
+  let blocks = {};
+  try {
+    const res = await fetch(
+      `https://notion-api.splitbee.io/v1/page/${snippet.id}`
+    );
+    if (res.ok) blocks = await res.json();
+  } catch {}
+
   return {
     props: {
-     blocks,
-     snippet,
+      blocks,
+      snippet,
     },
+    revalidate: 30,
   };
 }
 
