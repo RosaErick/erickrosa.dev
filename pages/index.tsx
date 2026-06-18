@@ -17,46 +17,40 @@ import { RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import fetcher from "../scripts/fetcher";
+import { useTranslation } from "../lib/i18n";
 
 const url = "https://erickrosa.dev/";
 const title = "Erick Rosa";
 const description =
   "Self-taught web developer, Javascript enthusiast, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience.";
 
+// Descriptions are translated via i18n keyed by title (home.projects.<title>).
 const projects: {
   title: string;
-  description: string;
   repoHref: string;
   liveHref?: string;
 }[] = [
   {
     title: "conflictzone-app",
-    description:
-      "Frontend of an application to fetch, process and visualize data from the Fogo Cruzado database, a platform tracking occurrences of violence. Presents tables, heatmaps and charts representing the geographic distribution of these occurrences.",
     repoHref: "https://github.com/RosaErick/conflictzone-app",
   },
   {
     title: "conflictzone-api",
-    description:
-      "Django backend that fetches, processes and serves data from the Fogo Cruzado database, a platform tracking occurrences of violence. Powers the tables, heatmaps and charts representing the geographic distribution of these occurrences.",
     repoHref: "https://github.com/RosaErick/conflictzone-api",
   },
   {
     title: "spotifysplit",
-    description:
-      "A fullstack app connected to Spotify via OAuth 2.0 to explore all kinds of listening stats. Built in public — frontend with Vite, React and TailwindCSS, backend with Node.js and Express.",
     repoHref: "https://github.com/RosaErick/spotifysplit",
   },
   {
     title: "piMageKit",
-    description:
-      "A web tool built with Flask for quick image adjustments — remove backgrounds, strip metadata, resize and crop images. A Python proof of concept for image processing.",
     repoHref: "https://github.com/RosaErick/piMageKit",
   },
 ];
 
 export default function Home() {
   const [showNotation, setShowNotation] = useState(true);
+  const { t } = useTranslation();
 
   const { data: githubData } = useSWR("/api/github", fetcher);
   const languageByRepo: Record<string, string> = {};
@@ -109,11 +103,11 @@ export default function Home() {
         <Flex justifyContent="space-around">
           <Flex flexDir="column">
             <Heading as="h1" p="10px 0" fontSize={["1xl", "2xl"]}>
-              Hi there, I&#39;m Erick 🍃
+              {t("home.greeting")}
             </Heading>
 
             <Paragraph fontSize={["sm", "md"]} lineHeight={2}>
-              I&#39;m a{" "}
+              {t("home.bio.lead")}{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={2200}
@@ -123,12 +117,9 @@ export default function Home() {
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
-                Software Engineer
+                {t("home.bio.role")}
               </RoughNotation>{" "}
-              based in Rio de Janeiro, Brazil, with 4+ years of experience
-              building and maintaining B2B SaaS platforms for pricing, analytics,
-              automation and AI-enabled products. My strongest background is in
-              frontend engineering — especially{" "}
+              {t("home.bio.afterRole")}{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={4000}
@@ -140,17 +131,11 @@ export default function Home() {
               >
                 React, JavaScript and TypeScript
               </RoughNotation>{" "}
-              — with a focus on accessible, polished and user-centered
-              interfaces. I work best at the intersection of design and
-              engineering, where thoughtful UX meets clean, scalable code, and
-              I&#39;m comfortable working across frontend, backend and cloud,
-              shipping complete production features such as analytical
-              dashboards, multi-tenant REST APIs, external integrations and
-              performance improvements.
+              {t("home.bio.afterStack")}
             </Paragraph>
 
             <Paragraph fontSize={["sm", "md"]} lineHeight={2} mt={5}>
-              As an avid learner passionate about{" "}
+              {t("home.bio.p2Lead")}{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={6000}
@@ -162,12 +147,7 @@ export default function Home() {
               >
                 open source
               </RoughNotation>
-              , I enjoy building things with code and exploring languages like
-              Python and Ruby and their ecosystems. I&#39;m a multipotentialite
-              who loves solving problems and learning new things. Aside from
-              programming I&#39;m a dad that likes to skate, chill at the beach,
-              wander through nature, homelabs, linux, and chat about topics like
-              arts, music, history, and philosophy. I passed the{" "}
+              {t("home.bio.afterOpenSource")}{" "}
               <RoughNotation
                 animate={true}
                 animationDelay={8000}
@@ -179,7 +159,7 @@ export default function Home() {
               >
                 Voight-Kampff Test
               </RoughNotation>
-              .
+              {t("home.bio.afterVoight")}
             </Paragraph>
           </Flex>
           {/*<Image
@@ -201,16 +181,16 @@ export default function Home() {
             as="h2"
             w="100%"
           >
-            Experience
+            {t("home.experience.title")}
           </Heading>
 
           <VStack spacing={2} align="stretch" mt={4}>
             <ExperienceItem
               period="2022 — 2026"
-              role="Software Engineer"
+              role={t("home.experience.proffer.role")}
               company="Proffer"
               companyHref="https://proffer.com.br/"
-              description="Led frontend development and evolved full modules of a B2B SaaS platform for pricing, market intelligence and optimization. Built analytical React dashboards and multi-tenant Python REST APIs, integrated 8+ external services, and developed AI and automation tooling, including MCP servers."
+              description={t("home.experience.proffer.description")}
               tags={[
                 "React",
                 "JavaScript",
@@ -222,10 +202,10 @@ export default function Home() {
             />
             <ExperienceItem
               period="2022"
-              role="Frontend Developer"
+              role={t("home.experience.mundiware.role")}
               company="Mundiware"
               companyHref="https://www.mundiware.com/br"
-              description="Started as a trainee and was promoted after 4 months, building web interfaces for newspapers and news portals. Worked on maintenance and upgrades of legacy projects with jQuery, vanilla JS and responsive layouts, alongside API consumption."
+              description={t("home.experience.mundiware.description")}
               tags={["JavaScript", "jQuery", "HTML", "CSS"]}
             />
           </VStack>
@@ -240,7 +220,7 @@ export default function Home() {
             as="h2"
             w="100%"
           >
-            Featured Projects
+            {t("home.projects.title")}
           </Heading>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
@@ -249,7 +229,7 @@ export default function Home() {
                 key={project.title}
                 index={i + 1}
                 title={project.title}
-                description={project.description}
+                description={t(`home.projects.${project.title}`)}
                 language={languageByRepo[project.title.toLowerCase()]}
                 repoHref={project.repoHref}
                 liveHref={project.liveHref}

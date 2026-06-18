@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "início",
+    "projects": "projetos",
+    "work": "carreira",
+    "guestbook": "recados",
+    "switchLanguage": "Switch to English"
+  },
+  "home": {
+    "greeting": "Olá, eu sou o Erick 🍃",
+    "bio": {
+      "lead": "Sou",
+      "role": "Engenheiro de Software",
+      "afterRole": "baseado no Rio de Janeiro, Brasil, com mais de 4 anos de experiência construindo e mantendo plataformas SaaS B2B para precificação, analytics, automação e produtos com IA. Minha base mais forte é em engenharia de frontend — especialmente",
+      "afterStack": "— com foco em interfaces acessíveis, refinadas e centradas no usuário. Trabalho melhor na interseção entre design e engenharia, onde uma boa UX encontra um código limpo e escalável, e me sinto à vontade atuando em frontend, backend e cloud, entregando features completas em produção como dashboards analíticos, APIs REST multi-tenant, integrações externas e melhorias de performance.",
+      "p2Lead": "Como um eterno aprendiz apaixonado por",
+      "afterOpenSource": ", gosto de construir coisas com código e explorar linguagens como Python e Ruby e seus ecossistemas. Sou um multipotencial que adora resolver problemas e aprender coisas novas. Além de programar, sou pai e gosto de andar de skate, relaxar na praia, caminhar pela natureza, homelabs, linux, e conversar sobre temas como arte, música, história e filosofia. Passei no",
+      "afterVoight": "."
+    },
+    "experience": {
+      "title": "Experiência",
+      "proffer": {
+        "role": "Engenheiro de Software",
+        "description": "Liderei o desenvolvimento de frontend e evoluí módulos inteiros de uma plataforma SaaS B2B de precificação, inteligência de mercado e otimização. Construí dashboards analíticos em React e APIs REST multi-tenant em Python, integrei mais de 8 serviços externos e desenvolvi ferramentas de IA e automação, incluindo servidores MCP."
+      },
+      "mundiware": {
+        "role": "Desenvolvedor Frontend",
+        "description": "Comecei como trainee e fui promovido após 4 meses, construindo interfaces web para jornais e portais de notícias. Atuei na manutenção e modernização de projetos legados com jQuery, JS puro e layouts responsivos, além de consumo de APIs."
+      }
+    },
+    "projects": {
+      "title": "Projetos em Destaque",
+      "conflictzone-app": "Frontend de uma aplicação para buscar, processar e visualizar dados do banco Fogo Cruzado, uma plataforma que monitora ocorrências de violência. Apresenta tabelas, heatmaps e gráficos representando a distribuição geográfica dessas ocorrências.",
+      "conflictzone-api": "Backend em Django que busca, processa e serve dados do banco Fogo Cruzado, uma plataforma que monitora ocorrências de violência. Alimenta as tabelas, heatmaps e gráficos que representam a distribuição geográfica dessas ocorrências.",
+      "spotifysplit": "Uma aplicação fullstack conectada ao Spotify via OAuth 2.0 para explorar todo tipo de estatística de escuta. Construída em público — frontend com Vite, React e TailwindCSS, backend com Node.js e Express.",
+      "piMageKit": "Uma ferramenta web feita com Flask para ajustes rápidos de imagem — remover fundo, limpar metadados, redimensionar e cortar. Uma prova de conceito em Python para processamento de imagens."
+    }
+  },
+  "work": {
+    "title": "carreira",
+    "summary": {
+      "p1": "Engenheiro de Software com mais de 4 anos de experiência construindo e mantendo plataformas SaaS B2B para precificação, analytics, automação e produtos com IA. Base mais forte em engenharia de frontend, especialmente React, JavaScript e TypeScript, com foco em interfaces acessíveis, refinadas e centradas no usuário.",
+      "p2": "Trabalho melhor na interseção entre design e engenharia, onde uma boa UX encontra um código limpo e escalável, e me sinto à vontade atuando em frontend, backend e cloud, entregando features completas em produção como dashboards analíticos, APIs REST multi-tenant, integrações externas e melhorias de performance."
+    },
+    "keyTechnologies": "Principais tecnologias:",
+    "proffer": {
+      "role": "engenheiro de software",
+      "period": "Maio 2022 — Junho 2026",
+      "summary": "Plataforma SaaS de precificação com IA/ML para distribuição e varejo farmacêutico. Remoto.",
+      "bullets": [
+        "Liderei frentes de desenvolvimento frontend e evoluí módulos inteiros de uma plataforma SaaS B2B de precificação, inteligência de mercado e otimização.",
+        "Construí dashboards analíticos em React com KPIs, gráficos de série temporal, tabelas paginadas, filtros dinâmicos e exportações de dados síncronas/assíncronas, usando mais de 3 bibliotecas de gráficos para grandes volumes de dados de negócio.",
+        "Desenvolvi APIs REST multi-tenant em Python que sustentavam aplicações B2B, lidando com isolamento de dados de clientes, autenticação JWT/Cognito, autorização por papéis, paginação, busca, filtros dinâmicos, downloads e consultas a bancos como BigQuery e PostgreSQL.",
+        "Implementei e mantive integrações com Stripe, HubSpot, Conta Azul OAuth, Twilio, RD Station, Mixpanel, ClickUp e AWS Cognito, conectando mais de 8 serviços externos em cobrança, CRM, analytics, onboarding, contratos, automações e permissões de usuário.",
+        "Construí ferramentas de IA e automação, incluindo servidores MCP em TypeScript/Node.js e Python/Flask para expor APIs proprietárias como ferramentas consumíveis por LLMs, com autenticação, sessões, recursos e prompts."
+      ]
+    },
+    "mundiware": {
+      "role": "desenvolvedor frontend",
+      "period": "Fevereiro 2022 — Maio 2022",
+      "summary": "Empresa de tecnologia editorial especializada em sistemas para portais de notícias, apps mobile, TV, impresso e jornais.",
+      "bullets": [
+        "Comecei como trainee e fui promovido após 4 meses, desenvolvendo interfaces web e aplicações frontend para jornais e portais de notícias.",
+        "Atuei na manutenção, evolução e modernização de projetos legados com jQuery, JS puro e layouts responsivos, além de consumo de APIs.",
+        "Trabalhei em soluções sob medida para publicação digital, colaborando com a equipe técnica em entregas ágeis para ambientes editoriais."
+      ]
+    },
+    "selectedProjects": {
+      "title": "Projetos Técnicos Selecionados",
+      "dashboards": {
+        "title": "Dashboards de Precificação B2B",
+        "bullets": [
+          "Construí interfaces em React que transformaram dados complexos de precificação, mercado e performance comercial em telas prontas para decisão, com KPIs, gráficos, tabelas, filtros, drill-down e exportações.",
+          "Trabalhei com Recharts, Chart.js e Ant Design Charts em gráficos de alto volume, com foco em performance, legibilidade, percentuais, ordenação e renderização de séries temporais."
+        ]
+      },
+      "apis": {
+        "title": "APIs Multi-tenant e Dados Analíticos",
+        "bullets": [
+          "Desenvolvi APIs em Python para servir múltiplos clientes na mesma plataforma, garantindo isolamento por tenant, autenticação JWT/Cognito, regras de acesso, consultas parametrizadas, paginação no servidor e contratos estáveis para o frontend.",
+          "Integrei BigQuery, PostgreSQL e 2 provedores de cloud para alimentar dashboards, filtros, tabelas e downloads, usando cache, URLs assinadas e jobs assíncronos para evitar gargalos em grandes volumes de dados."
+        ]
+      },
+      "ai": {
+        "title": "IA, Bots e Ferramentas de Agentes",
+        "bullets": [
+          "Desenvolvi um bot de WhatsApp para suporte e diagnóstico automatizados, capaz de conversar com usuários, coletar informações, chamar APIs internas e gerar respostas assistidas por IA com validação, retries e fallbacks.",
+          "Desenvolvi servidores MCP em TypeScript/Node.js e Python/Flask para oferecer ferramentas de consulta, autenticação e automação para clientes compatíveis com o Model Context Protocol."
+        ]
+      }
+    }
+  },
+  "guestbook": {
+    "title": "deixe um recado",
+    "placeholder": "Deixe um recado no mural...",
+    "signedInAs": "Conectado como",
+    "signIn": "Entrar com GitHub",
+    "signOut": "sair",
+    "send": "enviar",
+    "messages": "recados",
+    "errorFetch": "Erro ao carregar os recados.",
+    "errorSend": "Erro ao enviar o recado."
+  },
+  "about": {
+    "greeting": "Olá!",
+    "paragraph": "Sou um desenvolvedor web autodidata, focado em frontend, apaixonado por construir coisas com código e com bom conhecimento de técnicas voltadas a uma ótima experiência do usuário. Antes de migrar para a Tech, trabalhei como tradutor e professor de História. Sou bacharel em História e também especialista em tradução inglês/português. Desde que entrei no mundo da programação, comecei a ler artigos, ouvir podcasts, fazer cursos online e criar um portfólio de projetos para documentar minha jornada.",
+    "showMore": "Ver mais",
+    "showLess": "Ver menos"
+  },
+  "projects": {
+    "title": "projetos",
+    "intro": "aqui você encontra e pesquisa todos os meus projetos no GitHub, criados usando a API do GitHub.",
+    "searchPlaceholder": "Busque por nome, descrição e linguagem",
+    "noResults": "Nenhum projeto encontrado para",
+    "failedToLoad": "Falha ao carregar os projetos! Verifique sua conexão. Se o erro persistir, entre em contato comigo."
+  }
+}

@@ -10,8 +10,10 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import { useTranslation } from "../../lib/i18n";
 
 const MenuHamburguer = () => {
+  const { t } = useTranslation();
   // Define color variables with useColorModeValue for dynamic theme colors
   const iconColor = useColorModeValue("black", "white");
   const menuBgColor = useColorModeValue("#f0e7db", "#202023");
@@ -48,22 +50,22 @@ const MenuHamburguer = () => {
           <MenuList bg={menuBgColor}>
             <MenuItem>
               <NextLink href="/" passHref>
-                home
+                {t("nav.home")}
               </NextLink>
             </MenuItem>
             <MenuItem>
               <NextLink href="/projects" passHref>
-                projects
+                {t("nav.projects")}
               </NextLink>
             </MenuItem>
             <MenuItem>
               <NextLink href="/work" passHref>
-                work
+                {t("nav.work")}
               </NextLink>
             </MenuItem>
             <MenuItem>
               <NextLink href="/guestbook" passHref>
-                guestbook
+                {t("nav.guestbook")}
               </NextLink>
             </MenuItem>
           </MenuList>

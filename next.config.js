@@ -1,6 +1,9 @@
-module.exports = {
-  reactStrictMode: true,
-}
+const withImages = require("next-images");
 
-const withImages = require("next-images")
-module.exports = withImages()
+module.exports = withImages({
+  reactStrictMode: true,
+  i18n: {
+    locales: ["en", "pt-BR"],
+    defaultLocale: "en",
+  },
+});

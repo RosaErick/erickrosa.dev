@@ -11,24 +11,21 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import FeaturedProjectCard from "./FeaturedProjectCard";
+import { useTranslation } from "../../lib/i18n";
 
 const ProjectListFull = () => {
   const [searchValue, setSearchValue] = useState("");
+  const { t } = useTranslation();
   const { data, error } = useSWR("/api/github", fetcher);
   if (error)
-    return (
-      <div style={{ width: "100%" }}>
-        Failed to load projects! Please check your internet connection. If the
-        error persists, contact me.
-      </div>
-    );
+    return <div style={{ width: "100%" }}>{t("projects.failedToLoad")}</div>;
   if (!data)
     return (
       <div style={{ width: "100%" }}>
         <InputGroup mb={5} mr={4} w="100%">
           <Input
-            aria-label="Search by name, description, and language"
-            placeholder="Search by name, description, and language"
+            aria-label={t("projects.searchPlaceholder")}
+            placeholder={t("projects.searchPlaceholder")}
           />
           <InputRightElement children={<SearchIcon color="gray.500" />} />
         </InputGroup>
@@ -62,16 +59,16 @@ const ProjectListFull = () => {
     <>
       <InputGroup mb={4} mr={4} w="100%">
         <Input
-          aria-label="Search by name, description, and language"
+          aria-label={t("projects.searchPlaceholder")}
           onChange={(e) => setSearchValue(e.target.value)}
-          placeholder="Search by name, description, and language"
+          placeholder={t("projects.searchPlaceholder")}
         />
         <InputRightElement children={<SearchIcon color="gray.500" />} />
       </InputGroup>
       <SimpleGrid minChildWidth="300px" spacing="40px">
         {!filteredProjects.length && (
           <Text>
-            No projects found for <strong>{searchValue}</strong>!
+            {t("projects.noResults")} <strong>{searchValue}</strong>!
           </Text>
         )}
         {filteredProjects.map(

@@ -5,16 +5,18 @@ import ProjectList from "../components/projects/ProjectList";
 import React from "react";
 import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
+import { useTranslation } from "../lib/i18n";
 
 export default function Projects() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { t } = useTranslation();
 
   const { data, error } = useSWR("/api/github", fetcher);
 
   if (error)
     return (
       <Layout>
-        <Text>Failed to load projects!</Text>
+        <Text>{t("projects.failedToLoad")}</Text>
       </Layout>
     );
 
@@ -30,7 +32,7 @@ export default function Projects() {
         transition={{ duration: 0.7, delay: 0.4 }}
       >
         <Heading as="h1" fontSize="2xl" fontWeight="medium">
-          projects{" "}
+          {t("projects.title")}{" "}
         </Heading>
         <Box
           height="5px"
@@ -42,8 +44,7 @@ export default function Projects() {
 }"
         ></Box>
         <Text fontSize="medium" mt={4}>
-          here you can find and search all my projects stored in GitHub, created
-          using GitHub API.
+          {t("projects.intro")}
         </Text>
 
         <Flex flexDir="column" m="30px 0">

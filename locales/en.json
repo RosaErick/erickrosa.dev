@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "home",
+    "projects": "projects",
+    "work": "work",
+    "guestbook": "guestbook",
+    "switchLanguage": "Mudar para português"
+  },
+  "home": {
+    "greeting": "Hi there, I'm Erick 🍃",
+    "bio": {
+      "lead": "I'm a",
+      "role": "Software Engineer",
+      "afterRole": "based in Rio de Janeiro, Brazil, with 4+ years of experience building and maintaining B2B SaaS platforms for pricing, analytics, automation and AI-enabled products. My strongest background is in frontend engineering — especially",
+      "afterStack": "— with a focus on accessible, polished and user-centered interfaces. I work best at the intersection of design and engineering, where thoughtful UX meets clean, scalable code, and I'm comfortable working across frontend, backend and cloud, shipping complete production features such as analytical dashboards, multi-tenant REST APIs, external integrations and performance improvements.",
+      "p2Lead": "As an avid learner passionate about",
+      "afterOpenSource": ", I enjoy building things with code and exploring languages like Python and Ruby and their ecosystems. I'm a multipotentialite who loves solving problems and learning new things. Aside from programming I'm a dad that likes to skate, chill at the beach, wander through nature, homelabs, linux, and chat about topics like arts, music, history, and philosophy. I passed the",
+      "afterVoight": "."
+    },
+    "experience": {
+      "title": "Experience",
+      "proffer": {
+        "role": "Software Engineer",
+        "description": "Led frontend development and evolved full modules of a B2B SaaS platform for pricing, market intelligence and optimization. Built analytical React dashboards and multi-tenant Python REST APIs, integrated 8+ external services, and developed AI and automation tooling, including MCP servers."
+      },
+      "mundiware": {
+        "role": "Frontend Developer",
+        "description": "Started as a trainee and was promoted after 4 months, building web interfaces for newspapers and news portals. Worked on maintenance and upgrades of legacy projects with jQuery, vanilla JS and responsive layouts, alongside API consumption."
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "conflictzone-app": "Frontend of an application to fetch, process and visualize data from the Fogo Cruzado database, a platform tracking occurrences of violence. Presents tables, heatmaps and charts representing the geographic distribution of these occurrences.",
+      "conflictzone-api": "Django backend that fetches, processes and serves data from the Fogo Cruzado database, a platform tracking occurrences of violence. Powers the tables, heatmaps and charts representing the geographic distribution of these occurrences.",
+      "spotifysplit": "A fullstack app connected to Spotify via OAuth 2.0 to explore all kinds of listening stats. Built in public — frontend with Vite, React and TailwindCSS, backend with Node.js and Express.",
+      "piMageKit": "A web tool built with Flask for quick image adjustments — remove backgrounds, strip metadata, resize and crop images. A Python proof of concept for image processing."
+    }
+  },
+  "work": {
+    "title": "work",
+    "summary": {
+      "p1": "Software Engineer with 4+ years of experience building and maintaining B2B SaaS platforms for pricing, analytics, automation and AI-enabled products. Strongest background in frontend engineering, especially React, JavaScript and TypeScript, with a focus on accessible, polished and user-centered interfaces.",
+      "p2": "I work best at the intersection of design and engineering, where thoughtful UX meets clean, scalable code, and I'm comfortable working across frontend, backend and cloud, shipping complete production features such as analytical dashboards, multi-tenant REST APIs, external integrations and performance improvements."
+    },
+    "keyTechnologies": "Key technologies:",
+    "proffer": {
+      "role": "software engineer",
+      "period": "May 2022 — June 2026",
+      "summary": "AI/ML-powered pricing SaaS platform for pharmaceutical distribution and retail. Remote.",
+      "bullets": [
+        "Led frontend development workstreams and evolved full modules of a B2B SaaS platform for pricing, market intelligence and optimization.",
+        "Built analytical React dashboards with KPIs, time-series charts, paginated tables, dynamic filters and synchronous/asynchronous data exports, using 3+ charting libraries for high-volume business data.",
+        "Developed multi-tenant REST APIs in Python that supported B2B applications, handling customer data isolation, JWT/Cognito authentication, role-based authorization, pagination, search, dynamic filters, downloads and queries against databases such as BigQuery and PostgreSQL.",
+        "Implemented and maintained integrations with Stripe, HubSpot, Conta Azul OAuth, Twilio, RD Station, Mixpanel, ClickUp and AWS Cognito, connecting 8+ external services across billing, CRM, analytics, onboarding, contracts, automations and user permissions.",
+        "Built AI and automation tools, including MCP servers in TypeScript/Node.js and Python/Flask to expose proprietary APIs as LLM-consumable tools with authentication, sessions, resources and prompts."
+      ]
+    },
+    "mundiware": {
+      "role": "frontend developer",
+      "period": "February 2022 — May 2022",
+      "summary": "Editorial technology company specialized in systems for news portals, mobile apps, TV, print and newspapers.",
+      "bullets": [
+        "Started as a trainee and was promoted after 4 months, developing web interfaces and frontend applications for newspapers and news portals.",
+        "Worked on maintenance, evolution and upgrades of legacy projects with jQuery, vanilla JS and responsive layouts, as well as API consumption.",
+        "Worked on custom solutions for digital publishing, collaborating with the technical team on fast-paced deliveries for editorial environments."
+      ]
+    },
+    "selectedProjects": {
+      "title": "Selected Technical Projects",
+      "dashboards": {
+        "title": "B2B Pricing Dashboards",
+        "bullets": [
+          "Built React interfaces that turned complex pricing, market and commercial performance data into decision-ready screens with KPIs, charts, tables, filters, drill-down views and exports.",
+          "Worked with Recharts, Chart.js and Ant Design Charts in high-volume charts, focusing on performance, readability, percentages, ordering and time-series rendering."
+        ]
+      },
+      "apis": {
+        "title": "Multi-tenant APIs and Analytical Data",
+        "bullets": [
+          "Developed Python APIs to serve multiple customers within the same platform, ensuring tenant isolation, JWT/Cognito authentication, access rules, parameterized queries, server-side pagination and stable contracts for the frontend.",
+          "Integrated BigQuery, PostgreSQL and 2 cloud providers to feed dashboards, filters, tables and downloads, using caching, signed URLs and asynchronous jobs to avoid bottlenecks at large data volumes."
+        ]
+      },
+      "ai": {
+        "title": "AI, Bots and Agent Tooling",
+        "bullets": [
+          "Developed a WhatsApp bot for automated support and diagnostics, capable of chatting with users, collecting information, calling internal APIs and generating AI-assisted responses with validation, retries and fallbacks.",
+          "Developed MCP servers in TypeScript/Node.js and Python/Flask to provide query, authentication and automation tools for clients compatible with Model Context Protocol."
+        ]
+      }
+    }
+  },
+  "guestbook": {
+    "title": "leave me a message",
+    "placeholder": "Leave a message in the guestbook...",
+    "signedInAs": "Signed in as",
+    "signIn": "Sign in with GitHub",
+    "signOut": "sign out",
+    "send": "send",
+    "messages": "messages",
+    "errorFetch": "Error fetching messages.",
+    "errorSend": "Error sending message."
+  },
+  "about": {
+    "greeting": "Hi, There!",
+    "paragraph": "I'm a self-taught web developer, focused on frontend, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience. Before migrating to Tech I worked as a translator and as a History teacher. I have a bachelor's in History and I'm also a specialist in English/Portuguese translation. Since being introduced to coding I have started reading articles, listening to podcasts, taking online courses and creating a portfolio of projects to document my journey.",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+  "projects": {
+    "title": "projects",
+    "intro": "here you can find and search all my projects stored in GitHub, created using the GitHub API.",
+    "searchPlaceholder": "Search by name, description, and language",
+    "noResults": "No projects found for",
+    "failedToLoad": "Failed to load projects! Please check your internet connection. If the error persists, contact me."
+  }
+}

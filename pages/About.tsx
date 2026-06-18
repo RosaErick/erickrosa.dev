@@ -1,25 +1,23 @@
 import { useState } from "react";
-import Head from "next/head";
 import {
   Box,
   Flex,
-  Spacer,
   Image,
   Heading,
-  SlideFade,
   Divider,
   Button,
   Collapse,
   LightMode,
-  Tag,
 } from "@chakra-ui/react";
 import Paragraph from "../layouts/Paragraph";
 import Container from "../layouts/Layout";
 import { motion } from "framer-motion";
+import { useTranslation } from "../lib/i18n";
 
 const About = () => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -37,19 +35,11 @@ const About = () => {
                 src={`https://github.com/rosaerick.png`}
               />
             </Flex>
-            <Heading p="20px 0">Hi, There!</Heading>
+            <Heading p="20px 0">{t("about.greeting")}</Heading>
 
             <Collapse in={show} startingHeight={100}>
               <Paragraph fontSize="xl" lineHeight={1.6}>
-                I'm Self-taught web developer, focused on frontend, passionate
-                about building things with code and with a great knowledge of
-                techniques aimed at a great user experience. Before migrating to
-                Tech i worked as a translator and as a History teacher. I have a
-                bachelor's in History and I'm also a specialist in
-                English/Portuguese translation. Since being introduced to coding
-                I have started reading articles, listening to podcasts, taking
-                online courses and creating a portfolio of projects to document
-                my journey.
+                {t("about.paragraph")}
               </Paragraph>
             </Collapse>
             <LightMode>
@@ -59,7 +49,7 @@ const About = () => {
                 mt="1rem"
                 variant="ghost"
               >
-                Show {show ? "Less" : "More"}
+                {show ? t("about.showLess") : t("about.showMore")}
               </Button>
             </LightMode>
           </Box>

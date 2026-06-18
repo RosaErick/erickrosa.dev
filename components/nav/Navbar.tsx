@@ -7,7 +7,9 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
+import LanguageSwitch from "./LanguageSwitch";
 import MenuHamburguer from "./Menu";
+import { useTranslation } from "../../lib/i18n";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -33,6 +35,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = () => {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
+  const { t } = useTranslation();
 
   return (
     <Stack
@@ -63,20 +66,23 @@ const Navbar = () => {
             flexGrow={1}
           >
             <LinkItem href="/" path={path} target="_self">
-              home
+              {t("nav.home")}
             </LinkItem>
             <LinkItem target="_self" href="/projects" path={path}>
-              projects
+              {t("nav.projects")}
             </LinkItem>
             <LinkItem target="_self" href="/work" path={path}>
-              work
+              {t("nav.work")}
             </LinkItem>
             <LinkItem target="_self" href="/guestbook" path={path}>
-              guestbook
+              {t("nav.guestbook")}
             </LinkItem>
           </Stack>
         </Flex>
-        <DarkModeSwitch />
+        <Flex align="center">
+          <LanguageSwitch />
+          <DarkModeSwitch />
+        </Flex>
       </Container>
     </Stack>
   );

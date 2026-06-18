@@ -14,12 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import { useTranslation } from "../lib/i18n";
 
 export default function Guestbook() {
   const { data: session } = useSession();
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const toast = useToast();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchMessages();
@@ -36,7 +38,7 @@ export default function Guestbook() {
       setMessages(data);
     } catch (err: any) {
       toast({
-        title: "Error fetching messages.",
+        title: t("guestbook.errorFetch"),
         description: err.message,
         status: "error",
         duration: 5000,
@@ -57,7 +59,7 @@ export default function Guestbook() {
     } else {
       const data = await res.json();
       toast({
-        title: "Error sending message.",
+        title: t("guestbook.errorSend"),
         description: data.error,
         status: "error",
         duration: 5000,
@@ -74,7 +76,7 @@ export default function Guestbook() {
     >
       <VStack spacing={4} p={5}>
         <Heading as="h1" fontSize="2xl" fontWeight="medium">
-          leave me a message{" "}
+          {t("guestbook.title")}{" "}
         </Heading>
         <Box
           height="5px"
@@ -88,7 +90,7 @@ export default function Guestbook() {
         {session ? (
           <>
             <Textarea
-              placeholder="Leave a message in the guestbook..."
+              placeholder={t("guestbook.placeholder")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
@@ -104,7 +106,9 @@ export default function Guestbook() {
             >
               <Box display="flex" alignItems="center" gap={4}>
                 <Avatar src={session.user.image} size="sm" />
-                <Text fontSize="sm">Signed in as {session.user.name}</Text>
+                <Text fontSize="sm">
+                  {t("guestbook.signedInAs")} {session.user.name}
+                </Text>
               </Box>
               <Box
                 gap={4}
@@ -119,7 +123,7 @@ export default function Guestbook() {
                   fontSize="sm"
                   fontWeight="sm"
                 >
-                  send
+                  {t("guestbook.send")}
                 </Button>
                 <Button
                   bg={useColorModeValue("red.50", "red.100")}
@@ -128,7 +132,7 @@ export default function Guestbook() {
                   fontSize="sm"
                   fontWeight="sm"
                 >
-                  sign out
+                  {t("guestbook.signOut")}
                 </Button>
               </Box>
             </Box>
@@ -143,7 +147,7 @@ export default function Guestbook() {
             fontSize={["sm", "sm"]}
             fontWeight="md"
           >
-            Sign in with GitHub
+            {t("guestbook.signIn")}
           </Button>
         )}
 
@@ -163,7 +167,7 @@ export default function Guestbook() {
             fontWeight="medium"
             alignSelf={"center"}
           >
-            messages{" "}
+            {t("guestbook.messages")}{" "}
           </Heading>
           {messages.map((msg: any, i: number) => (
             <HStack key={i} align="stretch">
