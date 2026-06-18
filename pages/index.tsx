@@ -48,9 +48,24 @@ const projects: {
   },
 ];
 
+// Play the long staggered intro only on the first page load. After that (e.g.
+// language switches that remount the annotations), redraw them quickly so the
+// highlights never appear to vanish and slowly reload.
+let introHasPlayed = false;
+
 export default function Home() {
   const [showNotation, setShowNotation] = useState(true);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+
+  // True after the first mount, so re-renders/remounts use the fast reveal.
+  const quickHighlights = introHasPlayed;
+  useEffect(() => {
+    introHasPlayed = true;
+  }, []);
+
+  // Stagger: long, dramatic on first load; short and snappy on language switch.
+  const highlightDelay = (intro: number, fast: number) =>
+    quickHighlights ? fast : intro;
 
   const { data: githubData } = useSWR("/api/github", fetcher);
   const languageByRepo: Record<string, string> = {};
@@ -109,8 +124,9 @@ export default function Home() {
             <Paragraph fontSize={["sm", "md"]} lineHeight={2}>
               {t("home.bio.lead")}{" "}
               <RoughNotation
+                key={`role-${locale}`}
                 animate={true}
-                animationDelay={2200}
+                animationDelay={highlightDelay(2200, 0)}
                 animationDuration={1000}
                 type="underline"
                 show={true}
@@ -121,8 +137,9 @@ export default function Home() {
               </RoughNotation>{" "}
               {t("home.bio.afterRole")}{" "}
               <RoughNotation
+                key={`stack-${locale}`}
                 animate={true}
-                animationDelay={4000}
+                animationDelay={highlightDelay(4000, 150)}
                 type="box"
                 multiline={true}
                 show={showNotation}
@@ -137,8 +154,9 @@ export default function Home() {
             <Paragraph fontSize={["sm", "md"]} lineHeight={2} mt={5}>
               {t("home.bio.p2Lead")}{" "}
               <RoughNotation
+                key={`os-${locale}`}
                 animate={true}
-                animationDelay={6000}
+                animationDelay={highlightDelay(6000, 300)}
                 animationDuration={1200}
                 type="highlight"
                 show={true}
@@ -149,8 +167,9 @@ export default function Home() {
               </RoughNotation>
               {t("home.bio.afterOpenSource")}{" "}
               <RoughNotation
+                key={`vk-${locale}`}
                 animate={true}
-                animationDelay={8000}
+                animationDelay={highlightDelay(8000, 450)}
                 type="circle"
                 show={true}
                 color={useColorModeValue("black", "pink")}
