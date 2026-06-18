@@ -1,4 +1,4 @@
-import { Key, useState } from "react";
+import { useState } from "react";
 import useSWR from "swr";
 import fetcher from "../../scripts/fetcher";
 import {
@@ -10,31 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import ProjectCard from "./ProjectCard";
-
-function getLanguageColor(language: any) {
-  switch (language) {
-    case "JavaScript":
-      return "#f1e05a";
-    case "Python":
-      return "#3572A5";
-    case "HTML":
-      return "#e34c26";
-    case "CSS":
-      return "#480ca8";
-    case "TypeScript":
-      return "#2b7489";
-    case "Vue":
-      return "#2c3e";
-    case "Ruby":
-      return "#701516";
-    case "bash":
-      return "#89e051";
-
-    default:
-      return "#000000";
-  }
-}
+import FeaturedProjectCard from "./FeaturedProjectCard";
 
 const ProjectListFull = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -106,21 +82,17 @@ const ProjectListFull = () => {
               description: string;
               url: string;
               language: string;
-              stars: number;
-              stargazers_url: string;
             },
-            index: Key
+            index: number
           ) => (
-            <ProjectCard
-              demoHref={p.homepage}
-              key={index}
+            <FeaturedProjectCard
+              key={p.name ?? index}
+              index={index + 1}
               title={p.name}
               description={p.description}
-              repoHref={p.url}
-              languageColor={getLanguageColor(p.language)}
               language={p.language}
-              starCount={p.stars}
-              stargazersUrl={p.stargazers_url}
+              repoHref={p.url}
+              liveHref={p.homepage || undefined}
             />
           )
         )}

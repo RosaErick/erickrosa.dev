@@ -11,18 +11,60 @@ import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
 import Paragraph from "../layouts/Paragraph";
 import Script from "next/script";
-import ProjectCard from "../components/projects/ProjectCard";
+import FeaturedProjectCard from "../components/projects/FeaturedProjectCard";
 import ExperienceItem from "../components/experience/ExperienceItem";
 import { RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
+import useSWR from "swr";
+import fetcher from "../scripts/fetcher";
 
 const url = "https://erickrosa.dev/";
 const title = "Erick Rosa";
 const description =
   "Self-taught web developer, Javascript enthusiast, passionate about building things with code and with a great knowledge of techniques aimed at a great user experience.";
 
+const projects: {
+  title: string;
+  description: string;
+  repoHref: string;
+  liveHref?: string;
+}[] = [
+  {
+    title: "conflictzone-app",
+    description:
+      "Frontend of an application to fetch, process and visualize data from the Fogo Cruzado database, a platform tracking occurrences of violence. Presents tables, heatmaps and charts representing the geographic distribution of these occurrences.",
+    repoHref: "https://github.com/RosaErick/conflictzone-app",
+  },
+  {
+    title: "conflictzone-api",
+    description:
+      "Django backend that fetches, processes and serves data from the Fogo Cruzado database, a platform tracking occurrences of violence. Powers the tables, heatmaps and charts representing the geographic distribution of these occurrences.",
+    repoHref: "https://github.com/RosaErick/conflictzone-api",
+  },
+  {
+    title: "spotifysplit",
+    description:
+      "A fullstack app connected to Spotify via OAuth 2.0 to explore all kinds of listening stats. Built in public — frontend with Vite, React and TailwindCSS, backend with Node.js and Express.",
+    repoHref: "https://github.com/RosaErick/spotifysplit",
+  },
+  {
+    title: "piMageKit",
+    description:
+      "A web tool built with Flask for quick image adjustments — remove backgrounds, strip metadata, resize and crop images. A Python proof of concept for image processing.",
+    repoHref: "https://github.com/RosaErick/piMageKit",
+  },
+];
+
 export default function Home() {
   const [showNotation, setShowNotation] = useState(true);
+
+  const { data: githubData } = useSWR("/api/github", fetcher);
+  const languageByRepo: Record<string, string> = {};
+  githubData?.repos?.forEach((repo: { name?: string; language?: string }) => {
+    if (repo?.name && repo?.language) {
+      languageByRepo[repo.name.toLowerCase()] = repo.language;
+    }
+  });
 
   useEffect(() => {
     const handleNotationDisplay = () => {
@@ -182,6 +224,7 @@ export default function Home() {
               period="2022"
               role="Frontend Developer"
               company="Mundiware"
+              companyHref="https://www.mundiware.com/br"
               description="Started as a trainee and was promoted after 4 months, building web interfaces for newspapers and news portals. Worked on maintenance and upgrades of legacy projects with jQuery, vanilla JS and responsive layouts, alongside API consumption."
               tags={["JavaScript", "jQuery", "HTML", "CSS"]}
             />
@@ -189,91 +232,29 @@ export default function Home() {
         </Box>
 
         <Box as="section" mb={20}>
-          <Box
-            as="div"
-            m="30px 0"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={8}
+          <Heading
+            letterSpacing="tight"
+            mt={8}
+            mb={5}
+            fontSize="2xl"
+            as="h2"
+            w="100%"
           >
-            <Heading
-              letterSpacing="tight"
-              mt={8}
-              fontSize="2xl"
-              as="h2"
-              w="100%"
-            >
-              Featured Projects
-            </Heading>
-            {/* <ModelViewerMid /> */}
-          </Box>
+            Featured Projects
+          </Heading>
 
-          <SimpleGrid minChildWidth="280px" spacing="30px">
-            <ProjectCard
-              title="spotifysplit"
-              description="Spotifysplit is a simple fullstack app connected to Spotify via OAUTH 2.0 to see all kinds of music stats. Built for practice. Currently in progress, building it in public. Feel free to fork and use as you like. frotend: Vite + TypeScript + React + TailWindCSS, backend: Node.js + Express."
-              repoHref="https://github.com/RosaErick/spotifysplit"
-              demoHref="https://github.com/RosaErick/spotifysplit"
-              languageColor="#2b7489"
-              language="TypeScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
-
-            <ProjectCard
-              title="Ruby-docker-ecomm"
-              description="an e-commerce platform template built with Ruby on Rails, Tailwind CSS, Hotwire and Postgres. Admin panel, shopping experience, filter categories, add items to cart, process secure checkouts with Stripe integration."
-              repoHref="https://github.com/RosaErick/ruby-docker-commerce"
-              demoHref="rubydockercomm.onrender.com"
-              languageColor="#701516"
-              language="Ruby"
-              starCount={0}
-              stargazersUrl={""}
-            />
-
-            <ProjectCard
-              title="setup-kit-node-js"
-              description="A setup kit/starter for node js using deploy first approach and Github Actions."
-              repoHref="https://github.com/RosaErick/setup-kit-node-js"
-              demoHref="https://github.com/RosaErick/setup-kit-node-js"
-              languageColor="#f1e05a"
-              language="JavaScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
-
-            <ProjectCard
-              title="CalendarBot"
-              description="A simple twitter node bot for test and studies. This app fetches data from a calendar on Airtable and transforms it in a tweet or a thread with an image. It also comes with a cron job to repeat the task everyday."
-              repoHref="https://github.com/RosaErick/node-twitter-bot"
-              demoHref="https://github.com/RosaErick/node-twitter-bot"
-              languageColor="#f1e05a"
-              language="JavaScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
-
-            <ProjectCard
-              title="AI-vegetarian-recipes"
-              description="AI generated vegetarian recipes! you can share it! Built with Node.js, MongoDB, Vite, React, TailwindCSS and OpenAI API(ChatGPT)"
-              repoHref="https://github.com/RosaErick/AI-vegetarian-recipes"
-              demoHref="aivegetarianrecipes.netlify.app/"
-              languageColor="#f1e05a"
-              language="JavaScript"
-              starCount={0}
-              stargazersUrl={""}
-            />
-            <ProjectCard
-              title="piMageKit"
-              description="PiMageKit is a simple web tool built with Flask for quick image adjustments. Easily remove backgrounds, strip metadata, resize, and crop images. Built as a Python proof of concept for image processing."
-              repoHref="https://github.com/RosaErick/piMageKit"
-              demoHref="https://github.com/RosaErick/piMageKit"
-              languageColor="#3572A5"
-              language="Python"
-              starCount={0}
-              stargazersUrl={""}
-            />
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
+            {projects.map((project, i) => (
+              <FeaturedProjectCard
+                key={project.title}
+                index={i + 1}
+                title={project.title}
+                description={project.description}
+                language={languageByRepo[project.title.toLowerCase()]}
+                repoHref={project.repoHref}
+                liveHref={project.liveHref}
+              />
+            ))}
           </SimpleGrid>
         </Box>
       </motion.div>

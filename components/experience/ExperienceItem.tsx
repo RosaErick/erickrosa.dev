@@ -29,8 +29,8 @@ export default function ExperienceItem({
   const titleColor = useColorModeValue("gray.800", "gray.100");
   const descColor = useColorModeValue("gray.600", "gray.400");
   const accent = useColorModeValue("purple.600", "pink");
-  const tagBg = useColorModeValue("teal.50", "rgba(45, 212, 191, 0.12)");
-  const tagColor = useColorModeValue("teal.700", "teal.200");
+  const tagBg = useColorModeValue("#e8dcc8", "rgba(45, 212, 191, 0.12)");
+  const tagColor = useColorModeValue("gray.700", "teal.200");
   const hoverBg = useColorModeValue("blackAlpha.50", "whiteAlpha.50");
 
   const title = `${role} · ${company}`;
