@@ -8,8 +8,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:check": "NEXT_DIST_DIR=.next-check next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next .next-check"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",

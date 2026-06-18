@@ -10,6 +10,8 @@
 
 # next.js
 /.next/
+/.next-check/
+/.next-test/
 /out/
 
 
