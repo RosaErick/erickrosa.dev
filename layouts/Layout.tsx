@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         lg: "750px",
       }}
       px={[4, 6, 10]}
-      pt={["52px", "60px", "68px"]}
+      pt={["44px", "52px", "60px"]}
       m="0 auto"
     >
       <Navbar />
