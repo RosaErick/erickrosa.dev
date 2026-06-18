@@ -3,7 +3,7 @@ import {
   Heading,
   Box,
   Flex,
-  Link,
+  VStack,
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 import Paragraph from "../layouts/Paragraph";
 import Script from "next/script";
 import ProjectCard from "../components/projects/ProjectCard";
+import ExperienceItem from "../components/experience/ExperienceItem";
 import { RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
-import ModelViewerMid from "../components/3dmodel/3dModelMid";
 
 const url = "https://erickrosa.dev/";
 const title = "Erick Rosa";
@@ -81,40 +81,63 @@ export default function Home() {
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
-                software developer
+                Software Engineer
               </RoughNotation>{" "}
-              currently based in Rio de Janeiro, Brazil and working at{" "}
+              based in Rio de Janeiro, Brazil, with 4+ years of experience
+              building and maintaining B2B SaaS platforms for pricing, analytics,
+              automation and AI-enabled products. My strongest background is in
+              frontend engineering — especially{" "}
               <RoughNotation
                 animate={true}
-                animationDelay={5300}
-                type="circle"
-                show={true}
-                color={useColorModeValue("black", "pink")}
-                animationDuration={2800}
-                padding={1}
-              >
-                <Link href="https://proffer.com.br/" target="_blank">
-                  @Proffer.
-                </Link>
-              </RoughNotation>{" "}
-              As an avid learner passionate about open source, I enjoy building
-              things with code and am particularly interested in languages like{" "}
-              <RoughNotation
-                animate={true}
-                animationDelay={9500}
+                animationDelay={4000}
                 type="box"
+                multiline={true}
                 show={showNotation}
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
-                JavaScript, Ruby and Python
+                React, JavaScript and TypeScript
+              </RoughNotation>{" "}
+              — with a focus on accessible, polished and user-centered
+              interfaces. I work best at the intersection of design and
+              engineering, where thoughtful UX meets clean, scalable code, and
+              I&#39;m comfortable working across frontend, backend and cloud,
+              shipping complete production features such as analytical
+              dashboards, multi-tenant REST APIs, external integrations and
+              performance improvements.
+            </Paragraph>
+
+            <Paragraph fontSize={["sm", "md"]} lineHeight={2} mt={5}>
+              As an avid learner passionate about{" "}
+              <RoughNotation
+                animate={true}
+                animationDelay={6000}
+                animationDuration={1200}
+                type="highlight"
+                show={true}
+                color={useColorModeValue("#FED7E2", "pink")}
+                padding={2}
+              >
+                open source
               </RoughNotation>
-              , along with their ecosystems. I'm a multipotentialite who loves
-              solving problems and learning new things. Aside from programming
-              and taking care of my child, I like to chill at the beach, wander
-              through nature, and chat about topics like arts, music, history,
-              and philosophy. I also like practicing and watching football and
-              boxing. I passed the Voight-Kampff Test.
+              , I enjoy building things with code and exploring languages like
+              Python and Ruby and their ecosystems. I&#39;m a multipotentialite
+              who loves solving problems and learning new things. Aside from
+              programming I&#39;m a dad that likes to skate, chill at the beach,
+              wander through nature, homelabs, linux, and chat about topics like
+              arts, music, history, and philosophy. I passed the{" "}
+              <RoughNotation
+                animate={true}
+                animationDelay={8000}
+                type="circle"
+                show={true}
+                color={useColorModeValue("black", "pink")}
+                animationDuration={2000}
+                padding={2}
+              >
+                Voight-Kampff Test
+              </RoughNotation>
+              .
             </Paragraph>
           </Flex>
           {/*<Image
@@ -126,6 +149,44 @@ export default function Home() {
             />*/}
         </Flex>
         <Box as="div" m="30px 0"></Box>
+
+        <Box as="section" mb={20}>
+          <Heading
+            letterSpacing="tight"
+            mt={8}
+            mb={2}
+            fontSize="2xl"
+            as="h2"
+            w="100%"
+          >
+            Experience
+          </Heading>
+
+          <VStack spacing={2} align="stretch" mt={4}>
+            <ExperienceItem
+              period="2022 — 2026"
+              role="Software Engineer"
+              company="Proffer"
+              companyHref="https://proffer.com.br/"
+              description="Led frontend development and evolved full modules of a B2B SaaS platform for pricing, market intelligence and optimization. Built analytical React dashboards and multi-tenant Python REST APIs, integrated 8+ external services, and developed AI and automation tooling, including MCP servers."
+              tags={[
+                "React",
+                "JavaScript",
+                "TypeScript",
+                "Node.js",
+                "Python",
+                "Flask",
+              ]}
+            />
+            <ExperienceItem
+              period="2022"
+              role="Frontend Developer"
+              company="Mundiware"
+              description="Started as a trainee and was promoted after 4 months, building web interfaces for newspapers and news portals. Worked on maintenance and upgrades of legacy projects with jQuery, vanilla JS and responsive layouts, alongside API consumption."
+              tags={["JavaScript", "jQuery", "HTML", "CSS"]}
+            />
+          </VStack>
+        </Box>
 
         <Box as="section" mb={20}>
           <Box
