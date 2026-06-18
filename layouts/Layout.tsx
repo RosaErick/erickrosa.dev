@@ -1,8 +1,6 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Navbar from "../components/nav/Navbar";
 import Footer from "./Footer";
-import { Widget } from "../components/widgetForm/Widget";
-import { motion } from "framer-motion";
 import ModelViewer from "../components/3dmodel/3dModel";
 
 export default function Layout({ children }) {
@@ -15,9 +13,9 @@ export default function Layout({ children }) {
         "2xl": "750px",
         md: "750px",
         lg: "750px",
-    
       }}
-      px={10}
+      px={[4, 6, 10]}
+      pt={["52px", "60px", "68px"]}
       m="0 auto"
     >
       <Navbar />

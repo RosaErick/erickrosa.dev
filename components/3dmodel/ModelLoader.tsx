@@ -19,10 +19,10 @@ export const ModelContainer = forwardRef<HTMLDivElement, DogContainerProps>(
     <Box
       ref={ref}
       m="auto"
-      mt={["-20px", "-60px", "-100px"]}
-      mb={["-20px", "-60px", "-80px"]}
-      w={[180, 440, 600]}
-      h={[180, 480, 570]}
+      mt={["-4px", "-16px", "-30px"]}
+      mb={["-10px", "-40px", "-60px"]}
+      w={[165, 400, 540]}
+      h={[165, 430, 510]}
       position="relative"
       zIndex="0"
       alignSelf={["center", "center", "center"]}
