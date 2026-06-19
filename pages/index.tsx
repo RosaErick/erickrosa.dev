@@ -57,6 +57,16 @@ export default function Home() {
   const [showNotation, setShowNotation] = useState(true);
   const { t, locale } = useTranslation();
 
+  // The entrance animation transforms (translateY) the container for ~1.1s.
+  // RoughNotation measures the element position once when it draws and never
+  // redraws, so drawing mid-transform leaves the annotations stranded in the
+  // wrong spot. This flips true once the entrance settles.
+  const [entranceReady, setEntranceReady] = useState(false);
+  useEffect(() => {
+    const id = setTimeout(() => setEntranceReady(true), 1200);
+    return () => clearTimeout(id);
+  }, []);
+
   // True after the first mount, so re-renders/remounts use the fast reveal.
   const quickHighlights = introHasPlayed;
   useEffect(() => {
@@ -66,6 +76,12 @@ export default function Home() {
   // Stagger: long, dramatic on first load; short and snappy on language switch.
   const highlightDelay = (intro: number, fast: number) =>
     quickHighlights ? fast : intro;
+
+  // First load keeps its original timing — the long delays already outlast the
+  // entrance, so the layout is settled by the time they draw. The fast path
+  // (language switch / navigating back home) must wait for the entrance to
+  // settle, otherwise it measures the element while it's still being translated.
+  const showHighlight = quickHighlights ? entranceReady : true;
 
   const { data: githubData } = useSWR("/api/github", fetcher);
   const languageByRepo: Record<string, string> = {};
@@ -113,7 +129,7 @@ export default function Home() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-
+        onAnimationComplete={() => setEntranceReady(true)}
       >
         <Flex justifyContent="space-around">
           <Flex flexDir="column">
@@ -129,7 +145,7 @@ export default function Home() {
                 animationDelay={highlightDelay(2200, 0)}
                 animationDuration={1000}
                 type="underline"
-                show={true}
+                show={showHighlight}
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
@@ -142,7 +158,7 @@ export default function Home() {
                 animationDelay={highlightDelay(4000, 150)}
                 type="box"
                 multiline={true}
-                show={showNotation}
+                show={showHighlight && showNotation}
                 color={useColorModeValue("black", "pink")}
                 padding={0}
               >
@@ -159,7 +175,7 @@ export default function Home() {
                 animationDelay={highlightDelay(6000, 300)}
                 animationDuration={1200}
                 type="highlight"
-                show={true}
+                show={showHighlight}
                 color={useColorModeValue("#FED7E2", "pink")}
                 padding={2}
               >
@@ -171,7 +187,7 @@ export default function Home() {
                 animate={true}
                 animationDelay={highlightDelay(8000, 450)}
                 type="circle"
-                show={true}
+                show={showHighlight}
                 color={useColorModeValue("black", "pink")}
                 animationDuration={2000}
                 padding={2}
