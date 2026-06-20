@@ -222,7 +222,9 @@ export default function Home() {
                     animationDuration={2000}
                     padding={2}
                   >
-                    Voight-Kampff Test
+                    <Box as="span" whiteSpace="nowrap">
+                      Voight-Kampff Test
+                    </Box>
                   </RoughNotation>
                   {t("home.bio.afterVoight")}
                 </Paragraph>
