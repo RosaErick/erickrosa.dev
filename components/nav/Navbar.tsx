@@ -1,10 +1,4 @@
-import {
-  Flex,
-  Stack,
-  useColorModeValue,
-  Link,
-  Container,
-} from "@chakra-ui/react";
+import { Flex, Stack, Link, Container } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 import LanguageSwitch from "./LanguageSwitch";
@@ -13,9 +7,9 @@ import { useTranslation } from "../../lib/i18n";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue("gray.600", "gray.400");
-  const activeColor = useColorModeValue("gray.900", "gray.100");
-  const bgColor = useColorModeValue("", "");
+  const inactiveColor = "var(--text-muted)";
+  const activeColor = "var(--text)";
+  const bgColor = "";
 
   return (
     <Link

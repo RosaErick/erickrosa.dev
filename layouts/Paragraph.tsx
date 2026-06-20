@@ -1,11 +1,8 @@
-
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 const Paragraph = ({ children, ...props }) => {
-  const textColor = useColorModeValue("gray.600", "gray.400");
-
   return (
-    <Text color={textColor} {...props}>
+    <Text color="var(--text-muted)" {...props}>
       {children}
     </Text>
   );

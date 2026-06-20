@@ -9,7 +9,6 @@ import {
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 import LanguageBadge from "./LanguageBadge";
-import { getLanguageColor } from "../../lib/languageColor";
 
 interface FeaturedProjectCardProps {
   index?: number;
@@ -28,17 +27,19 @@ export default function FeaturedProjectCard({
   repoHref,
   liveHref,
 }: FeaturedProjectCardProps) {
-  const cardBg = useColorModeValue("#faf4ea", "whiteAlpha.50");
-  const cardBorder = useColorModeValue("#e4d7c3", "whiteAlpha.100");
-  const titleColor = useColorModeValue("gray.800", "gray.100");
-  const descColor = useColorModeValue("gray.600", "gray.400");
-  const mutedColor = useColorModeValue("gray.400", "whiteAlpha.500");
+  const cardBg = "var(--surface)";
+  const cardBorder = "var(--border)";
+  const titleColor = "var(--text)";
+  const descColor = "var(--text-muted)";
+  const mutedColor = "var(--text-subtle)";
   const shadow = useColorModeValue(
-    "0 14px 30px rgba(0,0,0,0.12)",
-    "0 14px 30px rgba(0,0,0,0.45)"
+    "0 14px 30px rgba(0,0,0,0.10)",
+    "0 16px 34px rgba(0,0,0,0.5)"
   );
 
-  const accent = getLanguageColor(language);
+  // Hover follows the unified accent so cards stay in harmony; the language's
+  // real color is preserved on the small badge dot below (informative).
+  const accent = "var(--accent)";
   const primaryHref = liveHref || repoHref;
 
   return (

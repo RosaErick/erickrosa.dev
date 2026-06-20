@@ -6,7 +6,6 @@ import {
   ListItem,
   Divider,
   UnorderedList,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "../lib/i18n";
@@ -32,7 +31,7 @@ const SectionHeading = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function WorkPage() {
-  const subtleText = useColorModeValue("gray.600", "gray.400");
+  const subtleText = "var(--text-muted)";
   const { t } = useTranslation();
 
   return (
@@ -60,7 +59,7 @@ export default function WorkPage() {
           </Text>
           <Text fontSize="lg">{t("work.summary.p2")}</Text>
 
-          <Divider borderColor="gray.200" />
+          <Divider borderColor="var(--border)" />
 
           <SectionHeading>Proffer</SectionHeading>
           <Text fontSize="sm" color={subtleText}>
@@ -78,7 +77,7 @@ export default function WorkPage() {
             pytest.
           </Text>
 
-          <Divider borderColor="gray.200" />
+          <Divider borderColor="var(--border)" />
 
           <SectionHeading>Mundiware</SectionHeading>
           <Text fontSize="sm" color={subtleText}>
@@ -87,7 +86,7 @@ export default function WorkPage() {
           <Text>{t("work.mundiware.summary")}</Text>
           <Bullets items={t<string[]>("work.mundiware.bullets")} />
 
-          <Divider borderColor="gray.200" />
+          <Divider borderColor="var(--border)" />
 
           <SectionHeading>{t("work.selectedProjects.title")}</SectionHeading>
 

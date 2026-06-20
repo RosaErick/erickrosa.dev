@@ -12,6 +12,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { I18nProvider } from "../lib/i18n";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  // Pages can opt out of the default centered Layout by exposing a `getLayout`
+  // (e.g. the home page renders its own wide two-column shell).
+  const getLayout =
+    Component.getLayout || ((page) => <Layout>{page}</Layout>);
+
   return (
     <SessionProvider session={session}>
       <Analytics />
@@ -20,11 +25,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <link rel="icon" type="favicon" href="../static/favicon.ico" />
         </Head>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <I18nProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </I18nProvider>
+        <I18nProvider>{getLayout(<Component {...pageProps} />)}</I18nProvider>
       </ChakraProvider>
     </SessionProvider>
   );

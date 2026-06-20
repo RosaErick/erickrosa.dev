@@ -17,6 +17,7 @@ const DarkModeSwitch = () => {
         onClick={toggleColorMode}
         color={iconColor[colorMode]}
         variant="ghost"
+        size="sm"
         _hover={{ background: "none" }}
         _focus={{ background: "none", border: "none" }}
       />

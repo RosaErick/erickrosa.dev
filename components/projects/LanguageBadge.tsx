@@ -1,4 +1,4 @@
-import { Flex, Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import { getLanguageColor } from "../../lib/languageColor";
 
 interface LanguageBadgeProps {
@@ -7,7 +7,7 @@ interface LanguageBadgeProps {
 }
 
 export default function LanguageBadge({ language, color }: LanguageBadgeProps) {
-  const textColor = useColorModeValue("gray.600", "gray.400");
+  const textColor = "var(--text-muted)";
 
   if (!language) return null;
 

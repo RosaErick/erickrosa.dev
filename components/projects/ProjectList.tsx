@@ -27,7 +27,7 @@ const ProjectListFull = () => {
             aria-label={t("projects.searchPlaceholder")}
             placeholder={t("projects.searchPlaceholder")}
           />
-          <InputRightElement children={<SearchIcon color="gray.500" />} />
+          <InputRightElement children={<SearchIcon color="var(--text-subtle)" />} />
         </InputGroup>
         <SimpleGrid minChildWidth="300px" spacing="40px">
           {[...Array(10)].map((_, i) => (
@@ -63,7 +63,7 @@ const ProjectListFull = () => {
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder={t("projects.searchPlaceholder")}
         />
-        <InputRightElement children={<SearchIcon color="gray.500" />} />
+        <InputRightElement children={<SearchIcon color="var(--text-subtle)" />} />
       </InputGroup>
       <SimpleGrid minChildWidth="300px" spacing="40px">
         {!filteredProjects.length && (

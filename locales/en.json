@@ -8,6 +8,14 @@
   },
   "home": {
     "greeting": "Hi there, I'm Erick 🍃",
+    "tagline": "I build accessible, pixel-perfect experiences for the web.",
+    "sections": {
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects"
+    },
+    "resumeCta": "View full résumé",
+    "credit": "Designed & built by Erick Rosa — crafted with Next.js, Chakra UI and a little 3D room.",
     "bio": {
       "lead": "I'm a",
       "role": "Software Engineer",

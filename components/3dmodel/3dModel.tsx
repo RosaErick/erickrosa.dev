@@ -9,9 +9,13 @@ const easeOutCirc = (x: number): number => {
 
 interface Props {
   children?: React.ReactNode;
+  w?: any;
+  h?: any;
+  mt?: any;
+  mb?: any;
 }
 
-const ModelViewer: React.FC<Props> = () => {
+const ModelViewer: React.FC<Props> = ({ w, h, mt, mb }) => {
   const refContainer = useRef<HTMLDivElement | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const refRenderer = useRef<THREE.WebGLRenderer | null>(null);
@@ -115,7 +119,7 @@ const ModelViewer: React.FC<Props> = () => {
   }, [handleWindowResize]);
 
   return (
-    <ModelContainer ref={refContainer}>
+    <ModelContainer ref={refContainer} w={w} h={h} mt={mt} mb={mb}>
       {loading && <ModelSpinner />}
     </ModelContainer>
   );

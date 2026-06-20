@@ -8,6 +8,14 @@
   },
   "home": {
     "greeting": "Olá, eu sou o Erick 🍃",
+    "tagline": "Construo experiências acessíveis e pixel-perfect para a web.",
+    "sections": {
+      "about": "Sobre",
+      "experience": "Experiência",
+      "projects": "Projetos"
+    },
+    "resumeCta": "Ver currículo completo",
+    "credit": "Desenhado & construído por Erick Rosa — feito com Next.js, Chakra UI e uma salinha 3D.",
     "bio": {
       "lead": "Sou",
       "role": "Engenheiro de Software",

@@ -6,7 +6,6 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -15,10 +14,10 @@ import { useTranslation } from "../../lib/i18n";
 const MenuHamburguer = () => {
   const { t } = useTranslation();
   // Define color variables with useColorModeValue for dynamic theme colors
-  const iconColor = useColorModeValue("black", "white");
-  const menuBgColor = useColorModeValue("#f0e7db", "#202023");
-  const menuTextColor = useColorModeValue("black", "white");
-  const menuHoverBgColor = useColorModeValue("brand.light", "brand.dark");
+  const iconColor = "var(--text)";
+  const menuBgColor = "var(--surface)";
+  const menuTextColor = "var(--text)";
+  const menuHoverBgColor = "var(--accent-soft)";
 
   return (
     <Flex

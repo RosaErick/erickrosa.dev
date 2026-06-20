@@ -1,7 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import Navbar from "../components/nav/Navbar";
 import Footer from "./Footer";
-import ModelViewer from "../components/3dmodel/3dModel";
 
 export default function Layout({ children }) {
   return (
@@ -20,7 +19,6 @@ export default function Layout({ children }) {
     >
       <Navbar />
 
-      <ModelViewer />
       {children}
 
       <Footer />

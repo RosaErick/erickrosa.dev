@@ -10,7 +10,6 @@ import {
   Text,
   Heading,
   Box,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
@@ -117,7 +116,9 @@ export default function Guestbook() {
                 alignItems="center"
               >
                 <Button
-                  bg={useColorModeValue("blue.50", "blue.900")}
+                  bg="var(--accent)"
+                  color="var(--bg)"
+                  _hover={{ bg: "var(--accent-strong)" }}
                   onClick={handleSend}
                   disabled={!message}
                   fontSize="sm"
@@ -126,8 +127,8 @@ export default function Guestbook() {
                   {t("guestbook.send")}
                 </Button>
                 <Button
-                  bg={useColorModeValue("red.50", "red.100")}
-                  color={useColorModeValue("red.500", "red.900")}
+                  bg="var(--surface-2)"
+                  color="var(--text-muted)"
                   onClick={() => signOut()}
                   fontSize="sm"
                   fontWeight="sm"
@@ -141,9 +142,9 @@ export default function Guestbook() {
           <Button
             onClick={() => signIn("github")}
             leftIcon={<FaGithub />}
-            bg="black"
-            color="white"
-            _hover={{ bg: "blue.700", boxShadow: "lg" }}
+            bg="var(--accent)"
+            color="var(--bg)"
+            _hover={{ bg: "var(--accent-strong)", boxShadow: "lg" }}
             fontSize={["sm", "sm"]}
             fontWeight="md"
           >

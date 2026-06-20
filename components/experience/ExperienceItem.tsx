@@ -4,7 +4,6 @@ import {
   Link,
   Wrap,
   WrapItem,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -25,13 +24,13 @@ export default function ExperienceItem({
   description,
   tags,
 }: ExperienceItemProps) {
-  const periodColor = useColorModeValue("gray.500", "gray.500");
-  const titleColor = useColorModeValue("gray.800", "gray.100");
-  const descColor = useColorModeValue("gray.600", "gray.400");
-  const accent = useColorModeValue("purple.600", "pink");
-  const tagBg = useColorModeValue("#e8dcc8", "rgba(45, 212, 191, 0.12)");
-  const tagColor = useColorModeValue("gray.700", "teal.200");
-  const hoverBg = useColorModeValue("blackAlpha.50", "whiteAlpha.50");
+  const periodColor = "var(--text-subtle)";
+  const titleColor = "var(--text)";
+  const descColor = "var(--text-muted)";
+  const accent = "var(--accent)";
+  const tagBg = "var(--surface-2)";
+  const tagColor = "var(--text-muted)";
+  const hoverBg = "var(--surface-2)";
 
   const title = `${role} · ${company}`;
 
