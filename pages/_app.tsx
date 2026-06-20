@@ -10,6 +10,7 @@ import Layout from "../layouts/Layout";
 import { SessionProvider } from "next-auth/react";
 import { Analytics } from "@vercel/analytics/react";
 import { I18nProvider } from "../lib/i18n";
+import CursorSpotlight from "../components/CursorSpotlight";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   // Pages can opt out of the default centered Layout by exposing a `getLayout`
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <link rel="icon" type="favicon" href="../static/favicon.ico" />
         </Head>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <CursorSpotlight />
         <I18nProvider>{getLayout(<Component {...pageProps} />)}</I18nProvider>
       </ChakraProvider>
     </SessionProvider>

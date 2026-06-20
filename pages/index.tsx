@@ -102,8 +102,8 @@ export default function Home() {
 
   // Bio annotations follow the accent (concrete colors — RoughNotation draws
   // SVG strokes that don't resolve the --accent CSS variable).
-  const underlineColor = useColorModeValue("#0d9488", "#2dd4bf");
-  const highlightColor = useColorModeValue("#cfeae5", "#155e63");
+  const underlineColor = useColorModeValue("#be123c", "#fb7185");
+  const highlightColor = useColorModeValue("#f6d4dc", "#4a1f28");
   const creditColor = "var(--text-subtle)";
 
   const { data: githubData } = useSWR("/api/github", fetcher);
