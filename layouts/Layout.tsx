@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import Navbar from "../components/nav/Navbar";
+import TopBar from "../components/nav/TopBar";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
       pt={["44px", "52px", "60px"]}
       m="0 auto"
     >
-      <Navbar />
+      <TopBar />
 
       {children}
 

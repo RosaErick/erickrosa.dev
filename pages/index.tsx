@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import Script from "next/script";
 import { useEffect, useState, ReactNode } from "react";
 import useSWR from "swr";
-import HomeTopBar from "../components/home/HomeTopBar";
+import TopBar from "../components/nav/TopBar";
 import Sidebar from "../components/home/Sidebar";
 import Paragraph from "../layouts/Paragraph";
 import FeaturedProjectCard from "../components/projects/FeaturedProjectCard";
@@ -299,7 +299,7 @@ export default function Home() {
 Home.getLayout = function getLayout(page: ReactNode) {
   return (
     <>
-      <HomeTopBar />
+      <TopBar />
       {page}
     </>
   );

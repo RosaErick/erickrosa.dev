@@ -1,8 +1,8 @@
 import { Box, Flex, HStack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import LanguageSwitch from "../nav/LanguageSwitch";
-import DarkModeSwitch from "../nav/DarkModeSwitch";
-import MenuHamburguer from "../nav/Menu";
+import LanguageSwitch from "./LanguageSwitch";
+import DarkModeSwitch from "./DarkModeSwitch";
+import MenuHamburguer from "./Menu";
 import { useTranslation } from "../../lib/i18n";
 
 const routes = [
@@ -12,10 +12,10 @@ const routes = [
   { href: "/guestbook", key: "guestbook" },
 ];
 
-// Home-specific top bar: aligned to the wide two-column container and pinned to
-// the right so it balances the identity sidebar on the left, instead of the
-// default full-width centered navbar.
-export default function HomeTopBar() {
+// Single top bar shared by every page (home + inner pages), so navigation stays
+// pixel-identical and never shifts between routes. Aligned to the same wide
+// container and pinned to the right.
+export default function TopBar() {
   const { t } = useTranslation();
   const path = typeof window !== "undefined" ? window.location.pathname : "";
 
