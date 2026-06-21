@@ -209,7 +209,9 @@ export default function Home() {
                     color={highlightColor}
                     padding={2}
                   >
-                    open source
+                    <Box as="span" whiteSpace="nowrap">
+                      open source
+                    </Box>
                   </RoughNotation>
                   {t("home.bio.afterOpenSource")}{" "}
                   <RoughNotation
